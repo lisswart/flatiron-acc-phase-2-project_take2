@@ -1,0 +1,60 @@
+{
+    "words": [
+      {
+        "id": 1,
+        "headword": "unfazed",
+        "functionalLabel": "adjective",
+        "definition": "not perturbed or disconcerted",
+        "verbalIllustration": "the protestors were unfazed by the prospect of arrest"
+      },
+      {
+        "id": 2,
+        "headword": "brat",
+        "functionalLabel": "noun",
+        "definition": "a child who behaves very badly : an annoying child",
+        "verbalIllustration": "a bunch of ill-mannered little brats"
+      },
+      {
+        "id": 3,
+        "headword": "undaunted",
+        "functionalLabel": "adjective",
+        "definition": "feeling or displaying no fear by temperament",
+        "verbalIllustration": "undaunted despite their repeated failures at starting a business"
+      },
+      {
+        "id": 4,
+        "headword": "cross",
+        "functionalLabel": "adjective",
+        "definition": "annoyed or angry",
+        "verbalIllustration": "I was cross with her for being so careless"
+      },
+      {
+        "id": 5,
+        "headword": "perturb",
+        "functionalLabel": "verb",
+        "definition": "to cause someone to be worried or upset",
+        "verbalIllustration": "It perturbed him that his son was thinking about leaving school"
+      },
+      {
+        "id": 6,
+        "headword": "troll",
+        "functionalLabel": "verb",
+        "definition": "to look through (as a place) carefully or thoroughly in an effort to find or discover something",
+        "verbalIllustration": "the owner of the bed-and-breakfast often trolls antique stores for furniture and knickknacks"
+      },
+      {
+        "id": 7,
+        "headword": "scurry",
+        "functionalLabel": "verb",
+        "definition": "to proceed or move quickly",
+        "verbalIllustration": "everyone scurried back to work as soon as they had finished their lunch in the cafeteria"
+      },
+      {
+        "id": 8,
+        "headword": "dawdle",
+        "functionalLabel": "verb",
+        "definition": "to move or act slowly",
+        "verbalIllustration": "if you continue to dawdle, we'll be late for sure"
+      }
+    ]
+  }
