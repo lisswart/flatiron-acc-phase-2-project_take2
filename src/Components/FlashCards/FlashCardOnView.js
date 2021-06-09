@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-// const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
-const LOCAL = `http://localhost:4000/words`;
+const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
+//const LOCAL = `http://localhost:4000/words`;
 
 function FlashCardOnView() {
     const [card, setCard] = useState({});
@@ -11,7 +11,7 @@ function FlashCardOnView() {
     const id = params.id;
 
     useEffect(() => {
-        fetch(`${LOCAL}/${id}`)
+        fetch(`${URL}/${id}`)
             .then(r => r.json())
             .then(cardData => {
                 setCard(cardData);
