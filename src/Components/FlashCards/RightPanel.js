@@ -2,8 +2,8 @@
 
 function RightPanel() {
     return (
-        <div>
-            
+        <div className="right-panel">
+            <h1 className="instructions">Instructions</h1>
         </div>
     );
 }

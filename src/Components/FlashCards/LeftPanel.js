@@ -7,7 +7,7 @@ function LeftPanel({ cards, setNewCard, isOnEditMode, setIsOnEditMode, cardToBeE
     }
 
     return (
-        <div>
+        <div className="left-panel-div">
             <button className="new-button"
                 onClick={handleNewCardClick}>
                 New

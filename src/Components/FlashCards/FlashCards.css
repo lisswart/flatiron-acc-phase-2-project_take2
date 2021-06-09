@@ -3,16 +3,23 @@
     grid-template-columns: 4fr 6fr;
 }
 
-.left-panel {
+.left-panel-div {
     grid-column: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(165, 42, 42, 0.315);
+    background-color: navajowhite;
 }
 
 .right-panel {
     grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.instructions {
+    margin-top: 10em;
 }
 
 .flashcard {
@@ -20,6 +27,54 @@
     padding-bottom: 3em;
     margin: 1.5em;
     font-size: 16px;
-    background-color: rgba(47, 79, 79, 0.26);
+    background-color: rgba(105, 160, 160, 0.26);
     color: indigo;
 }
+
+.card-on-view-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-on-view-wrapper {
+    border: 4px solid palevioletred;
+    box-sizing: border-box;
+    padding: 2em;
+    background-color: peachpuff;
+    color: rgb(17, 17, 78);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 4em;
+}
+
+.reveal-button {
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 1em;   
+    margin-top: 2em;
+    float: right;
+}
+
+.form-view {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 4em 0 0 4em;
+    background-color: lemonchiffon;
+    color: tomato;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.inputbox {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .label {
+     color:teal;
+ }

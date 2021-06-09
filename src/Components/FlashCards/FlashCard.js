@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
 
 function FlashCard({ card, isOnEditMode, setIsOnEditMode, cardToBeEdited, setCardToBeEdited, deleteCard }) {
     const {id, headword, functionalLabel, definition, verbalIllustration} = card;
-    // const [cardToView, setCardToView] = useState([]);
 
     function handleEditClick() {
         setIsOnEditMode(!isOnEditMode);
