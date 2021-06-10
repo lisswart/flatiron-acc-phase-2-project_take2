@@ -4,8 +4,9 @@ function RightPanel() {
     return (
         <div className="right-panel">
             <h1 className="instructions">
-                Click on the new button to add flashcards;
-                click on the new button again to cancel
+                To add flashcards, 
+                click on the new button on top of the left panel;
+                to cancel, click on the same button
             </h1>
         </div>
     );

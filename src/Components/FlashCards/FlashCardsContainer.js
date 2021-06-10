@@ -12,7 +12,7 @@ const LOCAL = `http://localhost:4000/words`;
 function FlashCardsContainer() {
     //state of list of flashcards
     const [cards, setCards] = useState([]);
-    const [isOnEntryMode, setIsOnEntryMode] = useState(false);
+    // const [isOnEntryMode, setIsOnEntryMode] = useState(false);
     //state of new flashcard entry form
     const [formState, setFormState] = useState({
         headword: "",
@@ -92,8 +92,8 @@ function FlashCardsContainer() {
             <LeftPanel cards={cards} 
                 newCard={newCard}
                 setNewCard={setNewCard} 
-                isOnEntryMode={isOnEntryMode}
-                setIsOnEntryMode={setIsOnEntryMode}
+                // isOnEntryMode={isOnEntryMode}
+                // setIsOnEntryMode={setIsOnEntryMode}
                 isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}
                 cardToBeEdited={cardToBeEdited}
@@ -107,8 +107,8 @@ function FlashCardsContainer() {
                 <Route>
                     {
                         newCard ? <NewFlashCardEntryForm path={"/newCardEntryForm"}
-                            isOnEntryMode={isOnEntryMode}
-                            setIsOnEntryMode={setIsOnEntryMode}
+                            // isOnEntryMode={isOnEntryMode}
+                            // setIsOnEntryMode={setIsOnEntryMode}
                             formState={formState} 
                             setFormState={setFormState} 
                             addCard={addCard} 
