@@ -95,9 +95,11 @@
 
  .textarea {
      min-height: 7em;
+     max-width: 197.94px;
      background-color: bisque;
 }
 
 .inputbar {
     background-color: bisque;
+    min-height: 25px;
 }
