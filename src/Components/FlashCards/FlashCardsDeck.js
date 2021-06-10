@@ -17,7 +17,11 @@ function FlashCardsDeck({ cards, isOnEditMode, setIsOnEditMode, cardToBeEdited, 
     }
     return (
         <ul>
-            {displayCards()}
+            {
+                cards.length === 0
+                ? <div className="loading">Loading...</div>
+                : displayCards()
+            }
         </ul>
     );
 }

@@ -30,19 +30,29 @@ function NewFlashCardEntryForm({ addCard, isOnEntryMode, setIsOnEntryMode, formS
             <form onSubmit={handleSubmit}>
                 <div className="inputbox" >
                     <label><strong>headword: </strong></label>
-                    <input type="text" onChange={handleNewEntryChange} name="headword" value={formState.headword} />
+                    <input type="text" onChange={handleNewEntryChange} 
+                        name="headword" 
+                        value={formState.headword} />
                 </div>
                 <div className="inputbox" >
                     <label><strong>functional label: </strong></label>
-                    <input type="text" onChange={handleNewEntryChange} name="functionalLabel" value={formState.functionalLabel} />
+                    <input type="text" onChange={handleNewEntryChange} 
+                        name="functionalLabel" 
+                        value={formState.functionalLabel} />
                 </div>
                 <div className="inputbox" >
                     <label><strong>definition: </strong></label>
-                    <textarea onChange={handleNewEntryChange} name="definition" value={formState.definition} />
+                    <textarea onChange={handleNewEntryChange} 
+                        name="definition" 
+                        value={formState.definition}
+                        className="textarea" />
                 </div>
                 <div  className="inputbox">
                     <label><strong>verbal illustration: </strong></label>
-                    <textarea onChange={handleNewEntryChange} name="verbalIllustration" value={formState.verbalIllustration} />
+                    <textarea onChange={handleNewEntryChange} 
+                        name="verbalIllustration" 
+                        value={formState.verbalIllustration}
+                        className="textarea" />
                 </div>
                 <button type="submit">Submit</button>
                 <button onClick={handleCancelClick}>Cancel</button>

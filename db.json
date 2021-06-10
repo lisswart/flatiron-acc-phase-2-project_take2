@@ -62,6 +62,48 @@
       "definition": "I want to write a notetaking app",
       "verbalIllustration": "for example, something like the awesome Notion notetaking app",
       "id": 9
+    },
+    {
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": "",
+      "id": 10
+    },
+    {
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": "",
+      "id": 11
+    },
+    {
+      "headword": "fret",
+      "functionalLabel": "verb",
+      "definition": "to worry or be concerned",
+      "verbalIllustration": "I was sure we wouldn't get there in time, but she told me not to fret.",
+      "id": 12
+    },
+    {
+      "headword": "cake",
+      "functionalLabel": "verb",
+      "definition": "to cover something with an outer layer that becomes hard as it dries",
+      "verbalIllustration": "The mud had caked on his boots.",
+      "id": 13
+    },
+    {
+      "headword": "brook",
+      "functionalLabel": "verb",
+      "definition": "to put up with something painful or difficult",
+      "verbalIllustration": "I will not brook insults from my own employees",
+      "id": 14
+    },
+    {
+      "headword": "bide",
+      "functionalLabel": "verb",
+      "definition": "to remain in place in readiness or expectation of something",
+      "verbalIllustration": "I promise you that if you bide yet a little longer, all will come to pass just as you desire",
+      "id": 15
     }
   ]
 }

@@ -1,6 +1,6 @@
 .flashcards-container {
     display: grid;
-    grid-template-columns: 4fr 6fr;
+    grid-template-columns: 6fr 4fr;
 }
 
 .left-panel-div {
@@ -82,4 +82,8 @@
 
  .label {
      color:cornsilk;
+ }
+
+ .textarea {
+     min-height: 7em;
  }

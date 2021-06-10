@@ -30,18 +30,26 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
         <div className="form-view">
             <form onSubmit={handleSubmit}>
                 <div className="inputbox label" >
-                    <strong>headword: </strong><span style={{color: "moccasin"}}>{cardToBeEdited.headword}</span>
+                    <strong>headword: </strong>
+                    <span style={{color: "moccasin"}}>{cardToBeEdited.headword}</span>
                 </div>
                 <div className="inputbox label" >
-                    <strong>functional label: </strong><span style={{color: "moccasin"}}>{cardToBeEdited.functionalLabel}</span>
+                    <strong>functional label: </strong>
+                    <span style={{color: "moccasin"}}>{cardToBeEdited.functionalLabel}</span>
                 </div>
                 <div className="inputbox label" >
                     <label><strong>definition: </strong></label>
-                    <textarea onChange={handleChange} name="definition" value={editFormState.definition} />
+                    <textarea onChange={handleChange} 
+                        name="definition" 
+                        value={editFormState.definition}
+                        className="textarea" />
                 </div>
                 <div  className="inputbox label">
                     <label><strong>verbal illustration: </strong></label>
-                    <textarea onChange={handleChange} name="verbalIllustration" value={editFormState.verbalIllustration} />
+                    <textarea onChange={handleChange} 
+                        name="verbalIllustration" 
+                        value={editFormState.verbalIllustration}
+                        className="textarea" />
                 </div>
                 <button onClick={handleCancelClick}>Cancel</button>
                 <button type="submit">Submit</button>

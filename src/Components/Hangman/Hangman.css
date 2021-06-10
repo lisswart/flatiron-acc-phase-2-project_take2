@@ -10,7 +10,7 @@
     box-sizing: border-box;
 }
 
-body{
+/* body{
     background-color: tomato;
     color: lemonchiffon;
     font-family: monospace;
@@ -20,7 +20,7 @@ body{
     height: 80vh;
     margin: 0;
     overflow: hidden;
-}
+} */
 
 h1 {
     margin: 20px 0 0;
