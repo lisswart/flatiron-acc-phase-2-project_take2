@@ -1,4 +1,4 @@
-function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) {
+function NewFlashCardEntryForm({ addCard, isOnEntryMode, setIsOnEntryMode, formState, setFormState, setNewCard}) {
 
     function handleNewEntryChange(event) {
         const fieldName = event.target.name;
@@ -21,6 +21,10 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
         setNewCard(false);
     }
 
+    function handleCancelClick() {
+        setIsOnEntryMode(!isOnEntryMode);
+    }
+
     return (
         <div className="form-view">
             <form onSubmit={handleSubmit}>
@@ -41,6 +45,7 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
                     <textarea onChange={handleNewEntryChange} name="verbalIllustration" value={formState.verbalIllustration} />
                 </div>
                 <button type="submit">Submit</button>
+                <button onClick={handleCancelClick}>Cancel</button>
             </form>
             
         </div>

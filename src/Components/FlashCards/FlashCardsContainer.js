@@ -12,6 +12,7 @@ const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
 function FlashCardsContainer() {
     //state of list of flashcards
     const [cards, setCards] = useState([]);
+    const [isOnEntryMode, setIsOnEntryMode] = useState(false);
     //state of new flashcard entry form
     const [formState, setFormState] = useState({
         headword: "",
@@ -89,7 +90,10 @@ function FlashCardsContainer() {
     return (
         <div className="flashcards-container">
             <LeftPanel cards={cards} 
+                newCard={newCard}
                 setNewCard={setNewCard} 
+                isOnEntryMode={isOnEntryMode}
+                setIsOnEntryMode={setIsOnEntryMode}
                 isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}
                 cardToBeEdited={cardToBeEdited}
@@ -102,7 +106,13 @@ function FlashCardsContainer() {
                 </Route> */}
                 <Route>
                     {
-                        newCard ? <NewFlashCardEntryForm path={"/newCardEntryForm"}formState={formState} setFormState={setFormState} addCard={addCard} setNewCard={setNewCard} />
+                        newCard ? <NewFlashCardEntryForm path={"/newCardEntryForm"}
+                            isOnEntryMode={isOnEntryMode}
+                            setIsOnEntryMode={setIsOnEntryMode}
+                            formState={formState} 
+                            setFormState={setFormState} 
+                            addCard={addCard} 
+                            setNewCard={setNewCard} />
                         : isOnEditMode ? <EditForm editFormState={editFormState} 
                                                 setEditFormState={setEditFormState} 
                                                 cardToBeEdited={cardToBeEdited}
