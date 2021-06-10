@@ -65,7 +65,7 @@ function HangmanContainer() {
             {/* <!-- Container for final messages --> */}
             <div class="popup-container" id="popup-container">
                 <div class="popup button">
-                    <h2 id="final-message"></h2>
+                    <h2 id="final-message">.</h2>
                     <button id="play-button">Play Again</button>
                 </div>
             </div>
