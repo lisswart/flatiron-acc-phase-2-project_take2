@@ -19,9 +19,9 @@ function FlashCardOnView() {
             .catch(err => console.error(err));
     }, [id]);
 
-    useEffect(() => {
-        console.log(card);
-    }, [card]);
+    // useEffect(() => {
+    //     console.log(card);
+    // }, [card]);
 
     function handleFlipClick() {
         setFlip(!flip);

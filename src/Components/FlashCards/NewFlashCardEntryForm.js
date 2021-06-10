@@ -56,14 +56,12 @@ function NewFlashCardEntryForm({ addCard, isOnEntryMode, setIsOnEntryMode, formS
                         value={formState.verbalIllustration}
                         className="textarea" />
                 </div>
-                <button type="submit" className="button">Submit</button>
-                <button onClick={handleCancelClick}
-                    className="button"
-                >
-                        Cancel
-                </button>
-            </form>
-            
+                {/* <button onClick={handleCancelClick}
+                    className="button">
+                    Cancel
+                </button> */}
+                <button type="submit" className="button">Submit</button>           
+            </form>            
         </div>
     );
 }

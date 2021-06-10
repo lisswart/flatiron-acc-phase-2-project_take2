@@ -3,7 +3,10 @@
 function RightPanel() {
     return (
         <div className="right-panel">
-            <h1 className="instructions">Instructions</h1>
+            <h1 className="instructions">
+                Click on the new button to add flashcards;
+                click on the new button again to cancel
+            </h1>
         </div>
     );
 }

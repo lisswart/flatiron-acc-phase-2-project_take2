@@ -8,10 +8,10 @@ function LeftPanel({ cards, newCard, setNewCard, isOnEditMode, setIsOnEditMode, 
 
     return (
         <div className="left-panel-div">
-            <button className="new-button"
+            <div className="new-button-div"><button className="new-button"
                 onClick={handleNewCardClick}>
                 New
-            </button>
+            </button></div>
             <FlashCardsDeck cards={cards}
                 isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}

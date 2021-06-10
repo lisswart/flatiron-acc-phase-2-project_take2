@@ -20,7 +20,8 @@
 }
 
 .instructions {
-    margin-top: 10em;
+    margin-top: 3em;
+    text-align: center;
 }
 
 .flashcard {
@@ -30,6 +31,7 @@
     font-size: 16px;
     background-color: rgba(73, 136, 49, 0.733);
     color: cornsilk;
+    border-radius: 10px;
 }
 
 .card-on-view-container {
@@ -51,6 +53,12 @@
     font-size: 20px;
     font-weight: bolder;
     margin-top: 4em;
+}
+
+.new-button-div {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 2em 0 2em;
 }
 
 .reveal-button, .new-button {
