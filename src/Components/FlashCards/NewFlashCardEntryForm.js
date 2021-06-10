@@ -1,4 +1,5 @@
-function NewFlashCardEntryForm({ addCard, isOnEntryMode, setIsOnEntryMode, formState, setFormState, setNewCard}) {
+//isOnEntryMode, setIsOnEntryMode, 
+function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) {
 
     function handleNewEntryChange(event) {
         const fieldName = event.target.name;
@@ -21,9 +22,9 @@ function NewFlashCardEntryForm({ addCard, isOnEntryMode, setIsOnEntryMode, formS
         setNewCard(false);
     }
 
-    function handleCancelClick() {
-        setIsOnEntryMode(!isOnEntryMode);
-    }
+    // function handleCancelClick() {
+    //     setIsOnEntryMode(!isOnEntryMode);
+    // }
 
     return (
         <div className="form-view">
