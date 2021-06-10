@@ -30,10 +30,10 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
         <div className="form-view">
             <form onSubmit={handleSubmit}>
                 <div className="inputbox label" >
-                    <strong>headword: </strong><span style={{color: "black"}}>{cardToBeEdited.headword}</span>
+                    <strong>headword: </strong><span style={{color: "moccasin"}}>{cardToBeEdited.headword}</span>
                 </div>
                 <div className="inputbox label" >
-                    <strong>functional label: </strong><span style={{color: "black"}}>{cardToBeEdited.functionalLabel}</span>
+                    <strong>functional label: </strong><span style={{color: "moccasin"}}>{cardToBeEdited.functionalLabel}</span>
                 </div>
                 <div className="inputbox label" >
                     <label><strong>definition: </strong></label>
