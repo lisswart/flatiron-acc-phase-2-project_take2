@@ -32,8 +32,8 @@ function FlashCardOnView() {
             {
                 flip
             ?    <div className="card-on-view-wrapper">
-                    <p className="card-on-view-definition">:{card.definition}</p><br></br>
-                    <p className="card-on-view-verbal-illustration">e.g., {card.verbalIllustration}</p>
+                    <p className="card-on-view-definition"><span style={{color: "yellow", fontWeight: "bolder"}}>:</span>{card.definition}</p><br></br>
+                    <p className="card-on-view-verbal-illustration"><span style={{color: "yellow"}}>e.g., </span>{card.verbalIllustration}</p>
                     <button onClick={handleFlipClick} className="reveal-button">reverse</button>
                 </div>
             :

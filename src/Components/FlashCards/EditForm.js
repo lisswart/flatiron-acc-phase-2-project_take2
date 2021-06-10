@@ -51,8 +51,14 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
                         value={editFormState.verbalIllustration}
                         className="textarea" />
                 </div>
-                <button onClick={handleCancelClick}>Cancel</button>
-                <button type="submit">Submit</button>
+                <button onClick={handleCancelClick}
+                    className="button">
+                    Cancel
+                </button>
+                <button type="submit"
+                    className="button">
+                    Submit
+                </button>
             </form>
         </div>
     );

@@ -32,13 +32,15 @@ function NewFlashCardEntryForm({ addCard, isOnEntryMode, setIsOnEntryMode, formS
                     <label><strong>headword: </strong></label>
                     <input type="text" onChange={handleNewEntryChange} 
                         name="headword" 
-                        value={formState.headword} />
+                        value={formState.headword}
+                        className="inputbar" />
                 </div>
                 <div className="inputbox" >
                     <label><strong>functional label: </strong></label>
                     <input type="text" onChange={handleNewEntryChange} 
                         name="functionalLabel" 
-                        value={formState.functionalLabel} />
+                        value={formState.functionalLabel}
+                        className="inputbar" />
                 </div>
                 <div className="inputbox" >
                     <label><strong>definition: </strong></label>
@@ -54,8 +56,12 @@ function NewFlashCardEntryForm({ addCard, isOnEntryMode, setIsOnEntryMode, formS
                         value={formState.verbalIllustration}
                         className="textarea" />
                 </div>
-                <button type="submit">Submit</button>
-                <button onClick={handleCancelClick}>Cancel</button>
+                <button type="submit" className="button">Submit</button>
+                <button onClick={handleCancelClick}
+                    className="button"
+                >
+                        Cancel
+                </button>
             </form>
             
         </div>
