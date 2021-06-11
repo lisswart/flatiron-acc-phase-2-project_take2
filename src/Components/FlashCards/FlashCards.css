@@ -40,6 +40,13 @@ li {
     padding-left: 2em;
 }
 
+.no-match {
+    display: flex;
+    justify-content: center;
+    color: cornflowerblue;
+    font-size: 3em;
+}
+
 .flashcard {
     padding: 2em 3em 3em 5em;
     margin: 1.5em;
@@ -160,11 +167,12 @@ li {
      max-width: 25em;
      background-color: bisque;
      border-radius: 5px;
+     padding: 1em 1em 0 1em;
 }
 
 .inputbar {
     background-color: bisque;
     min-height: 35px;
     border-radius: 5px;
-    padding-left: 2em;
+    padding-left: 1em;
 }

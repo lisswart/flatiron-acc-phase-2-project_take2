@@ -34,7 +34,7 @@ function FlashCardsContainer() {
 
     useEffect(() => {
         console.log(isOnSearchMode);
-    })
+    });
     
     useEffect(() => {        
         fetch(LOCAL)
@@ -91,7 +91,7 @@ function FlashCardsContainer() {
                     return card;
                 });
                 setCards(updatedCards);
-            })
+            });
     }
 
     return (
@@ -122,10 +122,10 @@ function FlashCardsContainer() {
                         setIsOnEditMode={setIsOnEditMode} 
                         editCard={editCard} />
                 :   <RightPanel 
-                            isOnSearchMode={isOnSearchMode}
-                            setIsOnSearchMode={setIsOnSearchMode}
-                            onSubmitQuery={setQuery}
-                            handleQuerySearch={handleQuerySearch}  />
+                        isOnSearchMode={isOnSearchMode}
+                        setIsOnSearchMode={setIsOnSearchMode}
+                        onSubmitQuery={setQuery}
+                        handleQuerySearch={handleQuerySearch}  />
             } 
         </div>
     );
