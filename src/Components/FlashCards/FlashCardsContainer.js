@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import NewFlashCardEntryForm from "./NewFlashCardEntryForm";
 import EditForm from "./EditForm";
 
-//const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
-const LOCAL = `http://localhost:4000/words`;
+const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
+//const LOCAL = `http://localhost:4000/words`;
 
 function FlashCardsContainer() {
     const [cards, setCards] = useState([]);    
@@ -37,7 +37,7 @@ function FlashCardsContainer() {
     });
     
     useEffect(() => {        
-        fetch(LOCAL)
+        fetch(URL)
             .then(r => r.json())
             .then(cardObjs => {
                 setCards(cardObjs);
@@ -45,13 +45,13 @@ function FlashCardsContainer() {
     }, []);
 
     function handleQuerySearch() {
-        fetch(`${LOCAL}`)
+        fetch(`${URL}`)
             .then(r => r.json())
             .then(setCards);
     }
 
     function addCard(card) {
-        fetch(LOCAL, {
+        fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -66,7 +66,7 @@ function FlashCardsContainer() {
     }
 
     function deleteCard(cardId) {
-        fetch(`${LOCAL}/${cardId}`, {
+        fetch(`${URL}/${cardId}`, {
             method: "DELETE"            
         })
             .then(r => r.json())
@@ -77,7 +77,7 @@ function FlashCardsContainer() {
     }
 
     function editCard(id, updatedCard) {
-        fetch(`${LOCAL}/${id}`, {
+        fetch(`${URL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

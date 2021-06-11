@@ -39,7 +39,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
                         <div>No match found</div>
                     </div>                
             );
-        })        
+        });        
     }
 
     return (
