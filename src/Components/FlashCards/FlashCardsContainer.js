@@ -44,9 +44,9 @@ function FlashCardsContainer() {
             });
     }, []);
 
-    function handleQuerySearch() {
-        fetch(`${LOCAL}`)
-    }
+    // function handleQuerySearch() {
+    //     fetch(`${LOCAL}`)
+    // }
 
     function addCard(card) {
         fetch(LOCAL, {
@@ -124,7 +124,7 @@ function FlashCardsContainer() {
                                                 isOnEditMode={isOnEditMode}
                                                 setIsOnEditMode={setIsOnEditMode} 
                                                 editCard={editCard} />
-                        : <RightPanel onSubmitQuery={setQuery} />
+                        : <RightPanel onSubmitQuery={setQuery} query={query} />
                     } 
                 </Route>
             </Switch>
