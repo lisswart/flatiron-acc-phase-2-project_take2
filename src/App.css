@@ -43,11 +43,24 @@
 }
 
 .link {
+  background-color: maroon;
+  color: cornsilk;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 18px 38px black;
+  padding: 1em;
+}
+
+.link-flashcard {
   color: cornsilk;
   text-decoration: none;
 }
 
 .link:hover {
+  color: gold;
+}
+
+.link-flashcard:hover {
   color: gold;
 }
 

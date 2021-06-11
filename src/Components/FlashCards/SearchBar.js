@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SearchBar({ onSubmitQuery}) {
+function SearchBar({ onSubmitQuery, handleQuerySearch}) {
     const [input, setInput] = useState("");
 
     function handleChange(event) {
@@ -10,6 +10,7 @@ function SearchBar({ onSubmitQuery}) {
     function handleSubmit(event) {
         event.preventDefault();
         onSubmitQuery(input);
+        handleQuerySearch();
     }
 
     return (

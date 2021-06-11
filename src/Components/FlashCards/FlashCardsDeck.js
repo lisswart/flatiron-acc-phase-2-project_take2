@@ -1,6 +1,9 @@
 import FlashCard from "./FlashCard";
 
-function FlashCardsDeck({ cards, isOnEditMode, setIsOnEditMode, cardToBeEdited, setCardToBeEdited, editCard, deleteCard }) {
+function FlashCardsDeck({ cards, isOnEditMode, 
+                        setIsOnEditMode, cardToBeEdited, 
+                        setCardToBeEdited, editCard, 
+                        deleteCard }) {
 
     function displayCards() {
         return cards.map((card) => {

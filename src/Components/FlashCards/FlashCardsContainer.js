@@ -1,7 +1,6 @@
 import "./FlashCards.css";
 import LeftPanel from "./LeftPanel";
 import RightPanel from "./RightPanel";
-import { Switch, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NewFlashCardEntryForm from "./NewFlashCardEntryForm";
 import EditForm from "./EditForm";
@@ -10,16 +9,13 @@ import EditForm from "./EditForm";
 const LOCAL = `http://localhost:4000/words`;
 
 function FlashCardsContainer() {
-    //state of list of flashcards
-    const [cards, setCards] = useState([]);
-    
+    const [cards, setCards] = useState([]);    
     const [formState, setFormState] = useState({
         headword: "",
         functionalLabel: "",
         definition: "",
         verbalIllustration: ""
     });
-    //state of new button
     const [newCard, setNewCard] = useState(false);
     const [isOnEditMode, setIsOnEditMode] = useState(false);
     const [cardToBeEdited, setCardToBeEdited] = useState({
@@ -33,7 +29,6 @@ function FlashCardsContainer() {
         definition: "",
         verbalIllustration: ""
     });
-
     const [query, setQuery] = useState("");
     
     useEffect(() => {        
@@ -44,9 +39,11 @@ function FlashCardsContainer() {
             });
     }, []);
 
-    // function handleQuerySearch() {
-    //     fetch(`${LOCAL}`)
-    // }
+    function handleQuerySearch() {
+        fetch(`${LOCAL}/${query}`)
+            .then(r => r.json())
+            .then(console.log);
+    }
 
     function addCard(card) {
         fetch(LOCAL, {
@@ -94,41 +91,32 @@ function FlashCardsContainer() {
 
     return (
         <div className="flashcards-container">
-            <LeftPanel cards={cards} 
+            <LeftPanel cards={cards}
                 newCard={newCard}
                 setNewCard={setNewCard} 
-                // isOnEntryMode={isOnEntryMode}
-                // setIsOnEntryMode={setIsOnEntryMode}
                 isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}
                 cardToBeEdited={cardToBeEdited}
                 setCardToBeEdited={setCardToBeEdited} 
                 editCard={editCard} 
                 deleteCard={deleteCard} />
-            <Switch>
-                {/* <Route exact path={"/words/:id"}>
-                    <FlashCardViewer />
-                </Route> */}
-                <Route>
-                    {
-                        newCard ? <NewFlashCardEntryForm path={"/newCardEntryForm"}
-                            // isOnEntryMode={isOnEntryMode}
-                            // setIsOnEntryMode={setIsOnEntryMode}
-                            formState={formState} 
-                            setFormState={setFormState} 
-                            addCard={addCard} 
-                            setNewCard={setNewCard} />
-                        : isOnEditMode ? <EditForm editFormState={editFormState} 
-                                                setEditFormState={setEditFormState} 
-                                                cardToBeEdited={cardToBeEdited}
-                                                isOnEditMode={isOnEditMode}
-                                                setIsOnEditMode={setIsOnEditMode} 
-                                                editCard={editCard} />
-                        : <RightPanel onSubmitQuery={setQuery} query={query} />
-                    } 
-                </Route>
-            </Switch>
-            
+            {
+                newCard 
+                ?   <NewFlashCardEntryForm path={"/newCardEntryForm"}                            
+                        formState={formState} 
+                        setFormState={setFormState} 
+                        addCard={addCard} 
+                        setNewCard={setNewCard} />
+                :   isOnEditMode 
+                ?   <EditForm editFormState={editFormState} 
+                        setEditFormState={setEditFormState} 
+                        cardToBeEdited={cardToBeEdited}
+                        isOnEditMode={isOnEditMode}
+                        setIsOnEditMode={setIsOnEditMode} 
+                        editCard={editCard} />
+                : <RightPanel onSubmitQuery={setQuery}
+                            handleQuerySearch={handleQuerySearch}  />
+            } 
         </div>
     );
 }

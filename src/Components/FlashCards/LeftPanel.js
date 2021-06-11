@@ -1,6 +1,10 @@
 import FlashCardsDeck from "./FlashCardsDeck";
 
-function LeftPanel({ cards, newCard, setNewCard, isOnEditMode, setIsOnEditMode, cardToBeEdited, setCardToBeEdited, editCard, deleteCard}) {
+function LeftPanel({ cards, newCard, 
+                    setNewCard, isOnEditMode, 
+                    setIsOnEditMode, cardToBeEdited, 
+                    setCardToBeEdited, editCard, 
+                    deleteCard}) {
 
     function handleNewCardClick() {
         setNewCard(!newCard);

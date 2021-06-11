@@ -1,6 +1,6 @@
 import SearchBar from "./SearchBar";
 
-function RightPanel({ onSubmitQuery}) {
+function RightPanel({ onSubmitQuery, handleQuerySearch }) {
 
     return (
         <div className="right-panel">
@@ -9,7 +9,7 @@ function RightPanel({ onSubmitQuery}) {
                 <li>to cancel, click on the same button;</li>
                 <li>to search a specific word, enter search term below</li>
             </ul>
-            <SearchBar onSubmitQuery={onSubmitQuery} />
+            <SearchBar onSubmitQuery={onSubmitQuery} handleQuerySearch={handleQuerySearch} />
         </div>
     );
 }

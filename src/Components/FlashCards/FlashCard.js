@@ -19,7 +19,7 @@ function FlashCard({ card, isOnEditMode, setIsOnEditMode, cardToBeEdited, setCar
 
     return (
         <div className="flashcard">
-            <Link to={`/words/${id}`} className="link">
+            <Link to={`/words/${id}`} className="link-flashcard">
                 <h1 style={{textAlign: "center"}} className="headword-link">{headword}</h1><br></br>
             </Link>
             <p><i className="label">headword: </i><br></br><span style={{color: "darkred", fontWeight: "bolder"}}>{headword}</span></p><br></br>
