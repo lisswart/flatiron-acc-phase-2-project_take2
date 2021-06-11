@@ -1,6 +1,6 @@
 import FlashCardsDeck from "./FlashCardsDeck";
 
-function LeftPanel({ cards, newCard, 
+function LeftPanel({ cards, isOnSearchMode, query, newCard, 
                     setNewCard, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, editCard, 
@@ -12,6 +12,12 @@ function LeftPanel({ cards, newCard,
 
     return (
         <div className="left-panel-div">
+            <div className="sort-button-div">
+                <button className="sort-button">Sort ↑</button>
+                <button className="sort-button">Sort ↓</button>
+                <button className="sort-button">Search by functional label</button>
+                <button className="sort-button">Search by headword</button>
+            </div>
             {
                 newCard
                 ? <div className="new-button-div"><button className="new-button"
@@ -24,6 +30,8 @@ function LeftPanel({ cards, newCard,
                 </button></div>
             }
             <FlashCardsDeck cards={cards}
+                isOnSearchMode={isOnSearchMode}
+                query={query}
                 isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}
                 cardToBeEdited={cardToBeEdited}

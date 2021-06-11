@@ -5,8 +5,8 @@ function HangmanContainer() {
         <div className="hangman-header">
             <h1>Hangman</h1>
             <p>Find the hidden word - Enter a letter</p>
-            <div class="game-container">
-                <svg class="figure-container" 
+            <div className="game-container">
+                <svg className="figure-container" 
                 height="250" width="200">
                     {/* <!--Rod--> */}
                     <line x1="60" y1="20" x2="140" y2="20" />
@@ -53,25 +53,25 @@ function HangmanContainer() {
                     <line x1="" y1="" x2="" y2="" /> --> */}
                 </svg>
 
-                <div class="wrong-letters-container">
+                <div className="wrong-letters-container">
                     <div id="wrong-letters"></div>
                 </div>
 
-                <div class="word" id="word">
+                <div className="word" id="word">
                     
                 </div>
             </div>
 
             {/* <!-- Container for final messages --> */}
-            <div class="popup-container" id="popup-container">
-                <div class="popup button">
+            <div className="popup-container" id="popup-container">
+                <div className="popup button">
                     <h2 id="final-message">.</h2>
                     <button id="play-button">Play Again</button>
                 </div>
             </div>
 
             {/* <!-- Notification --> */}
-            <div class="notification-container" id="notification-container">
+            <div className="notification-container" id="notification-container">
                 <p>You have already entered this letter</p>
             </div>
         </div>

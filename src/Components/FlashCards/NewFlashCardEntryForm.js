@@ -59,10 +59,6 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
                         value={formState.verbalIllustration}
                         className="textarea" />
                 </div>
-                {/* <button onClick={handleCancelClick}
-                    className="button">
-                    Cancel
-                </button> */}
                 <button type="submit" className="button"
                         style={{marginTop: "1em"}}>Submit</button>           
             </form>            

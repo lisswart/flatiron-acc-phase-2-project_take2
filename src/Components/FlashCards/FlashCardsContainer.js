@@ -29,7 +29,12 @@ function FlashCardsContainer() {
         definition: "",
         verbalIllustration: ""
     });
+    const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
+
+    useEffect(() => {
+        console.log(isOnSearchMode);
+    })
     
     useEffect(() => {        
         fetch(LOCAL)
@@ -40,9 +45,9 @@ function FlashCardsContainer() {
     }, []);
 
     function handleQuerySearch() {
-        fetch(`${LOCAL}/${query}`)
+        fetch(`${LOCAL}`)
             .then(r => r.json())
-            .then(console.log);
+            .then(setCards);
     }
 
     function addCard(card) {
@@ -92,6 +97,8 @@ function FlashCardsContainer() {
     return (
         <div className="flashcards-container">
             <LeftPanel cards={cards}
+                isOnSearchMode={isOnSearchMode}
+                query={query}
                 newCard={newCard}
                 setNewCard={setNewCard} 
                 isOnEditMode={isOnEditMode}
@@ -114,7 +121,10 @@ function FlashCardsContainer() {
                         isOnEditMode={isOnEditMode}
                         setIsOnEditMode={setIsOnEditMode} 
                         editCard={editCard} />
-                : <RightPanel onSubmitQuery={setQuery}
+                :   <RightPanel 
+                            isOnSearchMode={isOnSearchMode}
+                            setIsOnSearchMode={setIsOnSearchMode}
+                            onSubmitQuery={setQuery}
                             handleQuerySearch={handleQuerySearch}  />
             } 
         </div>

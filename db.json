@@ -1,13 +1,6 @@
 {
   "words": [
     {
-      "id": 1,
-      "headword": "unfazed",
-      "functionalLabel": "adjective",
-      "definition": "not perturbed or disconcerted",
-      "verbalIllustration": "the protestors were unfazed by the prospect of arrest"
-    },
-    {
       "id": 2,
       "headword": "brat",
       "functionalLabel": "noun",
@@ -27,13 +20,6 @@
       "functionalLabel": "adjective",
       "definition": "annoyed or angry",
       "verbalIllustration": "I was cross with her for being so careless"
-    },
-    {
-      "id": 5,
-      "headword": "perturb",
-      "functionalLabel": "verb",
-      "definition": "to cause someone to be worried or upset",
-      "verbalIllustration": "It perturbed him that his son was thinking about leaving school"
     },
     {
       "id": 6,
@@ -125,6 +111,27 @@
       "definition": "to be copiously supplied",
       "verbalIllustration": "the area teems with entrepreneurs hoping to hit upon the next big thing",
       "id": 21
+    },
+    {
+      "headword": "crass",
+      "functionalLabel": "adjective",
+      "definition": ":having or showing no understanding of what is proper or acceptable  :rude or insensitive",
+      "verbalIllustration": "A few people seemed shocked by her crass comments.",
+      "id": 22
+    },
+    {
+      "headword": "run",
+      "functionalLabel": "verb",
+      "definition": ":to direct the business or activities of (something)",
+      "verbalIllustration": "She runs the restaurant.",
+      "id": 23
+    },
+    {
+      "headword": "run",
+      "functionalLabel": "verb",
+      "definition": ":to do (a test or check) on someone or something",
+      "verbalIllustration": "The doctors need to run some more tests.",
+      "id": 24
     }
   ]
 }
