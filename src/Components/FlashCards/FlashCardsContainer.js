@@ -12,8 +12,7 @@ const LOCAL = `http://localhost:4000/words`;
 function FlashCardsContainer() {
     //state of list of flashcards
     const [cards, setCards] = useState([]);
-    // const [isOnEntryMode, setIsOnEntryMode] = useState(false);
-    //state of new flashcard entry form
+    
     const [formState, setFormState] = useState({
         headword: "",
         functionalLabel: "",
@@ -34,6 +33,8 @@ function FlashCardsContainer() {
         definition: "",
         verbalIllustration: ""
     });
+
+    const [query, setQuery] = useState("");
     
     useEffect(() => {        
         fetch(LOCAL)
@@ -42,6 +43,10 @@ function FlashCardsContainer() {
                 setCards(cardObjs);
             });
     }, []);
+
+    function handleQuerySearch() {
+        fetch(`${LOCAL}`)
+    }
 
     function addCard(card) {
         fetch(LOCAL, {
@@ -119,7 +124,7 @@ function FlashCardsContainer() {
                                                 isOnEditMode={isOnEditMode}
                                                 setIsOnEditMode={setIsOnEditMode} 
                                                 editCard={editCard} />
-                        : <RightPanel />
+                        : <RightPanel onSubmitQuery={setQuery} />
                     } 
                 </Route>
             </Switch>

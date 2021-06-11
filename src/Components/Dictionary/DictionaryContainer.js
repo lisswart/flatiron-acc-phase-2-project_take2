@@ -3,7 +3,7 @@
 function DictionaryContainer() {
     return (
         <div>
-            <h1>Dictionary</h1>
+            <h1 style={{textAlign: "center"}}>Dictionary</h1>
         </div>
     );
 }

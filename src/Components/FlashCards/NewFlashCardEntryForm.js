@@ -1,4 +1,4 @@
-//isOnEntryMode, setIsOnEntryMode, 
+
 function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) {
 
     function handleNewEntryChange(event) {
@@ -20,11 +20,13 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
         };
         addCard(card);
         setNewCard(false);
+        setFormState({
+            headword: "",
+            functionalLabel: "",
+            definition: "",
+            verbalIllustration: ""
+        })
     }
-
-    // function handleCancelClick() {
-    //     setIsOnEntryMode(!isOnEntryMode);
-    // }
 
     return (
         <div className="form-view">
@@ -61,7 +63,8 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
                     className="button">
                     Cancel
                 </button> */}
-                <button type="submit" className="button">Submit</button>           
+                <button type="submit" className="button"
+                        style={{marginTop: "1em"}}>Submit</button>           
             </form>            
         </div>
     );

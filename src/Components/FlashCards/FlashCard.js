@@ -22,10 +22,10 @@ function FlashCard({ card, isOnEditMode, setIsOnEditMode, cardToBeEdited, setCar
             <Link to={`/words/${id}`} className="link">
                 <h1 style={{textAlign: "center"}} className="headword-link">{headword}</h1><br></br>
             </Link>
-            <p><i>headword: </i><br></br>{headword}</p><br></br>
-            <p><i>functional label: </i><br></br>{functionalLabel}</p><br></br>
-            <p><i>definition: </i><br></br>{definition}</p><br></br>
-            <p><i>verbal illustration: </i><br></br>{verbalIllustration}</p><br></br>
+            <p><i className="label">headword: </i><br></br><span style={{color: "darkred", fontWeight: "bolder"}}>{headword}</span></p><br></br>
+            <p><i className="label">functional label: </i><br></br><span style={{color: "navy", fontWeight: "bolder"}}>{functionalLabel}</span></p><br></br>
+            <p><i className="label">definition: </i><br></br><span style={{color: "darkslategrey"}}>{definition}</span></p><br></br>
+            <p><i className="label">verbal illustration: </i><br></br><span style={{color: "darkslategrey"}}>{verbalIllustration}</span></p><br></br>
             <button className="button" onClick={handleEditClick}>Edit</button>
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>Delete</button>
         </div>

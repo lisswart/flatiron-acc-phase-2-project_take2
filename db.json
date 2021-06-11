@@ -90,6 +90,41 @@
       "definition": "to remain in place in readiness or expectation of something",
       "verbalIllustration": "decided to bide her time until she had an opportunity to switch jobs",
       "id": 16
+    },
+    {
+      "headword": "flutter",
+      "functionalLabel": "verb",
+      "definition": "to move or behave in a nervous and excited way",
+      "verbalIllustration": "She nervously fluttered around the office",
+      "id": 17
+    },
+    {
+      "headword": "scope out",
+      "functionalLabel": "phrasal verb",
+      "definition": "to look at (someone or something) especially in order to get information",
+      "verbalIllustration": "He wants to scope out all of the possibilities before deciding what to do",
+      "id": 18
+    },
+    {
+      "headword": "scope",
+      "functionalLabel": "noun",
+      "definition": "an area over which activity, capacity, or influence extends",
+      "verbalIllustration": "the company's scope of operations now spans two continents",
+      "id": 19
+    },
+    {
+      "headword": "take",
+      "functionalLabel": "verb",
+      "definition": "to achieve a victory over",
+      "verbalIllustration": "I know we can take that team",
+      "id": 20
+    },
+    {
+      "headword": "teem",
+      "functionalLabel": "verb",
+      "definition": "to be copiously supplied",
+      "verbalIllustration": "the area teems with entrepreneurs hoping to hit upon the next big thing",
+      "id": 21
     }
   ]
 }

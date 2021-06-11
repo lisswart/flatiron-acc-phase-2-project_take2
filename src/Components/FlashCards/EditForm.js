@@ -52,11 +52,11 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
                         className="textarea" />
                 </div>
                 <button onClick={handleCancelClick}
-                    className="button">
+                    className="button" style={{marginTop: "1em"}}>
                     Cancel
                 </button>
                 <button type="submit"
-                    className="button">
+                    className="button" style={{marginTop: "1em"}}>
                     Submit
                 </button>
             </form>
