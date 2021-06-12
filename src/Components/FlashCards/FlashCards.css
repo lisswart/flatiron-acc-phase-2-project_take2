@@ -162,6 +162,19 @@ li {
     text-decoration: none;
 }
 
+.click-more-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.click-more-button {
+    margin: 2em 0 2em 0;
+    max-width: 3em;
+    min-width: 3em;
+    max-height: 3em;
+    border-radius: 50%;
+}
+
 .form-view {
     display: flex;
     flex-direction: column;

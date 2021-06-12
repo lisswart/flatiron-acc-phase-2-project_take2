@@ -1,22 +1,31 @@
 import FlashCard from "./FlashCard";
+import { useState } from "react";
 
 function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode, 
                         setIsOnEditMode, cardToBeEdited, 
                         setCardToBeEdited, editCard, 
                         deleteCard }) {
+    
+    const [cardIndex, setCardIndex] = useState(0);
 
     function displayCards() {
-        return cards.map((card) => {
-            return (
-                <FlashCard card={card} key={card.id}
-                    isOnEditMode={isOnEditMode}
-                    setIsOnEditMode={setIsOnEditMode}
-                    cardToBeEdited={cardToBeEdited}
-                    setCardToBeEdited={setCardToBeEdited}
-                    editCard={editCard}
-                    deleteCard={deleteCard} />
-            );
+        return cards
+                .slice(cardIndex, cardIndex + 4)
+                .map((card) => {
+                    return (
+                        <FlashCard card={card} key={card.id}
+                            isOnEditMode={isOnEditMode}
+                            setIsOnEditMode={setIsOnEditMode}
+                            cardToBeEdited={cardToBeEdited}
+                            setCardToBeEdited={setCardToBeEdited}
+                            editCard={editCard}
+                            deleteCard={deleteCard} />
+                    );
         });
+    }
+
+    function handleClickMore() {
+        setCardIndex((cardIndex) => (cardIndex + 4) % cards.length)
     }
 
     function isMatched(card) {
@@ -59,6 +68,12 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
                     )   
                 :   displayCards()
             }
+            <div className="click-more-button-container">
+                <button onClick={handleClickMore}
+                        className="click-more-button">
+                    ▶
+                </button>
+            </div>
         </ol>
     );
 }
