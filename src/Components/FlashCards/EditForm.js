@@ -27,8 +27,8 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
     }
 
     return (
-        <div className="form-view">
-            <form onSubmit={handleSubmit}>
+        <div>
+            <form onSubmit={handleSubmit} className="form-view">
                 <div className="inputbox label" >
                     <strong>headword: </strong>
                     <span style={{color: "moccasin"}}>{cardToBeEdited.headword}</span>
@@ -52,14 +52,16 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
                         value={editFormState.verbalIllustration}
                         className="textarea" />
                 </div>
-                <button onClick={handleCancelClick}
-                    className="button" style={{marginTop: "1em"}}>
-                    Cancel
-                </button>
-                <button type="submit"
-                    className="button" style={{marginTop: "1em"}}>
-                    Submit
-                </button>
+                <div style={{display: "flex"}}>
+                    <button onClick={handleCancelClick}
+                        className="button" style={{marginTop: "1em"}}>
+                        Cancel
+                    </button>
+                    <button type="submit"
+                        className="button" style={{marginTop: "1em"}}>
+                        Submit
+                    </button>
+                </div>
             </form>
         </div>
     );

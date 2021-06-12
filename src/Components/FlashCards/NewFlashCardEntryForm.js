@@ -29,8 +29,8 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
     }
 
     return (
-        <div className="form-view">
-            <form onSubmit={handleSubmit}>
+        <div>
+            <form onSubmit={handleSubmit} className="form-view">
                 <div className="inputbox" >
                     <label><strong>headword: </strong></label>
                     <input type="text" onChange={handleNewEntryChange} 

@@ -1,6 +1,6 @@
 .flashcards-container {
     display: grid;
-    grid-template-columns: 5fr 5fr;
+    grid-template-columns: 6fr 4fr;
 }
 
 .left-panel-div {
@@ -17,7 +17,8 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(100, 68, 68);
+    /* background-color: rgb(100, 68, 68); */
+    background-color: transparent;
     padding: 0 2em 2em 1.2em;
     margin: 2em 2em 2em 0;
     border-radius: 10px;
@@ -41,9 +42,6 @@ li {
 }
 
 .no-match {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
     color: rgb(156, 118, 118);
     font-size: 3em;
     margin-top: 3em;
@@ -51,18 +49,22 @@ li {
 }
 
 .flashcard {
-    padding: 2em 3em 3em 5em;
+    padding: 2em 1em 1em 2em;
     margin: 1.5em;
-    max-width: 32em;
+    max-width: 245px;
+    max-height: 375px;
     font-size: 16px;
-    background-color: rgba(114, 113, 113, 0.692);
+    /* background-color: rgba(216, 212, 212, 0.692); */
+    background-color: rgba(216, 191, 216, 0.836);
     color: cornsilk;
     border-radius: 10px;
-    box-shadow: 0 8px 38px black;
+    border: 0.3em solid lemonchiffon;
 }
 
 .card-list {
     list-style-position: inside;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .flashcard::marker {
@@ -107,6 +109,7 @@ li {
     font-weight: bolder;
     margin-top: 4em;
     perspective: 1000px;
+    border: 0.2em solid lemonchiffon;
 }
 
 .sort-button-div {
@@ -161,10 +164,11 @@ li {
 
 .form-view {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-evenly;
-    padding: 4em 0 0 0;
+    padding: 2em;
     background-color: rosybrown;
     color: cornsilk;
     font-size: 18px;
@@ -186,6 +190,10 @@ li {
      margin-left: 2em;
  }
 
+ .label-definition {
+     color:honeydew;
+ }
+
  .textarea {
     min-height: 7em;
     min-width: 25em;
@@ -199,6 +207,7 @@ li {
 
 .inputbar {
     background-color: bisque;
+    max-width: 26em;
     min-height: 35px;
     border-radius: 5px;
     padding-left: 1em;
