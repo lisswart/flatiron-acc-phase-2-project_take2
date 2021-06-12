@@ -8,7 +8,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: navajowhite;
+    /* background-color: navajowhite; */
+    background-color: rgb(37, 37, 37);
 }
 
 .right-panel {
@@ -17,7 +18,9 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    background-color: rgb(105, 1, 1);
+    /* background-color: rgb(105, 1, 1); */
+    /* background-color: peru; */
+    background-color: rosybrown;
     padding: 0 2em 0 2em;
 }
 
@@ -49,10 +52,18 @@ li {
     padding: 2em 3em 3em 5em;
     margin: 1.5em;
     font-size: 16px;
-    background-color: rgba(73, 136, 49, 0.733);
+    background-color: rosybrown;
     color: cornsilk;
     border-radius: 10px;
-    box-shadow: 0 18px 38px darkolivegreen;
+    box-shadow: 0 8px 38px rosybrown;
+}
+
+.card-list {
+    list-style-position: inside;
+}
+
+.flashcard::marker {
+    color: navy;
 }
 
 .card-on-view-container {
@@ -66,7 +77,7 @@ li {
     box-shadow: 0 18px 38px black;
     box-sizing: border-box;
     padding: 2em;
-    background-color: tan;
+    background-color: rosybrown;
     color: rgb(51, 51, 51);
     font-size: 20px;
     font-weight: bolder;
@@ -136,7 +147,7 @@ li {
 }
 
 .headword-link {
-    box-shadow: 0 18px 38px darkolivegreen;
+    box-shadow: 0 18px 38px rgb(65, 65, 65);
     border-radius: 10px;
 }
 
@@ -146,7 +157,7 @@ li {
     align-items: flex-start;
     justify-content: space-evenly;
     padding: 4em 0 0 0;
-    background-color: maroon;
+    background-color: rosybrown;
     color: cornsilk;
     font-size: 18px;
     font-weight: bolder;
@@ -164,11 +175,13 @@ li {
  }
 
  .textarea {
-     min-height: 7em;
-     max-width: 25em;
-     background-color: bisque;
-     border-radius: 5px;
-     padding: 1em 1em 0 1em;
+    min-height: 7em;
+    max-width: 25em;
+    background-color: bisque;
+    border-radius: 5px;
+    padding: 1em 1em 0 1em;
+    outline: none;
+    border: 1px solid bisque;
 }
 
 .inputbar {
@@ -176,4 +189,6 @@ li {
     min-height: 35px;
     border-radius: 5px;
     padding-left: 1em;
+    outline: none;
+    border: 1px solid bisque;
 }

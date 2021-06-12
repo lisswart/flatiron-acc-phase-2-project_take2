@@ -43,7 +43,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
     }
 
     return (
-        <ul>
+        <ol className="card-list">
             {
                 cards.length === 0
                 ?   <div className="loading-flashcard">Loading...</div>
@@ -51,7 +51,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
                 ?   displayMatchedCards()
                 :   displayCards()
             }
-        </ul>
+        </ol>
     );
 }
 

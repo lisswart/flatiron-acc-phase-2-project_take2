@@ -9,7 +9,8 @@
 }
 
 #header {
-  background-color: rgb(44, 24, 24);
+  /* background-color: rgb(44, 24, 24); */
+  background-color: rgb(37, 37, 37);
   color: cornsilk;
   display: flex;
   flex-direction: column;
@@ -47,11 +48,13 @@
   font-size: 1.5rem;
   font-weight: bolder;
   padding: 1em 0 1em 0;
-  background-color: rgb(59, 90, 23);
+  /* background-color: rgb(59, 90, 23); */
+  background-color: rosybrown;
 }
 
 .link {
-  background-color: maroon;
+  /* background-color: maroon; */
+  background-color: rgb(37, 37, 37);
   color: cornsilk;
   text-decoration: none;
   border-radius: 10px;
@@ -65,8 +68,10 @@
 }
 
 .link:hover {
-  color: maroon;
-  background-color: moccasin;
+  /* color: maroon; */
+  color: rgb(37, 37, 37);
+  /* background-color: moccasin; */
+  background-color: rosybrown;
 }
 
 .link-flashcard:hover {
@@ -79,8 +84,8 @@
 }
 
 .headword-link:hover {
-  background-color: peachpuff;
-  color: cornflowerblue;
+  background-color: rgb(93, 107, 119);
+  color: aliceblue;
 }
 
 .homepage-wrapper {
@@ -101,8 +106,9 @@
   min-height: 10em;
   border-radius: 50%;
   text-align: center;
-  background-color: black;
-  box-shadow: 0 18px 38px darksalmon;
+  background-color: antiquewhite;
+  color: black;
+  box-shadow: 0 18px 38px gainsboro;
 }
 
 .loading {
