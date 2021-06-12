@@ -54,11 +54,22 @@ li {
     max-width: 245px;
     max-height: 375px;
     font-size: 16px;
-    /* background-color: rgba(216, 212, 212, 0.692); */
     background-color: rgba(216, 191, 216, 0.836);
     color: cornsilk;
     border-radius: 10px;
     border: 0.3em solid lemonchiffon;
+}
+
+.flashcard:first-of-type{
+    background-color: skyblue;
+}
+
+.flashcard:last-of-type {
+    background-color: rgb(147, 136, 214);
+}
+
+#index-0 {
+    background-color: red;
 }
 
 .card-list {
@@ -96,20 +107,55 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 1000px;
 }
 
 .card-on-view-wrapper {
+    max-width: 265px;
+    max-height: 395px;
+    min-width: 265px;
+    min-height: 395px;
     border-radius: 10px;
     box-shadow: 0 18px 38px black;
     box-sizing: border-box;
     padding: 2em;
     background-color: rosybrown;
     color: rgb(51, 51, 51);
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
     margin-top: 4em;
     perspective: 1000px;
     border: 0.2em solid lemonchiffon;
+    position: relative;
+    transition: transform 3s;
+    transform-style: preserve-3d;
+}
+
+.card-on-view-container:hover .card-on-view-wrapper {
+    transform: rotateY(180deg);
+}
+
+.card-on-view-front, .card-on-view-back {
+    backface-visibility: hidden;
+}
+
+.card-on-view-front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-on-view-back {
+    transform: rotateY(180deg);
+}
+
+.card-on-view-headword {
+    color: maroon;
+}
+
+.card-on-view-functional-label {
+    color: navy;
+    margin-bottom: 2em;
 }
 
 .sort-button-div {
@@ -172,6 +218,7 @@ li {
     max-width: 3em;
     min-width: 3em;
     max-height: 3em;
+    min-height: 3em;
     border-radius: 50%;
 }
 

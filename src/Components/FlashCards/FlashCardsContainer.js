@@ -122,6 +122,7 @@ function FlashCardsContainer() {
                         setIsOnEditMode={setIsOnEditMode} 
                         editCard={editCard} />
                 :   <RightPanel 
+                        cards={cards}
                         isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
                         onSubmitQuery={setQuery}

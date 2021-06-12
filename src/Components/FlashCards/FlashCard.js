@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-function FlashCard({ card, isOnEditMode, 
+function FlashCard({ index, card, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, deleteCard }) {
     const {id, headword, functionalLabel, definition, verbalIllustration} = card;
@@ -20,7 +20,7 @@ function FlashCard({ card, isOnEditMode,
     }
 
     return (
-        <li className="flashcard">
+        <li className="flashcard" id={index}>
             <NavLink to={`/words/${id}`}>
                 <div className="link-flashcard">
                     <pre style={{color: "rgb(105, 1, 1)", fontWeight: "bolder"}}>

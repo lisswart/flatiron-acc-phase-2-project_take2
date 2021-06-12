@@ -11,9 +11,10 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
     function displayCards() {
         return cards
                 .slice(cardIndex, cardIndex + 4)
-                .map((card) => {
+                .map((card, index) => {
                     return (
-                        <FlashCard card={card} key={card.id}
+                        <FlashCard index={`index-${String.toString(index)}`}
+                            card={card} key={card.id}
                             isOnEditMode={isOnEditMode}
                             setIsOnEditMode={setIsOnEditMode}
                             cardToBeEdited={cardToBeEdited}
