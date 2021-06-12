@@ -29,7 +29,8 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
             return (
                 Object.keys(card).length === 0
                 ?   <div className="no-match">
-                        No match found
+                        <>No match found</><br></br>
+                        <div style={{color: "orange"}}>(˘･_･˘)</div>
                     </div>     
                 :   <FlashCard card={card} key={card.id}
                         isOnEditMode={isOnEditMode}
@@ -50,10 +51,11 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
                 :   isOnSearchMode
                 ?   (
                         cards.filter(isMatched)
-                        ?   <div className="no-match">
-                                <div>No match found</div>
+                        ?   displayMatchedCards()
+                        :   <div className="no-match">
+                                <>No match found</>
+                                <pre style={{color: "orange"}}>   (˘･_･˘)</pre>
                             </div> 
-                        :   displayMatchedCards()
                     )   
                 :   displayCards()
             }

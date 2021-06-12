@@ -21,37 +21,29 @@ function FlashCard({ card, isOnEditMode,
 
     return (
         <li className="flashcard">
-            <NavLink to={`/words/${id}`} className="link-flashcard">
-                <h1 style={{textAlign: "center"}} className="headword-link">{headword}</h1><br></br>
+            <NavLink to={`/words/${id}`}>
+                <div className="link-flashcard">
+                    <pre style={{color: "rgb(105, 1, 1)", fontWeight: "bolder"}}>
+                        {headword}     
+                    </pre>
+                    <span style={{color: "navy", fontWeight: "bolder"}}>
+                        {functionalLabel}
+                    </span>
+                </div>
             </NavLink>
+            
             <p>
-                <i className="label">headword: </i>
+                <i className="label-definition">definition: </i>
                 <br></br>
-                <span style={{color: "rgb(105, 1, 1)", fontWeight: "bolder"}}>
-                    {headword}
-                </span>
-            </p>
-            <br></br>
-            <p>
-                <i className="label">functional label: </i>
-                <br></br>
-                <span style={{color: "royalblue", fontWeight: "bolder"}}>
-                    {functionalLabel}
-                </span>
-            </p>
-            <br></br>
-            <p>
-                <i className="label">definition: </i>
-                <br></br>
-                <span style={{color: "rgb(37, 37, 37)"}}>
+                <span style={{color: "rgb(7, 7, 7)"}}>
                     {definition}
                 </span>
             </p>
             <br></br>
             <p>
-                <i className="label">verbal illustration: </i>
+                <i className="label-definition">verbal illustration: </i>
                 <br></br>
-                <span style={{color: "rgb(37, 37, 37)"}}>
+                <span style={{color: "rgb(7, 7, 7)"}}>
                     {verbalIllustration}
                 </span>
             </p>

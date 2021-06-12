@@ -9,7 +9,6 @@
 }
 
 #header {
-  /* background-color: rgb(44, 24, 24); */
   background-color: rgb(37, 37, 37);
   color: cornsilk;
   display: flex;
@@ -24,13 +23,11 @@
 
 .header-child {
   color: navajowhite;
-  box-shadow: 0 5px 15px navajowhite;
-  padding: 1em;
-  margin: 1em;
+  padding: 0.3em;
 }
 
 #footer {
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(80, 79, 79);
   color: cornsilk;
   position: absolute;
   width: 100%;
@@ -50,13 +47,12 @@
   font-size: 1.5rem;
   font-weight: bolder;
   padding: 1em 0 1em 0;
-  background-color: rosybrown;
+  background-color: rgb(116, 77, 77);
   margin: 0 1em 0 1em;
   border-radius: 10px;
 }
 
 .link {
-  /* background-color: maroon; */
   background-color: rgb(75, 74, 74);
   color: cornsilk;
   text-decoration: none;
@@ -65,30 +61,9 @@
   padding: 1em;
 }
 
-.link-flashcard {
-  color: cornsilk;
-  text-decoration: none;
-}
-
 .link:hover {
-  /* color: maroon; */
   color: rgb(37, 37, 37);
-  /* background-color: moccasin; */
   background-color: rosybrown;
-}
-
-.link-flashcard:hover {
-  width: max-content;
-}
-
-.headword-link {
-  width: max-content;
-  padding: 0.3em;
-}
-
-.headword-link:hover {
-  background-color: rgb(93, 107, 119);
-  color: aliceblue;
 }
 
 .homepage-wrapper {
@@ -109,9 +84,9 @@
   min-height: 10em;
   border-radius: 50%;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: lemonchiffon;
   color: black;
-  box-shadow: 0 18px 38px gainsboro;
+  box-shadow: 0 4px 28px rgba(255, 250, 205, 0.747);
 }
 
 .loading {
