@@ -17,18 +17,18 @@ function LeftPanel({ cards, isOnSearchMode, query, newCard,
                 <button className="sort-button">Sort ↓</button>
                 <button className="sort-button">Search by functional label</button>
                 <button className="sort-button">Search by headword</button>
+                {
+                    newCard
+                    ? <div className="new-button-div"><button className="new-button"
+                        onClick={handleNewCardClick}>
+                        Cancel
+                    </button></div>
+                    : <div className="new-button-div"><button className="new-button"
+                        onClick={handleNewCardClick}>
+                        New
+                    </button></div>
+                }
             </div>
-            {
-                newCard
-                ? <div className="new-button-div"><button className="new-button"
-                    onClick={handleNewCardClick}>
-                    Cancel
-                </button></div>
-                : <div className="new-button-div"><button className="new-button"
-                    onClick={handleNewCardClick}>
-                    New
-                </button></div>
-            }
             <FlashCardsDeck cards={cards}
                 isOnSearchMode={isOnSearchMode}
                 query={query}

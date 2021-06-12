@@ -17,7 +17,9 @@
   justify-content: center;
   align-items: center;
   padding: 2em 0 3em 0;
-  box-shadow: 0 18px 38px navajowhite;
+  box-shadow: 0 2px 8px navajowhite;
+  border-radius: 0 0px 10px 10px;
+  margin: 0 2em 2em 2em;
 }
 
 .header-child {
@@ -48,17 +50,18 @@
   font-size: 1.5rem;
   font-weight: bolder;
   padding: 1em 0 1em 0;
-  /* background-color: rgb(59, 90, 23); */
   background-color: rosybrown;
+  margin: 0 1em 0 1em;
+  border-radius: 10px;
 }
 
 .link {
   /* background-color: maroon; */
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(75, 74, 74);
   color: cornsilk;
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 0 18px 38px black;
+  box-shadow: 0 18px 38px rgb(37, 37, 37);
   padding: 1em;
 }
 

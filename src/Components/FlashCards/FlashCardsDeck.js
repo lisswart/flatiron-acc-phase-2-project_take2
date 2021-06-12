@@ -27,17 +27,17 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
         const filteredCards = cards.filter(isMatched);
         return filteredCards.map(card => {
             return (
-                Object.keys(card).length !== 0
-                ?   <FlashCard card={card} key={card.id}
-                    isOnEditMode={isOnEditMode}
-                    setIsOnEditMode={setIsOnEditMode}
-                    cardToBeEdited={cardToBeEdited}
-                    setCardToBeEdited={setCardToBeEdited}
-                    editCard={editCard}
-                    deleteCard={deleteCard} />
-                :   <div className="no-match">
-                        <div>No match found</div>
-                    </div>                
+                Object.keys(card).length === 0
+                ?   <div className="no-match">
+                        No match found
+                    </div>     
+                :   <FlashCard card={card} key={card.id}
+                        isOnEditMode={isOnEditMode}
+                        setIsOnEditMode={setIsOnEditMode}
+                        cardToBeEdited={cardToBeEdited}
+                        setCardToBeEdited={setCardToBeEdited}
+                        editCard={editCard}
+                        deleteCard={deleteCard} />           
             );
         });        
     }
@@ -48,7 +48,13 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
                 cards.length === 0
                 ?   <div className="loading-flashcard">Loading...</div>
                 :   isOnSearchMode
-                ?   displayMatchedCards()
+                ?   (
+                        cards.filter(isMatched)
+                        ?   <div className="no-match">
+                                <div>No match found</div>
+                            </div> 
+                        :   displayMatchedCards()
+                    )   
                 :   displayCards()
             }
         </ol>
