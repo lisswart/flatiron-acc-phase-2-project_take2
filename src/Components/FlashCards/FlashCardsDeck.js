@@ -11,9 +11,9 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
     function displayCards() {
         return cards
                 .slice(cardIndex, cardIndex + 4)
-                .map((card, index) => {
+                .map((card) => {
                     return (
-                        <FlashCard index={`index-${String.toString(index)}`}
+                        <FlashCard 
                             card={card} key={card.id}
                             isOnEditMode={isOnEditMode}
                             setIsOnEditMode={setIsOnEditMode}
@@ -54,7 +54,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
     }
 
     return (
-        <ol className="card-list">
+        <ul className="card-list">
             {
                 cards.length === 0
                 ?   <div className="loading-flashcard">Loading...</div>
@@ -75,7 +75,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query, isOnEditMode,
                     ▶
                 </button>
             </div>
-        </ol>
+        </ul>
     );
 }
 

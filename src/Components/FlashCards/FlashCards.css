@@ -68,10 +68,6 @@ li {
     background-color: rgb(147, 136, 214);
 }
 
-#index-0 {
-    background-color: red;
-}
-
 .card-list {
     list-style-position: inside;
     display: flex;

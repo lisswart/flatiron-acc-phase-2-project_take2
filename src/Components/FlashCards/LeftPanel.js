@@ -10,13 +10,41 @@ function LeftPanel({ cards, isOnSearchMode, query, newCard,
         setNewCard(!newCard);
     }
 
+    function handleSortClickIncreasing() {
+        return alert("increasing");
+    }
+
+    function handleSortClickDecreasing() {
+        return alert("decreasing");
+    }
+
+    function handleSortClickByFunctionalLabel() {
+        return alert("functional label");
+    }
+
+    function handleSortClickByHeadword() {
+        return alert("headword");
+    }
+
     return (
         <div className="left-panel-div">
             <div className="sort-button-div">
-                <button className="sort-button">Sort ↑</button>
-                <button className="sort-button">Sort ↓</button>
-                <button className="sort-button">Search by functional label</button>
-                <button className="sort-button">Search by headword</button>
+                <button className="sort-button"
+                        onClick={handleSortClickIncreasing}>
+                        Sort ↑
+                </button>
+                <button className="sort-button"
+                        onClick={handleSortClickDecreasing}>
+                        Sort ↓
+                </button>
+                <button className="sort-button"
+                        onClick={handleSortClickByFunctionalLabel}>
+                        Search by functional label
+                </button>
+                <button className="sort-button"
+                        onClick={handleSortClickByHeadword}>
+                        Search by headword
+                </button>
                 {
                     newCard
                     ? <div className="new-button-div"><button className="new-button"
