@@ -1,6 +1,13 @@
 {
   "words": [
     {
+      "id": 1,
+      "headword": "unfazed",
+      "functionalLabel": "adjective",
+      "definition": "not perturbed or disconcerted",
+      "verbalIllustration": "the protestors were unfazed by the prospect of arrest"
+    },
+    {
       "id": 2,
       "headword": "brat",
       "functionalLabel": "noun",
@@ -20,6 +27,13 @@
       "functionalLabel": "adjective",
       "definition": "annoyed or angry",
       "verbalIllustration": "I was cross with her for being so careless"
+    },
+    {
+      "id": 5,
+      "headword": "perturb",
+      "functionalLabel": "verb",
+      "definition": "to cause someone to be worried or upset",
+      "verbalIllustration": "It perturbed him that his son was thinking about leaving school"
     },
     {
       "id": 6,
@@ -43,95 +57,256 @@
       "verbalIllustration": "if you continue to dawdle, we'll be late for sure"
     },
     {
-      "headword": "fret",
+      "id": 9,
+      "headword": "dart",
       "functionalLabel": "verb",
-      "definition": "to worry or be concerned",
-      "verbalIllustration": "I was sure we wouldn't get there in time, but she told me not to fret.",
+      "definition": "to make an irregular series of quick, sudden movements",
+      "verbalIllustration": "the housefly darted about the room until it found an open window and flew out"
+    },
+    {
+      "headword": "post",
+      "functionalLabel": "verb",
+      "definition": ":to put up (a sign, notice, etc.) so that it can be seen by many people",
+      "verbalIllustration": "The professor posted (up) the students's exam grades outside her office",
+      "id": 10
+    },
+    {
+      "headword": "post",
+      "functionalLabel": "verb",
+      "definition": ":to make (something) officially known to many people",
+      "verbalIllustration": "The company posted increased profits for the third quarter.",
+      "id": 11
+    },
+    {
+      "headword": "post",
+      "functionalLabel": "verb",
+      "definition": ":to add (a message) to an online message board ",
+      "verbalIllustration": "She posts regularly to several newsgroups.",
       "id": 12
     },
     {
-      "headword": "cake",
+      "headword": "post",
       "functionalLabel": "verb",
-      "definition": "to cover something with an outer layer that becomes hard as it dries",
-      "verbalIllustration": "The mud had caked on his boots.",
+      "definition": ":to assign (someone, such as a guard) to stand or stay at a particular place",
+      "verbalIllustration": "Paramedics were posted nearby.",
       "id": 13
     },
     {
-      "headword": "brook",
-      "functionalLabel": "verb",
-      "definition": "to put up with something painful or difficult",
-      "verbalIllustration": "I will not brook insults from my own employees",
-      "id": 14
-    },
-    {
-      "headword": "bide",
-      "functionalLabel": "verb",
-      "definition": "to remain in place in readiness or expectation of something",
-      "verbalIllustration": "I promise you that if you bide yet a little longer, all will come to pass just as you desire",
-      "id": 15
-    },
-    {
-      "headword": "bide one's time",
-      "functionalLabel": "phrase",
-      "definition": "to remain in place in readiness or expectation of something",
-      "verbalIllustration": "decided to bide her time until she had an opportunity to switch jobs",
-      "id": 16
-    },
-    {
-      "headword": "flutter",
-      "functionalLabel": "verb",
-      "definition": "to move or behave in a nervous and excited way",
-      "verbalIllustration": "She nervously fluttered around the office",
-      "id": 17
-    },
-    {
-      "headword": "scope out",
-      "functionalLabel": "phrasal verb",
-      "definition": "to look at (someone or something) especially in order to get information",
-      "verbalIllustration": "He wants to scope out all of the possibilities before deciding what to do",
-      "id": 18
-    },
-    {
-      "headword": "scope",
+      "id": 14,
+      "headword": "post",
       "functionalLabel": "noun",
-      "definition": "an area over which activity, capacity, or influence extends",
-      "verbalIllustration": "the company's scope of operations now spans two continents",
-      "id": 19
+      "definition": ":a piece of wood or metal that is set in an upright position into or on the ground especially as a support or marker",
+      "verbalIllustration": "fence posts"
     },
     {
-      "headword": "take",
+      "id": 15,
+      "headword": "clench",
       "functionalLabel": "verb",
-      "definition": "to achieve a victory over",
-      "verbalIllustration": "I know we can take that team",
-      "id": 20
+      "definition": ":to set (something) in a tightly closed position",
+      "verbalIllustration": "His jaw clenched and unclenched as he listened to the speech."
     },
     {
-      "headword": "teem",
+      "id": 16,
+      "headword": "clench",
       "functionalLabel": "verb",
-      "definition": "to be copiously supplied",
-      "verbalIllustration": "the area teems with entrepreneurs hoping to hit upon the next big thing",
-      "id": 21
+      "definition": ":to hold (something) tightly",
+      "verbalIllustration": "She danced alone, with a rose clenched in her teeth."
     },
     {
-      "headword": "crass",
-      "functionalLabel": "adjective",
-      "definition": ":having or showing no understanding of what is proper or acceptable  :rude or insensitive",
-      "verbalIllustration": "A few people seemed shocked by her crass comments.",
-      "id": 22
+      "id": 17,
+      "headword": "clench",
+      "functionalLabel": "noun",
+      "definition": ":the act or manner of holding",
+      "verbalIllustration": "fearful that his suitcase might be stolen, he never once relaxed his clench on the handle"
     },
     {
-      "headword": "run",
+      "id": 18,
+      "headword": "clench",
       "functionalLabel": "verb",
-      "definition": ":to direct the business or activities of (something)",
-      "verbalIllustration": "She runs the restaurant.",
-      "id": 23
+      "definition": ":to have or keep in one's hands",
+      "verbalIllustration": "clenched a tissue in his hands as he told his story of misfortune"
     },
     {
-      "headword": "run",
+      "id": 19,
+      "headword": "clutch",
       "functionalLabel": "verb",
-      "definition": ":to do (a test or check) on someone or something",
-      "verbalIllustration": "The doctors need to run some more tests.",
-      "id": 24
+      "definition": ":to have or keep in one's hands",
+      "verbalIllustration": "he clutched the eggs carefully so he wouldn't drop them"
+    },
+    {
+      "id": 20,
+      "headword": "clasp",
+      "functionalLabel": "verb",
+      "definition": ":to fasten (something) with a clasp",
+      "verbalIllustration": "He clasped the keys to his belt"
+    },
+    {
+      "id": 21,
+      "headword": "clasp",
+      "functionalLabel": "verb",
+      "definition": ":to hold (someone or something) tightly with your hands or arms",
+      "verbalIllustration": "He clasped her hand gently/firmly."
+    },
+    {
+      "id": 22,
+      "headword": "invested",
+      "functionalLabel": "verb",
+      "definition": ":to cause (as a person) to become filled or saturated with a certain quality or principle",
+      "verbalIllustration": "invested the film with his own enthusiasm for the wonders of flight"
+    },
+    {
+      "id": 23,
+      "headword": "invested",
+      "functionalLabel": "verb",
+      "definition": ":to furnish freely or naturally with some power, quality, or attribute",
+      "verbalIllustration": "a woman invested with the strong desire to make the world a better place"
+    },
+    {
+      "id": 24,
+      "headword": "invest",
+      "functionalLabel": "verb",
+      "definition": ":to give official or legal power to",
+      "verbalIllustration": "invested him with power of attorney"
+    },
+    {
+      "id": 25,
+      "headword": "clutch",
+      "functionalLabel": "noun",
+      "definition": ":a number of things considered as a unit",
+      "verbalIllustration": "a clutch of medals adorned the general's chest"
+    },
+    {
+      "id": 26,
+      "headword": "clutch",
+      "functionalLabel": "noun",
+      "definition": ":a usually small number of persons considered as a unit",
+      "verbalIllustration": "a clutch of people traveling together"
+    },
+    {
+      "id": 27,
+      "headword": "clutch",
+      "functionalLabel": "noun",
+      "definition": ":a time or state of affairs requiring prompt or decisive action",
+      "verbalIllustration": "a football quarterback who always comes throught in the clutch"
+    },
+    {
+      "id": 28,
+      "headword": "clutch",
+      "functionalLabel": "noun",
+      "definition": ":the right or means to command or control others",
+      "verbalIllustration": "a nation no longer living in the clutch of a cruel tyrant"
+    },
+    {
+      "id": 29,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 30,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 31,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 32,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 33,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 34,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 35,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 36,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 37,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 38,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 39,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 40,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 41,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 42,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 43,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
+    },
+    {
+      "id": 44,
+      "headword": "",
+      "functionalLabel": "",
+      "definition": "",
+      "verbalIllustration": ""
     }
   ]
 }

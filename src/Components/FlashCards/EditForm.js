@@ -41,6 +41,7 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
                     <label><strong>definition: </strong></label>
                     <textarea onChange={handleChange} 
                         name="definition" 
+                        // placeholder={}
                         value={editFormState.definition}
                         className="textarea" />
                 </div>

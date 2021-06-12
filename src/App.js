@@ -43,9 +43,6 @@ function App() {
                           >
                             404 Path Not Found  ...(*￣０￣)ノ
             </div>
-            {/* <img src="https://images.unsplash.com/photo-1574390353491-92705370c72e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1426&q=80" 
-                  alt="maze"
-                  style={{maxWidth: "100%"}} /> */}
           </Route>
         </Switch>
         <Footer />

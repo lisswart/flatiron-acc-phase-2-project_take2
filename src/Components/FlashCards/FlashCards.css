@@ -9,8 +9,6 @@
     flex-direction: column;
     justify-content: center;
     background-color: navajowhite;
-
-    /* position: absolute; */
 }
 
 .right-panel {
@@ -68,8 +66,8 @@ li {
     box-shadow: 0 18px 38px black;
     box-sizing: border-box;
     padding: 2em;
-    background-color: rgba(31, 73, 61, 0.555);
-    color: cornsilk;
+    background-color: tan;
+    color: rgb(51, 51, 51);
     font-size: 20px;
     font-weight: bolder;
     margin-top: 4em;
@@ -106,8 +104,9 @@ li {
     box-sizing: border-box;
     padding: 1em;
     margin: 2em 1em 0 0;
-    background-color: blanchedalmond;
-    border: 1px solid bisque;
+    background-color: dimgray;
+    color: moccasin;
+    border: 1px solid dimgray;
 }
 
 .new-button-div {
@@ -121,8 +120,9 @@ li {
     box-sizing: border-box;
     padding: 1em;   
     margin-top: 2em;
-    background-color: blanchedalmond;
-    border: 1px solid bisque;
+    background-color: dimgray;
+    color: moccasin;
+    border: 1px solid dimgray;
 }
 
 .button {
@@ -130,8 +130,9 @@ li {
     border-radius: 5px;
     padding: 1em;
     margin-right: 1em;
-    background-color: blanchedalmond;
-    border: 1px solid bisque;
+    background-color: dimgray;
+    color: moccasin;
+    border: 1px solid dimgray;
 }
 
 .headword-link {
