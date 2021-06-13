@@ -21,13 +21,15 @@ function RightPanel({ cards, isOnSearchMode,
             <SearchBar isOnSearchMode={isOnSearchMode} 
                 setIsOnSearchMode={setIsOnSearchMode}
                 onSubmitQuery={onSubmitQuery} />
-            <ul className="instructions">
-                {/* <li>to search by functional label, select from the dropdown below</li> */}
-            </ul>
-            {/* <DropDownMenu 
-                isOnSelectMode={isOnSelectMode}
-                setIsOnSelectMode={setIsOnSelectMode}
-                setOnSelect={setOnSelect} /> */}
+            <div className="escutcheon">
+                <div className="escutcheon-inner-0">
+                    <div className="escutcheon-inner-1">
+                        <div className="escutcheon-inner-2">
+                            λ
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

@@ -275,6 +275,50 @@ li {
     padding-left: 2em;
 }
 
+.escutcheon {
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 300px;
+    max-height: 300px;
+    padding: 3em;
+    margin: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid cornsilk;
+}
+
+.escutcheon-inner-2 {
+    padding: 2em;
+    border-radius: 50%;
+    background-color: maroon;
+    min-width: 50px;
+    max-width: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.escutcheon-inner-1 {
+    border: 1px solid cornsilk;
+    min-width: 210px;
+    max-width: 210px;
+    min-height: 210px;
+    max-height: 210px;
+    padding: 1em;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.escutcheon-inner-0 {
+    border: 2px solid cornsilk;
+    padding: 0.5px;
+}
+
 /* .drop-down-container {
     padding-left: 2em;
 } */
