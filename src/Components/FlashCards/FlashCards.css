@@ -24,7 +24,7 @@
 }
 
 .instructions {
-    margin: 3em 0 1em 2em;
+    margin: 4em 0 1em 2em;
     font-size: 16px;
 }
 
@@ -226,7 +226,7 @@ li {
     color: cornsilk;
     font-size: 18px;
     font-weight: bolder;
-    margin: 2em 2em 2em 0;
+    margin: 5em 2em 2em 0;
     border-radius: 10px;
     box-shadow: 0 8px 38px rosybrown;
 }
