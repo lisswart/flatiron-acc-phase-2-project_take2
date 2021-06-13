@@ -2,6 +2,8 @@ import FlashCard from "./FlashCard";
 import { useState } from "react";
 
 function FlashCardsDeck({ cards, isOnSearchMode, query,
+                        handleSortClickIncreasing,
+                        handleSortClickDecreasing,
                         isOnSelectMode, setIsOnSelectMode,
                         onSelect, isOnEditMode, 
                         setIsOnEditMode, cardToBeEdited, 
@@ -37,7 +39,6 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function displayMatchedCards() {
         const filteredCards = cards.filter(isMatched);
-        setIsOnSelectMode(!isOnSelectMode);
         return filteredCards
                 .map(card => {
                     return (
@@ -57,25 +58,25 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
         });        
     }
 
-    function displaySelectionSortedCards() {
-        if(onSelect === "all") {
-            displayCards();
-        }
-        const filteredCards = cards.filter((card) => 
-            card.functionalLabel === onSelect);
-        // setIsOnSelectMode(!isOnSelectMode);
-        return filteredCards.map((card) => {
-            return (
-                <FlashCard card={card} key={card.id}
-                isOnEditMode={isOnEditMode}
-                setIsOnEditMode={setIsOnEditMode}
-                cardToBeEdited={cardToBeEdited}
-                setCardToBeEdited={setCardToBeEdited}
-                editCard={editCard}
-                deleteCard={deleteCard} />
-            );
-        });        
-    }
+    // function displaySelectionSortedCards() {
+    //     if(onSelect === "all") {
+    //         displayCards();
+    //     }
+    //     const filteredCards = cards.filter((card) => 
+    //         card.functionalLabel === onSelect);
+    //     // setIsOnSelectMode(!isOnSelectMode);
+    //     return filteredCards.map((card) => {
+    //         return (
+    //             <FlashCard card={card} key={card.id}
+    //             isOnEditMode={isOnEditMode}
+    //             setIsOnEditMode={setIsOnEditMode}
+    //             cardToBeEdited={cardToBeEdited}
+    //             setCardToBeEdited={setCardToBeEdited}
+    //             editCard={editCard}
+    //             deleteCard={deleteCard} />
+    //         );
+    //     });        
+    // }
 
     return (
         <ul className="card-list">
@@ -91,8 +92,8 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                                 <pre style={{color: "orange"}}>   (˘･_･˘)</pre>
                             </div> 
                     )
-                :   isOnSelectMode
-                ?   displaySelectionSortedCards()
+                // :   isOnSelectMode
+                // ?   displaySelectionSortedCards()
                 :   displayCards()
             }
             <div className="click-more-button-container">

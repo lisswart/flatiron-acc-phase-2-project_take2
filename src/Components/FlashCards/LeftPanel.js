@@ -1,6 +1,7 @@
 import FlashCardsDeck from "./FlashCardsDeck";
 
 function LeftPanel({ cards, isOnSearchMode, 
+                    isOnSortMode, setIsOnSortMode,
                     isOnSelectMode, setIsOnSelectMode,
                     onSelect, query, newCard, 
                     setNewCard, isOnEditMode, 
@@ -13,12 +14,45 @@ function LeftPanel({ cards, isOnSearchMode,
     }
 
     function handleSortClickIncreasing() {
-        alert("increasing");
+        setIsOnSortMode(!isOnSortMode);
+        sortIncreasing();
+    }
 
+    function sortIncreasing() {
+        cards.sort((a,b) => {
+            let ha = a.headword.toLowerCase();
+            let hb = b.headword.toLowerCase();
+
+            if(ha < hb) {
+                return -1;
+            }
+            if(ha > hb) {
+                return 1;
+            }
+            return 0;
+        });
+        console.log(cards);
     }
 
     function handleSortClickDecreasing() {
-        alert("decreasing");
+        setIsOnSortMode(!isOnSortMode);
+        sortDecreasing();
+    }
+
+    function sortDecreasing() {
+        cards.sort((a,b) => {
+            let ha = a.headword.toLowerCase();
+            let hb = b.headword.toLowerCase();
+
+            if(ha < hb) {
+                return 1;
+            }
+            if(ha > hb) {
+                return -1;
+            }
+            return 0;
+        });
+        console.log(cards);
     }
 
     return (
@@ -47,9 +81,11 @@ function LeftPanel({ cards, isOnSearchMode,
             <FlashCardsDeck cards={cards}
                 isOnSearchMode={isOnSearchMode}
                 query={query}
-                isOnSelectMode={isOnSelectMode}
-                setIsOnSelectMode={setIsOnSelectMode}
-                onSelect={onSelect}
+                handleSortClickIncreasing={handleSortClickIncreasing}
+                handleSortClickDecreasing={handleSortClickDecreasing}
+                // isOnSelectMode={isOnSelectMode}
+                // setIsOnSelectMode={setIsOnSelectMode}
+                // onSelect={onSelect}
                 isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}
                 cardToBeEdited={cardToBeEdited}
