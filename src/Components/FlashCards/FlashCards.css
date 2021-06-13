@@ -201,11 +201,6 @@ li {
     text-decoration: none;
 }
 
-.click-more-button-container {
-    /* display: flex;
-    align-items: center; */
-}
-
 .click-more-button {
     margin: 2em 0 2em 0;
     max-width: 3em;
@@ -228,7 +223,7 @@ li {
     font-weight: bolder;
     margin: 5em 2em 2em 0;
     border-radius: 10px;
-    box-shadow: 0 8px 38px rosybrown;
+    box-shadow: 0 8px 38px maroon;
 }
 
 .inputbox {
