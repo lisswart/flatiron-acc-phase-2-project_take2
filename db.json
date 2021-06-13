@@ -209,6 +209,48 @@
       "definition": ":something that can be used for a particular purpose",
       "verbalIllustration": "Now that he's a writer, he regards his difficult childhood experience as grist for the mill.",
       "id": 31
-    }
+    },
+    {
+      "headword": "run your eye over",
+      "functionalLabel": "phrasal verb",
+      "definition": ":to read or look at something quickly",
+      "verbalIllustration": "Please run your eye over this and let me know what you think.",
+      "id": 32
+      },
+      {
+      "headword": "run your eye down",
+      "functionalLabel": "phrasal verb",
+      "definition": ":to quickly read or look at (something, such as a list)",
+      "verbalIllustration": "She ran her eye down the list looking for her name.",
+      "id": 33
+      },
+      {
+      "headword": "up to your eyes",
+      "functionalLabel": "phrasal adjective",
+      "definition": ":deeply involved in or affected by something",
+      "verbalIllustration": "We're up to our eyes in work. [=we are very busy]",
+      "id": 34
+      },
+      {
+      "headword": "vigil",
+      "functionalLabel": "noun",
+      "definition": "an act or period of watching for signs of activity, danger, or opportunity",
+      "verbalIllustration": "kept vigil at their ailing son's bedside the entire time he was in the hospital",
+      "id": 35
+      },
+      {
+      "headword": "on the fence",
+      "functionalLabel": "phrasal adjective",
+      "definition": ":unable to decide about something",
+      "verbalIllustration": "He tried to persuade those still (sitting) on the fence to vote in his favor.",
+      "id": 36
+      },
+      {
+      "headword": "find your feet",
+      "functionalLabel": "phrasal verb",
+      "definition": "1:to start to be comfortable in a new situation 2:to begin to be confident or successful",
+      "verbalIllustration": "1. They quickly found their feet in their adopted country. 2. I was away for a long time, so it will take me a while to find my feet again.",
+      "id": 37
+      }
   ]
 }

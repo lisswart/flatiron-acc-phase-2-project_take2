@@ -33,6 +33,14 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
         setCardIndex((cardIndex) => (cardIndex + 4) % cards.length)
     }
 
+    function handleClickBackward() {
+        if(cardIndex >= 0) {
+            setCardIndex((cardIndex) => 
+                (cardIndex - 4) % cards.length
+            );
+        }
+    }
+
     function isMatched(card) {
         return card.headword === query.toString();
     }
@@ -42,12 +50,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
         return filteredCards
                 .map(card => {
                     return (
-                        Object.keys(card).length === 0
-                        ?   <div className="no-match">
-                                <>No match found</><br></br>
-                                <div style={{color: "orange"}}>(˘･_･˘)</div>
-                            </div>     
-                        :   <FlashCard card={card} key={card.id}
+                        <FlashCard card={card} key={card.id}
                                 isOnEditMode={isOnEditMode}
                                 setIsOnEditMode={setIsOnEditMode}
                                 cardToBeEdited={cardToBeEdited}
@@ -84,23 +87,24 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                 cards.length === 0
                 ?   <div className="loading-flashcards"><div>Loading...</div></div>
                 :   isOnSearchMode
-                ?   (
-                        cards.filter(isMatched)
-                        ?   displayMatchedCards()
-                        :   <div className="no-match">
-                                <>No match found</>
-                                <pre style={{color: "orange"}}>   (˘･_･˘)</pre>
-                            </div> 
-                    )
+                ?   displayMatchedCards() 
+                :   displayCards()
                 // :   isOnSelectMode
                 // ?   displaySelectionSortedCards()
-                :   displayCards()
             }
-            <div className="click-more-button-container">
-                <button onClick={handleClickMore}
-                        className="click-more-button">
-                    ▶
-                </button>
+            <div className="forward-backward-buttons-container">
+                <div className="click-more-button-container">
+                    <button onClick={handleClickBackward}
+                            className="click-more-button">
+                        ◀
+                    </button>
+                </div>
+                <div className="click-more-button-container">
+                    <button onClick={handleClickMore}
+                            className="click-more-button">
+                        ▶
+                    </button>
+                </div>
             </div>
         </ul>
     );

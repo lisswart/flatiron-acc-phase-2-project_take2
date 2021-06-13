@@ -202,8 +202,8 @@ li {
 }
 
 .click-more-button-container {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
 }
 
 .click-more-button {
@@ -266,6 +266,13 @@ li {
     padding-left: 1em;
     outline: none;
     border: 1px solid bisque;
+}
+
+.forward-backward-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2em;
 }
 
 /* .drop-down-container {
