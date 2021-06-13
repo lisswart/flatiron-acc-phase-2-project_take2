@@ -17,7 +17,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    /* background-color: rgb(100, 68, 68); */
     background-color: transparent;
     padding: 0 2em 2em 1.2em;
     margin: 2em 2em 2em 0;
@@ -51,8 +50,10 @@ li {
 .flashcard {
     padding: 2em 1em 1em 2em;
     margin: 1.5em;
-    max-width: 245px;
-    max-height: 375px;
+    max-width: 265px;
+    max-height: 395px;
+    min-width: 265px;
+    min-height: 395px;
     font-size: 16px;
     background-color: rgba(216, 191, 216, 0.836);
     color: cornsilk;
@@ -69,13 +70,9 @@ li {
 }
 
 .card-list {
-    list-style-position: inside;
     display: flex;
     flex-wrap: wrap;
-}
-
-.flashcard::marker {
-    color: navajowhite;
+    list-style-type: none;
 }
 
 .link-flashcard {
@@ -139,6 +136,7 @@ li {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .card-on-view-back {
@@ -269,4 +267,17 @@ li {
     padding-left: 1em;
     outline: none;
     border: 1px solid bisque;
+}
+
+.drop-down-container {
+    padding-left: 2em;
+}
+
+.select-element {
+    background-color: bisque;
+    min-height: 36px;
+    padding: 0 2em 0 2em;
+    outline: none;
+    /* border: 1px solid bisque; */
+    border-radius: 5px;
 }

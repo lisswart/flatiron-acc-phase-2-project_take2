@@ -1,6 +1,10 @@
 import SearchBar from "./SearchBar";
+// import DropDownMenu from "./DropDownMenu";
 
-function RightPanel({ cards, isOnSearchMode, setIsOnSearchMode, onSubmitQuery, handleQuerySearch }) {
+function RightPanel({ cards, isOnSearchMode, 
+                    setIsOnSearchMode, onSubmitQuery, 
+                    isOnSelectMode, setIsOnSelectMode, 
+                    setOnSelect }) {
 
     return (
         <div className="right-panel">
@@ -11,9 +15,15 @@ function RightPanel({ cards, isOnSearchMode, setIsOnSearchMode, onSubmitQuery, h
                 <li>to search a specific word, enter search term below</li>
             </ul>
             <SearchBar isOnSearchMode={isOnSearchMode} 
-                    setIsOnSearchMode={setIsOnSearchMode}
-                    onSubmitQuery={onSubmitQuery} 
-                    handleQuerySearch={handleQuerySearch} />
+                setIsOnSearchMode={setIsOnSearchMode}
+                onSubmitQuery={onSubmitQuery} />
+            <ul className="instructions">
+                {/* <li>to search by functional label, select from the dropdown below</li> */}
+            </ul>
+            {/* <DropDownMenu 
+                isOnSelectMode={isOnSelectMode}
+                setIsOnSelectMode={setIsOnSelectMode}
+                setOnSelect={setOnSelect} /> */}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SearchBar({ isOnSearchMode, setIsOnSearchMode, onSubmitQuery, handleQuerySearch}) {
+function SearchBar({ isOnSearchMode, setIsOnSearchMode, onSubmitQuery}) {
     const [input, setInput] = useState("");
 
     function handleChange(event) {
@@ -14,7 +14,6 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, onSubmitQuery, handleQue
     function handleSubmit(event) {
         event.preventDefault();
         onSubmitQuery(input);
-        handleQuerySearch();
     }
 
     return (
@@ -25,7 +24,7 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, onSubmitQuery, handleQue
                     ?   <><input type="text" className="inputbar inputbox" /><br></br>
                         <button className="button" onClick={handleSearchClick}>Clear</button></>
                     :   <><input type="text" onChange={handleChange} value={input} className="inputbar inputbox" /><br></br>
-                        <button className="button" onClick={handleSearchClick}>Search</button></>
+                        <button className="button" onClick={handleSearchClick}>Search by headword</button></>
                 }
             </form>
             

@@ -162,13 +162,6 @@
       "verbalIllustration": "a woman invested with the strong desire to make the world a better place"
     },
     {
-      "id": 24,
-      "headword": "invest",
-      "functionalLabel": "verb",
-      "definition": ":to give official or legal power to",
-      "verbalIllustration": "invested him with power of attorney"
-    },
-    {
       "id": 25,
       "headword": "clutch",
       "functionalLabel": "noun",
@@ -202,6 +195,20 @@
       "definition": ":to make (someone) feel annoyed or angry",
       "verbalIllustration": "It galls me that such a small group of people can have so much power.",
       "id": 29
+    },
+    {
+      "headword": "bide one's time",
+      "functionalLabel": "phrasal verb",
+      "definition": "to remain in place in readiness or expectation of something",
+      "verbalIllustration": "decided to bide her time until she had an opportunity to switch jobs",
+      "id": 30
+    },
+    {
+      "headword": "grist for the mill",
+      "functionalLabel": "phrasal noun",
+      "definition": ":something that can be used for a particular purpose",
+      "verbalIllustration": "Now that he's a writer, he regards his difficult childhood experience as grist for the mill.",
+      "id": 31
     }
   ]
 }

@@ -31,10 +31,8 @@ function FlashCardsContainer() {
     });
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
-
-    useEffect(() => {
-        console.log(isOnSearchMode);
-    });
+    const [isOnSelectMode, setIsOnSelectMode] = useState(false)
+    const [onSelect, setOnSelect] = useState("");
     
     useEffect(() => {        
         fetch(LOCAL)
@@ -43,12 +41,6 @@ function FlashCardsContainer() {
                 setCards(cardObjs);
             });
     }, []);
-
-    function handleQuerySearch() {
-        fetch(`${LOCAL}`)
-            .then(r => r.json())
-            .then(setCards);
-    }
 
     function addCard(card) {
         fetch(LOCAL, {
@@ -99,6 +91,9 @@ function FlashCardsContainer() {
             <LeftPanel cards={cards}
                 isOnSearchMode={isOnSearchMode}
                 query={query}
+                isOnSelectMode={isOnSelectMode}
+                setIsOnSelectMode={setIsOnSelectMode}
+                onSelect={onSelect}
                 newCard={newCard}
                 setNewCard={setNewCard} 
                 isOnEditMode={isOnEditMode}
@@ -126,7 +121,9 @@ function FlashCardsContainer() {
                         isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
                         onSubmitQuery={setQuery}
-                        handleQuerySearch={handleQuerySearch}  />
+                        isOnSelectMode={isOnSelectMode}
+                        setIsOnSelectMode={setIsOnSelectMode}
+                        setOnSelect={setOnSelect}  />
             } 
         </div>
     );
