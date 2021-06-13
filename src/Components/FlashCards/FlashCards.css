@@ -208,6 +208,9 @@ li {
     max-height: 3em;
     min-height: 3em;
     border-radius: 50%;
+    background-color: maroon;
+    color:oldlace;
+    border:1px solid lemonchiffon;
 }
 
 .form-view {
