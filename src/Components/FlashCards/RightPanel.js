@@ -12,6 +12,9 @@ function RightPanel({ cards, isOnSearchMode,
                 <li>current size of card deck: {cards.length}</li>
                 <li>to add flashcards, click on the new button</li>
                 <li>to cancel, click on the same button</li>
+                <li>to sort the cards (a-z↑) alphabetically in increasing order, click on the sort↑ button</li>
+                <li>to sort the cards (a-z↓) alphabetically in decreasing order, click on the sort↓ button</li>
+                <li>to quiz yourself on a specific word, click on the underlined headword in each card</li>
                 <li>to search a specific word, enter search term below</li>
             </ul>
             <SearchBar isOnSearchMode={isOnSearchMode} 

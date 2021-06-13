@@ -35,7 +35,7 @@ function FlashCard({ index, card, isOnEditMode,
             <p>
                 <i className="label-definition">definition: </i>
                 <br></br>
-                <span style={{color: "rgb(7, 7, 7)"}}>
+                <span style={{color: "black"}}>
                     {definition}
                 </span>
             </p>
@@ -43,7 +43,7 @@ function FlashCard({ index, card, isOnEditMode,
             <p>
                 <i className="label-definition">verbal illustration: </i>
                 <br></br>
-                <span style={{color: "rgb(7, 7, 7)"}}>
+                <span style={{color: "black"}}>
                     {verbalIllustration}
                 </span>
             </p>

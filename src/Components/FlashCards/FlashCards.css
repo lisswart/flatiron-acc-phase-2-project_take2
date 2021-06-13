@@ -55,19 +55,19 @@ li {
     min-width: 265px;
     min-height: 395px;
     font-size: 16px;
-    background-color: rgba(216, 191, 216, 0.836);
+    background-color: lemonchiffon;
     color: cornsilk;
     border-radius: 10px;
-    border: 0.3em solid lemonchiffon;
+    border: 0.3em solid tomato;
 }
 
-.flashcard:first-of-type{
-    background-color: skyblue;
+/* .flashcard:first-of-type{
+    background-color: maroon;
 }
 
 .flashcard:last-of-type {
     background-color: rgb(147, 136, 214);
-}
+} */
 
 .card-list {
     display: flex;
@@ -244,7 +244,7 @@ li {
  }
 
  .label-definition {
-     color:honeydew;
+     color: darkgreen;
  }
 
  .textarea {
@@ -268,15 +268,14 @@ li {
     border: 1px solid bisque;
 }
 
-.drop-down-container {
+/* .drop-down-container {
     padding-left: 2em;
-}
+} */
 
-.select-element {
+/* .select-element {
     background-color: bisque;
     min-height: 36px;
     padding: 0 2em 0 2em;
     outline: none;
-    /* border: 1px solid bisque; */
     border-radius: 5px;
-}
+} */
