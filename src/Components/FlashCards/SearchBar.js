@@ -21,14 +21,16 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, onSubmitQuery}) {
             <form onSubmit={handleSubmit}>                
                 {
                     isOnSearchMode
-                    ?   <>  <input type="text" 
+                    ?   <>  
+                            <input type="text" 
                                     className="inputbar inputbox" /><br></br>
                             <button className="button" 
                                     onClick={handleSearchClick}>
                                         Clear
                             </button>
                         </>
-                    :   <>  <input type="text" 
+                    :   <>  
+                            <input type="text" 
                                     onChange={handleChange} 
                                     value={input} 
                                     className="inputbar inputbox" /><br></br>

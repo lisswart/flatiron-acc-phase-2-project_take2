@@ -61,7 +61,9 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
         <ul className="card-list">
             {
                 cards.length === 0
-                ?   <div className="loading-flashcards"><div>Loading...</div></div>
+                ?   <div className="loading-flashcards">
+                        <div>Loading...</div>
+                    </div>
                 :   isOnSearchMode
                 ?   displayMatchedCards() 
                 :   displayCards()
