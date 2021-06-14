@@ -1,6 +1,8 @@
 
 
-function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMode, setIsOnEditMode, editCard }) {
+function EditForm({ editFormState, setEditFormState, 
+                    cardToBeEdited, isOnEditMode, 
+                    setIsOnEditMode, editCard }) {
 
     function handleChange(event) {
         const fieldName = event.target.name;

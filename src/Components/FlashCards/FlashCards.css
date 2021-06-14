@@ -1,6 +1,7 @@
 .flashcards-container {
     display: grid;
     grid-template-columns: 6fr 4fr;
+    background-color: rgb(37, 37, 37);
 }
 
 .left-panel-div {
@@ -8,7 +9,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: rgb(37, 37, 37);
 }
 
 .right-panel {
@@ -60,14 +60,6 @@ li {
     border-radius: 10px;
     border: 0.3em solid tomato;
 }
-
-/* .flashcard:first-of-type{
-    background-color: maroon;
-}
-
-.flashcard:last-of-type {
-    background-color: rgb(147, 136, 214);
-} */
 
 .card-list {
     display: flex;
@@ -210,7 +202,7 @@ li {
     border-radius: 50%;
     background-color: maroon;
     color:oldlace;
-    border:1px solid lemonchiffon;
+    border:1px solid maroon;
 }
 
 .form-view {
@@ -316,15 +308,3 @@ li {
     border: 2px solid cornsilk;
     padding: 1.5px;
 }
-
-/* .drop-down-container {
-    padding-left: 2em;
-} */
-
-/* .select-element {
-    background-color: bisque;
-    min-height: 36px;
-    padding: 0 2em 0 2em;
-    outline: none;
-    border-radius: 5px;
-} */
