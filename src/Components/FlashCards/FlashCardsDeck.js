@@ -10,7 +10,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function displayCards() {
         return cards
-                .slice(cardIndex, cardIndex + 4)
+                .slice(cardIndex, cardIndex + 6)
                 .map((card) => {
                     return (
                         <FlashCard 
@@ -26,13 +26,13 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
     }
 
     function handleClickMore() {
-        setCardIndex((cardIndex) => (cardIndex + 4) % cards.length)
+        setCardIndex((cardIndex) => (cardIndex + 6) % cards.length)
     }
 
     function handleClickBackward() {
         if(cardIndex >= 0) {
             setCardIndex((cardIndex) => 
-                (cardIndex - 4) % cards.length
+                (cardIndex - 6) % cards.length
             );
         }
     }
