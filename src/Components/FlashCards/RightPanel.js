@@ -25,7 +25,7 @@ function RightPanel({ cards, isOnSearchMode,
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">
                         <div className="escutcheon-inner-2">
-                            λ
+                            ❇
                         </div>
                     </div>
                 </div>
