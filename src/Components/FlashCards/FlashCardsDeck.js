@@ -23,7 +23,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
     }
 
     function isMatched(card) {
-        return card.headword === query.toString();
+        return card.headword.includes(query.toString());
     }
 
     function displayMatchedCards() {
