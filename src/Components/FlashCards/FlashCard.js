@@ -21,6 +21,7 @@ function FlashCard({ index, card, isOnEditMode,
 
     return (
         <li className="flashcard" id={index}>
+
             <NavLink to={`/words/${id}`}>
                 <div className="link-flashcard">
                     <pre style={{color: "rgb(105, 1, 1)", fontWeight: "bolder"}}>
@@ -54,6 +55,7 @@ function FlashCard({ index, card, isOnEditMode,
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
                 Delete
             </button>
+            
         </li>
     );
 }

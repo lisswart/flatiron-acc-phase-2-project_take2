@@ -30,7 +30,6 @@ function LeftPanel({ cards, isOnSearchMode,
             }
             return 0;
         });
-        console.log(cards);
     }
 
     function handleSortClickDecreasing() {
@@ -51,7 +50,6 @@ function LeftPanel({ cards, isOnSearchMode,
             }
             return 0;
         });
-        console.log(cards);
     }
 
     return (

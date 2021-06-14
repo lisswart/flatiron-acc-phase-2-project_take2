@@ -22,7 +22,9 @@ function FlashCardOnView() {
         <div className="card-on-view-container">
             {
                 Object.keys(card).length === 0
-                ?   <div className="loading">Loading...</div>
+                ?   <div className="loading">
+                        Loading...
+                    </div>
                 :   
                    <div className="card-on-view-wrapper">
                         <div className="card-on-view-inner">                            
