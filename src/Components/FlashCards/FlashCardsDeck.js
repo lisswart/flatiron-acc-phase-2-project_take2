@@ -1,13 +1,10 @@
 import FlashCard from "./FlashCard";
-import { useState } from "react";
 
 function FlashCardsDeck({ cards, isOnSearchMode, query,
                         isOnEditMode, setIsOnEditMode, 
                         cardToBeEdited, setCardToBeEdited, 
-                        editCard, deleteCard }) {
+                        editCard, deleteCard, cardIndex }) {
     
-    const [cardIndex, setCardIndex] = useState(0);
-
     function displayCards() {
         return cards
                 .slice(cardIndex, cardIndex + 6)
@@ -23,18 +20,6 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                             deleteCard={deleteCard} />
                     );
         });
-    }
-
-    function handleClickMore() {
-        setCardIndex((cardIndex) => (cardIndex + 6) % cards.length)
-    }
-
-    function handleClickBackward() {
-        if(cardIndex >= 0) {
-            setCardIndex((cardIndex) => 
-                (cardIndex - 6) % cards.length
-            );
-        }
     }
 
     function isMatched(card) {
@@ -68,20 +53,6 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                 ?   displayMatchedCards() 
                 :   displayCards()
             }
-            <div className="forward-backward-buttons-container">
-                <div className="click-more-button-container">
-                    <button onClick={handleClickBackward}
-                            className="click-more-button">
-                        ◀
-                    </button>
-                </div>
-                <div className="click-more-button-container">
-                    <button onClick={handleClickMore}
-                            className="click-more-button">
-                        ▶
-                    </button>
-                </div>
-            </div>
         </ul>
     );
 }

@@ -1,4 +1,6 @@
 import FlashCardsDeck from "./FlashCardsDeck";
+import { useState } from "react";
+
 
 function LeftPanel({ cards, isOnSearchMode, 
                     isOnSortMode, setIsOnSortMode,
@@ -7,6 +9,8 @@ function LeftPanel({ cards, isOnSearchMode,
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, editCard, 
                     deleteCard}) {
+
+    const [cardIndex, setCardIndex] = useState(0);
 
     function handleNewCardClick() {
         setNewCard(!newCard);
@@ -52,6 +56,17 @@ function LeftPanel({ cards, isOnSearchMode,
         });
     }
 
+    function handleClickMore() {
+        setCardIndex((cardIndex) => (cardIndex + 6) % cards.length)
+    }
+
+    function handleClickBackward() {
+        if(cardIndex >= 0) {
+            setCardIndex((cardIndex) => 
+                (cardIndex - 6) % cards.length);
+        }
+    }
+
     return (
         <div className="left-panel-div">
 
@@ -63,7 +78,7 @@ function LeftPanel({ cards, isOnSearchMode,
                 <button className="sort-button"
                         onClick={handleSortClickDecreasing}>
                         Sort ↓
-                </button>                
+                </button>
                 {
                     newCard
                     ?   <div className="new-button-div">
@@ -79,9 +94,24 @@ function LeftPanel({ cards, isOnSearchMode,
                             </button>
                         </div>
                 }
+                <div className="forward-backward-buttons-container">
+                    <div className="click-more-button-container">
+                        <button onClick={handleClickBackward}
+                                className="click-more-button">
+                            ◀
+                        </button>
+                    </div>
+                    <div className="click-more-button-container">
+                        <button onClick={handleClickMore}
+                                className="click-more-button">
+                            ▶
+                        </button>
+                    </div>
+                </div> 
             </div>
 
             <FlashCardsDeck cards={cards}
+                cardIndex={cardIndex}
                 isOnSearchMode={isOnSearchMode}
                 query={query}
                 handleSortClickIncreasing={handleSortClickIncreasing}

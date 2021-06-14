@@ -193,12 +193,26 @@ li {
     text-decoration: none;
 }
 
+.forward-backward-buttons-container {
+    display: flex;
+    justify-content: center;
+    padding-left: 0 2em 0 2em;
+    justify-content: space-between;
+}
+
+.click-more-button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 1em 0 1em;
+}
+
 .click-more-button {
     margin: 2em 0 2em 0;
     max-width: 3em;
     min-width: 3em;
     max-height: 3em;
     min-height: 3em;
+    padding-left: 0 2em 0 2em;
     border-radius: 50%;
     background-color: maroon;
     color:oldlace;
@@ -256,13 +270,6 @@ li {
     padding-left: 1em;
     outline: none;
     border: 1px solid bisque;
-}
-
-.forward-backward-buttons-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 2em;
 }
 
 .escutcheon {

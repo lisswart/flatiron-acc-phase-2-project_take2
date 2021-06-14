@@ -118,7 +118,7 @@ function FlashCardsContainer() {
                         cards={cards}
                         isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
-                        onSubmitQuery={setQuery} 
+                        setQuery={setQuery} 
                     />
             } 
         </div>

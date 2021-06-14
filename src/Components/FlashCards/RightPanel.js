@@ -1,7 +1,7 @@
 import SearchBar from "./SearchBar";
 
 function RightPanel({ cards, isOnSearchMode, 
-                    setIsOnSearchMode, onSubmitQuery }) {
+                    setIsOnSearchMode, setQuery }) {
 
     return (
         <div className="right-panel">
@@ -19,7 +19,7 @@ function RightPanel({ cards, isOnSearchMode,
 
             <SearchBar isOnSearchMode={isOnSearchMode} 
                 setIsOnSearchMode={setIsOnSearchMode}
-                onSubmitQuery={onSubmitQuery} />
+                setQuery={setQuery} />
 
             <div className="escutcheon">
                 <div className="escutcheon-inner-0">
