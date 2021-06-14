@@ -66,14 +66,18 @@ function LeftPanel({ cards, isOnSearchMode,
                 </button>                
                 {
                     newCard
-                    ? <div className="new-button-div"><button className="new-button"
-                        onClick={handleNewCardClick}>
-                        Cancel
-                    </button></div>
-                    : <div className="new-button-div"><button className="new-button"
-                        onClick={handleNewCardClick}>
-                        New
-                    </button></div>
+                    ?   <div className="new-button-div">
+                            <button className="new-button"
+                                    onClick={handleNewCardClick}>
+                                Cancel
+                            </button>
+                        </div>
+                    :   <div className="new-button-div">
+                            <button className="new-button"
+                                    onClick={handleNewCardClick}>
+                                New
+                            </button>
+                        </div>
                 }
             </div>
 
