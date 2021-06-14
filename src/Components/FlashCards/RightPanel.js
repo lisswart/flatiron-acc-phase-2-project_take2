@@ -1,13 +1,11 @@
 import SearchBar from "./SearchBar";
-// import DropDownMenu from "./DropDownMenu";
 
 function RightPanel({ cards, isOnSearchMode, 
-                    setIsOnSearchMode, onSubmitQuery, 
-                    isOnSelectMode, setIsOnSelectMode, 
-                    setOnSelect }) {
+                    setIsOnSearchMode, onSubmitQuery }) {
 
     return (
         <div className="right-panel">
+
             <ul className="instructions">
                 <li>current size of card deck: {cards.length}</li>
                 <li>to add flashcards, click on the new button</li>
@@ -18,9 +16,11 @@ function RightPanel({ cards, isOnSearchMode,
                 <li>to search a specific word, enter search term below</li>
                 <li>when running multiple searches, after every search, click the clear button to reset before running another search</li>
             </ul>
+
             <SearchBar isOnSearchMode={isOnSearchMode} 
                 setIsOnSearchMode={setIsOnSearchMode}
                 onSubmitQuery={onSubmitQuery} />
+
             <div className="escutcheon">
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">
@@ -30,6 +30,7 @@ function RightPanel({ cards, isOnSearchMode,
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 }

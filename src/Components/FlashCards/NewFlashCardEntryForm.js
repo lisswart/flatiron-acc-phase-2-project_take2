@@ -1,5 +1,6 @@
 
-function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) {
+function NewFlashCardEntryForm({ addCard, formState, 
+                                setFormState, setNewCard}) {
 
     function handleNewEntryChange(event) {
         const fieldName = event.target.name;
@@ -30,6 +31,7 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
 
     return (
         <div>
+            
             <form onSubmit={handleSubmit} className="form-view">
                 <div className="inputbox" >
                     <label><strong>headword: </strong></label>
@@ -62,6 +64,7 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
                 <button type="submit" className="button"
                         style={{marginTop: "1em"}}>Submit</button>           
             </form>
+
             <div className="escutcheon">
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">
@@ -70,7 +73,8 @@ function NewFlashCardEntryForm({ addCard, formState, setFormState, setNewCard}) 
                         </div>
                     </div>
                 </div>
-            </div>          
+            </div> 
+
         </div>
     );
 }

@@ -1,6 +1,8 @@
 
 
-function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMode, setIsOnEditMode, editCard }) {
+function EditForm({ editFormState, setEditFormState, 
+                    cardToBeEdited, isOnEditMode, 
+                    setIsOnEditMode, editCard }) {
 
     function handleChange(event) {
         const fieldName = event.target.name;
@@ -28,20 +30,24 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
 
     return (
         <div>
+            
             <form onSubmit={handleSubmit} className="form-view">
                 <div className="inputbox label" >
                     <strong>headword: </strong>
-                    <span style={{color: "moccasin"}}>{cardToBeEdited.headword}</span>
+                    <span style={{color: "moccasin"}}>
+                        {cardToBeEdited.headword}
+                    </span>
                 </div>
                 <div className="inputbox label" >
                     <strong>functional label: </strong>
-                    <span style={{color: "moccasin"}}>{cardToBeEdited.functionalLabel}</span>
+                    <span style={{color: "moccasin"}}>
+                        {cardToBeEdited.functionalLabel}
+                    </span>
                 </div>
                 <div className="inputbox label" >
                     <label><strong>definition: </strong></label>
                     <textarea onChange={handleChange} 
                         name="definition" 
-                        // placeholder={}
                         value={editFormState.definition}
                         className="textarea" />
                 </div>
@@ -63,6 +69,7 @@ function EditForm({ editFormState, setEditFormState, cardToBeEdited, isOnEditMod
                     </button>
                 </div>
             </form>
+
             <div className="escutcheon">
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">

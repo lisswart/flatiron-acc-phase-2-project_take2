@@ -2,13 +2,9 @@ import FlashCard from "./FlashCard";
 import { useState } from "react";
 
 function FlashCardsDeck({ cards, isOnSearchMode, query,
-                        handleSortClickIncreasing,
-                        handleSortClickDecreasing,
-                        isOnSelectMode, setIsOnSelectMode,
-                        onSelect, isOnEditMode, 
-                        setIsOnEditMode, cardToBeEdited, 
-                        setCardToBeEdited, editCard, 
-                        deleteCard }) {
+                        isOnEditMode, setIsOnEditMode, 
+                        cardToBeEdited, setCardToBeEdited, 
+                        editCard, deleteCard }) {
     
     const [cardIndex, setCardIndex] = useState(0);
 
@@ -61,36 +57,16 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
         });        
     }
 
-    // function displaySelectionSortedCards() {
-    //     if(onSelect === "all") {
-    //         displayCards();
-    //     }
-    //     const filteredCards = cards.filter((card) => 
-    //         card.functionalLabel === onSelect);
-    //     // setIsOnSelectMode(!isOnSelectMode);
-    //     return filteredCards.map((card) => {
-    //         return (
-    //             <FlashCard card={card} key={card.id}
-    //             isOnEditMode={isOnEditMode}
-    //             setIsOnEditMode={setIsOnEditMode}
-    //             cardToBeEdited={cardToBeEdited}
-    //             setCardToBeEdited={setCardToBeEdited}
-    //             editCard={editCard}
-    //             deleteCard={deleteCard} />
-    //         );
-    //     });        
-    // }
-
     return (
         <ul className="card-list">
             {
                 cards.length === 0
-                ?   <div className="loading-flashcards"><div>Loading...</div></div>
+                ?   <div className="loading-flashcards">
+                        <div>Loading...</div>
+                    </div>
                 :   isOnSearchMode
                 ?   displayMatchedCards() 
                 :   displayCards()
-                // :   isOnSelectMode
-                // ?   displaySelectionSortedCards()
             }
             <div className="forward-backward-buttons-container">
                 <div className="click-more-button-container">

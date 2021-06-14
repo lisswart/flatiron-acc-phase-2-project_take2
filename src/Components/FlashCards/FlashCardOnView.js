@@ -22,19 +22,29 @@ function FlashCardOnView() {
         <div className="card-on-view-container">
             {
                 Object.keys(card).length === 0
-                ?   <div className="loading">Loading...</div>
+                ?   <div className="loading">
+                        Loading...
+                    </div>
                 :   
                    <div className="card-on-view-wrapper">
                         <div className="card-on-view-inner">                            
                             <div className="card-on-view-front">
-                                <h2 className="card-on-view-headword">{card.headword}</h2>
-                                <p className="card-on-view-functional-label">{card.functionalLabel}</p>            
+                                <h2 className="card-on-view-headword">
+                                    {card.headword}
+                                </h2>
+                                <p className="card-on-view-functional-label">
+                                    {card.functionalLabel}
+                                </p>            
                             </div>
                             <div className="card-on-view-back">
-                                {/* <h2 className="card-on-view-headword">{card.headword}</h2>
-                                <p className="card-on-view-functional-label">{card.functionalLabel}</p>             */}
-                                <p className="card-on-view-definition"><span style={{color: "navy", fontWeight: "bolder"}}>:</span>{card.definition}</p><br></br>
-                                <p className="card-on-view-verbal-illustration"><span style={{color: "navy"}}>e.g., </span>{card.verbalIllustration}</p>
+                                <p className="card-on-view-definition">
+                                    <span style={{color: "navy", fontWeight: "bolder"}}>:</span>
+                                        {card.definition}
+                                </p><br></br>
+                                <p className="card-on-view-verbal-illustration">
+                                    <span style={{color: "navy"}}>e.g., </span>
+                                        {card.verbalIllustration}
+                                </p>
                             </div>                                                         
                         </div>
                     </div>

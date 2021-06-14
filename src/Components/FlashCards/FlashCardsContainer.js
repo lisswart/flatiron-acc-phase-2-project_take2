@@ -31,8 +31,6 @@ function FlashCardsContainer() {
     });
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
-    // const [isOnSelectMode, setIsOnSelectMode] = useState(false);
-    // const [onSelect, setOnSelect] = useState("");
     const [isOnSortMode, setIsOnSortMode] = useState(false);
     
     useEffect(() => {        
@@ -94,9 +92,6 @@ function FlashCardsContainer() {
                 query={query}
                 isOnSortMode={isOnSortMode}
                 setIsOnSortMode={setIsOnSortMode}
-                // isOnSelectMode={isOnSelectMode}
-                // setIsOnSelectMode={setIsOnSelectMode}
-                // onSelect={onSelect}
                 newCard={newCard}
                 setNewCard={setNewCard} 
                 isOnEditMode={isOnEditMode}
@@ -123,10 +118,7 @@ function FlashCardsContainer() {
                         cards={cards}
                         isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
-                        onSubmitQuery={setQuery}
-                        // isOnSelectMode={isOnSelectMode}
-                        // setIsOnSelectMode={setIsOnSelectMode}
-                        // setOnSelect={setOnSelect}  
+                        onSubmitQuery={setQuery} 
                     />
             } 
         </div>
