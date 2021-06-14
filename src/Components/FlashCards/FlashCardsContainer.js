@@ -102,7 +102,7 @@ function FlashCardsContainer() {
                 deleteCard={deleteCard} />
             {
                 newCard 
-                ?   <NewFlashCardEntryForm path={"/newCardEntryForm"}                            
+                ?   <NewFlashCardEntryForm                            
                         formState={formState} 
                         setFormState={setFormState} 
                         addCard={addCard} 
