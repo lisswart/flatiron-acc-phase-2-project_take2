@@ -17,7 +17,7 @@ function FlashCardsContainer() {
         verbalIllustration: "",
         isLearned: false
     });
-    const [isNewCard, setIsNewCard] = useState(true);
+    const [isNewCard, setIsNewCard] = useState(false);
     const [isOnEditMode, setIsOnEditMode] = useState(false);
     const [cardToBeEdited, setCardToBeEdited] = useState({
         id: undefined,
