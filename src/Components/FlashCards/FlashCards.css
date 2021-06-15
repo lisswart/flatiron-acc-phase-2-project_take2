@@ -155,9 +155,11 @@ li {
     box-sizing: border-box;
     padding: 1em;
     margin: 2em 1em 0 0;
-    background-color: dimgray;
+    /* background-color: dimgray; */
+    background-color: rgba(60, 105, 173, 0.842);
     color: moccasin;
-    border: 1px solid dimgray;
+    /* border: 1px solid dimgray; */
+    border: 1px solid rgba(22, 15, 85, 0.719);
 }
 
 .new-button-div {
@@ -172,9 +174,11 @@ li {
     box-sizing: border-box;
     padding: 1em;   
     margin-top: 2em;
-    background-color: dimgray;
+    /* background-color: dimgray; */
+    background-color: rgba(30, 76, 145, 0.747);
     color: moccasin;
-    border: 1px solid dimgray;
+    /* border: 1px solid dimgray; */
+    border: 1px solid rgba(12, 12, 150, 0.884);
 }
 
 .button {
@@ -182,9 +186,11 @@ li {
     border-radius: 5px;
     padding: 1em;
     margin-right: 1em;
-    background-color: dimgray;
+    /* background-color: dimgray; */
+    background-color: rgba(30, 76, 145);
     color: moccasin;
-    border: 1px solid dimgray;
+    /* border: 1px solid dimgray; */
+    border: 1px solid rgba(12, 12, 150, 0.884);
 }
 
 .headword-link {
@@ -226,13 +232,13 @@ li {
     align-items: center;
     justify-content: space-evenly;
     padding: 2em;
-    background-color: midnightblue;
+    background-color: maroon;
     color: cornsilk;
     font-size: 18px;
     font-weight: bolder;
     margin: 6.5em 2em 2em 0;
     border-radius: 10px;
-    box-shadow: 0 8px 38px maroon;
+    box-shadow: 0 8px 38px black;
 }
 
 .inputbox {
@@ -278,7 +284,7 @@ li {
     min-height: 20em;
     max-height: 20em;
     padding: 1em;
-    margin: 8em 0 0 10em;
+    margin: 2em 0 0 2em;
     display: flex;
     justify-content: center;
     align-items: center;

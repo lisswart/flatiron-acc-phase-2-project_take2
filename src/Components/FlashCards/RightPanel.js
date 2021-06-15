@@ -14,8 +14,8 @@ function RightPanel({ cards, isOnSearchMode,
 
             <ul className="instructions">
                 <li>total number of cards: {cards.length}</li>
-                <li>current size of <span style={{backgroundColor: "moccasin", color: "maroon"}}>[need to review]</span> card deck: {cards.length - countNumberOfIsLearnedCards()}</li>
-                <li>current size of <span style={{backgroundColor: "moccasin", color: "green"}}>[is learned]</span> card deck: {countNumberOfIsLearnedCards()}</li>
+                <li>current size of <span style={{color: "red"}}> need to review </span>card deck: {cards.length - countNumberOfIsLearnedCards()}</li>
+                <li>current size of <span style={{color: "limegreen"}}> is learned </span> card deck: {countNumberOfIsLearnedCards()}</li>
                 <li>when you feel confident that you've got the definition of a word memorized, click the checkmark 
                     <button className="button" style={{backgroundColor: "green", color: "cornsilk", padding: "4px", marginLeft: "1em"}}>
                         ✔
@@ -26,7 +26,11 @@ function RightPanel({ cards, isOnSearchMode,
                         is learned
                     </button>
                 </li>
-                <li>to restore the cards referenced in the previous line, click the 
+                <li>to restore the cards referenced in the previous line, click 
+                    <button className="button" style={{marginLeft: "1em", backgroundColor: "green", color: "cornsilk", padding: "4px", border: "1px solid green"}}>
+                        is learned
+                    </button>                    
+                    then click the 
                     <button className="button" style={{backgroundColor: "maroon", color: "cornsilk", marginLeft: "1em", padding: "4px", border: "1px solid maroon"}}>
                         ✖
                     </button>
