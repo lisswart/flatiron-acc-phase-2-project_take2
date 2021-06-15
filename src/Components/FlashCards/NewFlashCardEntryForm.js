@@ -1,6 +1,6 @@
 
 function NewFlashCardEntryForm({ addCard, formState, 
-                                setFormState, setNewCard}) {
+                                setFormState, setIsNewCard}) {
 
     function handleNewEntryChange(event) {
         const fieldName = event.target.name;
@@ -20,7 +20,7 @@ function NewFlashCardEntryForm({ addCard, formState,
             verbalIllustration: formState.verbalIllustration
         };
         addCard(card);
-        setNewCard(false);
+        setIsNewCard(false);
         setFormState({
             headword: "",
             functionalLabel: "",
