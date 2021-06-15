@@ -8,7 +8,7 @@ function LeftPanel({ cards, isOnSearchMode,
                     setIsNewCard, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, editCard, 
-                    deleteCard}) {
+                    deleteCard, masteredCard }) {
 
     const [cardIndex, setCardIndex] = useState(0);
 
@@ -121,7 +121,8 @@ function LeftPanel({ cards, isOnSearchMode,
                 cardToBeEdited={cardToBeEdited}
                 setCardToBeEdited={setCardToBeEdited}
                 editCard={editCard}
-                deleteCard={deleteCard} />
+                deleteCard={deleteCard}
+                masteredCard={masteredCard} />
                 
         </div>
     );

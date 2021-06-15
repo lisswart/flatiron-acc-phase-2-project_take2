@@ -7,8 +7,8 @@ function NewFlashCardEntryForm({ addCard, formState,
         const userInput = event.target.value;
         setFormState({
             ...formState,
-            [fieldName]: userInput
-        })
+            [fieldName]: userInput,
+        });
     }
 
     function handleSubmit(event) {
@@ -17,7 +17,8 @@ function NewFlashCardEntryForm({ addCard, formState,
             headword: formState.headword,
             functionalLabel: formState.functionalLabel,
             definition: formState.definition,
-            verbalIllustration: formState.verbalIllustration
+            verbalIllustration: formState.verbalIllustration,
+            needsReview: true
         };
         addCard(card);
         setIsNewCard(false);
@@ -26,7 +27,7 @@ function NewFlashCardEntryForm({ addCard, formState,
             functionalLabel: "",
             definition: "",
             verbalIllustration: ""
-        })
+        });
     }
 
     return (
@@ -69,7 +70,7 @@ function NewFlashCardEntryForm({ addCard, formState,
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">
                         <div className="escutcheon-inner-2">
-                            λ
+                            ⫶
                         </div>
                     </div>
                 </div>

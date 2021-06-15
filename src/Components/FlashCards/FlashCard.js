@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom";
 function FlashCard({ index, card, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, deleteCard,
-                    reviewCard 
+                    masteredCard 
                     }) {
 
-    const {id, headword, functionalLabel, definition, verbalIllustration} = card;
+    const {id, headword, functionalLabel, definition, verbalIllustration, needsReview} = card;
     
 
     function handleEditClick() {
@@ -23,9 +23,15 @@ function FlashCard({ index, card, isOnEditMode,
         deleteCard(id);
     }
 
-    function handleReviewClick() {
-        // reviewCard(id);
+    function handleReviewedClick() {
+        const reviewedCard = {needsReview: false};
+        masteredCard(id, reviewedCard);
     }
+
+    // function handleNeedsReviewClick() {
+    //     const cardStillNeedToBeReviewed = {needsReview: true};
+    //     masteredCard(id, cardStillNeedToBeReviewed);
+    // }
 
     return (
         <li className="flashcard" id={index}>
@@ -63,12 +69,12 @@ function FlashCard({ index, card, isOnEditMode,
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
                 Delete
             </button>
-            <button className="button" onClick={handleReviewClick}>
+            <button className="button" onClick={handleReviewedClick}>
                 ✔
             </button>
-            <button className="button" onClick={handleReviewClick}>
+            {/* <button className="button" onClick={handleNeedsReviewClick}>
                 ✖
-            </button>
+            </button> */}
             
         </li>
     );

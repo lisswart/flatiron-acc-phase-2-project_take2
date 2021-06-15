@@ -19,13 +19,14 @@ function EditForm({ editFormState, setEditFormState,
             headword: cardToBeEdited.headword,
             functionalLabel: cardToBeEdited.functionalLabel,
             definition: editFormState.definition,
-            verbalIllustration: editFormState.verbalIllustration
+            verbalIllustration: editFormState.verbalIllustration,
         };
         editCard(cardToBeEdited.id, editedCard);
+        setIsOnEditMode(false);
     }
 
     function handleCancelClick() {
-        setIsOnEditMode((isOnEditMode) => !isOnEditMode);
+        setIsOnEditMode(!isOnEditMode);
     }
 
     return (
@@ -73,8 +74,8 @@ function EditForm({ editFormState, setEditFormState,
             <div className="escutcheon">
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">
-                        <div className="escutcheon-inner-2">
-                            λ
+                        <div className="escutcheon-inner-2" id="edit">
+                            ヽ(✿ﾟ▽ﾟ)ノ
                         </div>
                     </div>
                 </div>

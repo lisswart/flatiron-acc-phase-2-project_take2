@@ -15,7 +15,7 @@ function FlashCardsContainer() {
         functionalLabel: "",
         definition: "",
         verbalIllustration: "",
-        isLearned: false
+        needsReview: true
     });
     const [isNewCard, setIsNewCard] = useState(false);
     const [isOnEditMode, setIsOnEditMode] = useState(false);
@@ -29,7 +29,7 @@ function FlashCardsContainer() {
         functionalLabel: "",
         definition: "",
         verbalIllustration: "",
-        isLearned: false
+        needsReview: true
     });
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
@@ -87,6 +87,21 @@ function FlashCardsContainer() {
             });
     }
 
+    function masteredCard(id, masteredCard) {
+        fetch(`${URL}/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(masteredCard)
+        })
+            .then(r => r.json())
+            .then((masteredCard) => {
+                const updatedCards = cards.filter((card) => card.id !== masteredCard.id);
+                setCards(updatedCards);
+            })
+    }
+
     return (
         <div className="flashcards-container">
             <LeftPanel cards={cards}
@@ -101,7 +116,8 @@ function FlashCardsContainer() {
                 cardToBeEdited={cardToBeEdited}
                 setCardToBeEdited={setCardToBeEdited} 
                 editCard={editCard} 
-                deleteCard={deleteCard} />
+                deleteCard={deleteCard}
+                masteredCard={masteredCard} />
             {
                 isNewCard 
                 ?   <NewFlashCardEntryForm                            

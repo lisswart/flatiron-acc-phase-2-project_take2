@@ -17,10 +17,6 @@ function FlashCardOnView() {
             })
             .catch(err => console.error(err));
     }, [id]);
-
-    function handleReviewClick() {
-        // reviewCard(id);
-    }
     
     return (
         <div className="card-on-view-container">
@@ -39,14 +35,14 @@ function FlashCardOnView() {
                                 <p className="card-on-view-functional-label">
                                     {card.functionalLabel}
                                 </p>
-                                <div className="review-button-container">
+                                {/* <div className="review-button-container">
                                     <button className="button" onClick={handleReviewClick}>
                                         ✔
                                     </button>
                                     <button className="button" onClick={handleReviewClick}>
                                         ✖
                                     </button>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="card-on-view-back">
                                 <p className="card-on-view-definition">
