@@ -23,6 +23,12 @@ function EditForm({ editFormState, setEditFormState,
         };
         editCard(cardToBeEdited.id, editedCard);
         setIsOnEditMode(false);
+        setEditFormState({
+            headword: "",
+            functionalLabel: "",
+            definition: "",
+            verbalIllustration: ""
+        });
     }
 
     function handleCancelClick() {

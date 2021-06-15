@@ -34,6 +34,7 @@ function FlashCardsContainer() {
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
     const [isOnSortMode, setIsOnSortMode] = useState(false);
+    const [masteredCards, setMasteredCards] = useState([]);
     
     useEffect(() => {        
         fetch(URL)
@@ -88,6 +89,8 @@ function FlashCardsContainer() {
     }
 
     function masteredCard(id, masteredCard) {
+        setMasteredCards(masteredCard);
+        console.log(masteredCards);
         fetch(`${URL}/${id}`, {
             method: "PATCH",
             headers: {
@@ -96,10 +99,11 @@ function FlashCardsContainer() {
             body: JSON.stringify(masteredCard)
         })
             .then(r => r.json())
-            .then((masteredCard) => {
-                const updatedCards = cards.filter((card) => card.id !== masteredCard.id);
+            .then((updatedCard) => {
+                const updatedCards = cards.filter((card) => card.id !== updatedCard.id);
                 setCards(updatedCards);
-            })
+                setMasteredCards([...masteredCards, updatedCard]);
+            });
     }
 
     return (
@@ -136,7 +140,8 @@ function FlashCardsContainer() {
                         cards={cards}
                         isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
-                        setQuery={setQuery} 
+                        setQuery={setQuery}
+                        masteredCards={masteredCards}
                     />
             } 
         </div>

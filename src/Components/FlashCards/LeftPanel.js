@@ -73,11 +73,11 @@ function LeftPanel({ cards, isOnSearchMode,
             <div className="sort-button-div">
                 <button className="sort-button"
                         onClick={handleSortClickIncreasing}>
-                        Sort ↑
+                        <pre>Sort ↑</pre>
                 </button>
                 <button className="sort-button"
                         onClick={handleSortClickDecreasing}>
-                        Sort ↓
+                        <pre>Sort ↓</pre>
                 </button>
                 {
                     isNewCard

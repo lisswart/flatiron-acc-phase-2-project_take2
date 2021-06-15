@@ -27,23 +27,15 @@ function FlashCardOnView() {
                     </div>
                 :   
                    <div className="card-on-view-wrapper">
-                        <div className="card-on-view-inner">                            
+                        <div className="card-on-view-inner"> 
                             <div className="card-on-view-front">
                                 <h2 className="card-on-view-headword">
                                     {card.headword}
                                 </h2>
                                 <p className="card-on-view-functional-label">
                                     {card.functionalLabel}
-                                </p>
-                                {/* <div className="review-button-container">
-                                    <button className="button" onClick={handleReviewClick}>
-                                        ✔
-                                    </button>
-                                    <button className="button" onClick={handleReviewClick}>
-                                        ✖
-                                    </button>
-                                </div> */}
-                            </div>
+                                </p>                                
+                            </div>          
                             <div className="card-on-view-back">
                                 <p className="card-on-view-definition">
                                     <span style={{color: "navy", fontWeight: "bolder"}}>:</span>
@@ -53,7 +45,7 @@ function FlashCardOnView() {
                                     <span style={{color: "navy"}}>e.g., </span>
                                         {card.verbalIllustration}
                                 </p>
-                            </div>                                                         
+                            </div>                                                                                                       
                         </div>
                     </div>
             }

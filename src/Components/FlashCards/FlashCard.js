@@ -24,7 +24,12 @@ function FlashCard({ index, card, isOnEditMode,
     }
 
     function handleReviewedClick() {
-        const reviewedCard = {needsReview: false};
+        const reviewedCard = { 
+            headword: headword,
+            functionalLabel: functionalLabel,
+            definition: definition,
+            verbalIllustration: verbalIllustration,
+            needsReview: false };
         masteredCard(id, reviewedCard);
     }
 
@@ -69,7 +74,7 @@ function FlashCard({ index, card, isOnEditMode,
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
                 Delete
             </button>
-            <button className="button" onClick={handleReviewedClick}>
+            <button className="button" style={{backgroundColor: "green", color: "cornsilk"}} onClick={handleReviewedClick}>
                 ✔
             </button>
             {/* <button className="button" onClick={handleNeedsReviewClick}>
