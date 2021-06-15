@@ -159,7 +159,7 @@ li {
     background-color: rgba(60, 105, 173, 0.842);
     color: moccasin;
     /* border: 1px solid dimgray; */
-    border: 1px solid rgba(22, 15, 85, 0.719);
+    border: 1px solid rgba(60, 105, 173, 0.842);
 }
 
 .new-button-div {
@@ -178,7 +178,7 @@ li {
     background-color: rgba(30, 76, 145, 0.747);
     color: moccasin;
     /* border: 1px solid dimgray; */
-    border: 1px solid rgba(12, 12, 150, 0.884);
+    border: 1px solid rgba(30, 76, 145, 0.747);
 }
 
 .button {
@@ -190,7 +190,7 @@ li {
     background-color: rgba(30, 76, 145);
     color: moccasin;
     /* border: 1px solid dimgray; */
-    border: 1px solid rgba(12, 12, 150, 0.884);
+    border: 1px solid rgba(30, 76, 145);
 }
 
 .headword-link {

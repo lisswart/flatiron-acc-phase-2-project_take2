@@ -17,7 +17,7 @@ function RightPanel({ cards, isOnSearchMode,
                 <li>current size of <span style={{color: "red"}}> need to review </span>card deck: {cards.length - countNumberOfIsLearnedCards()}</li>
                 <li>current size of <span style={{color: "limegreen"}}> is learned </span> card deck: {countNumberOfIsLearnedCards()}</li>
                 <li>when you feel confident that you've got the definition of a word memorized, click the checkmark 
-                    <button className="button" style={{backgroundColor: "green", color: "cornsilk", padding: "4px", marginLeft: "1em"}}>
+                    <button className="button" style={{backgroundColor: "green", color: "cornsilk", padding: "4px", marginLeft: "1em", border: "1px solid green"}}>
                         ✔
                     </button>
                      to take the card off the review deck</li>

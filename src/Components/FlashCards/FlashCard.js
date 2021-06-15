@@ -69,7 +69,7 @@ function FlashCard({ index, card, isOnEditMode,
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
                 Delete
             </button>
-            <button className="button" style={{backgroundColor: "green", color: "cornsilk"}} onClick={handleReviewedClick}>
+            <button className="button" style={{backgroundColor: "green", color: "cornsilk", border: "1px solid green"}} onClick={handleReviewedClick}>
                 ✔
             </button>
             
