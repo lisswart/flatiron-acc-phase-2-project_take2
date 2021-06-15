@@ -13,10 +13,15 @@ function RightPanel({ cards, isOnSearchMode,
         <div className="right-panel">
 
             <ul className="instructions">
+                <li>total number of cards: {cards.length}</li>
                 <li>current size of <span style={{backgroundColor: "moccasin", color: "maroon"}}>[need to review]</span> card deck: {cards.length - countNumberOfIsLearnedCards()}</li>
                 <li>current size of <span style={{backgroundColor: "moccasin", color: "green"}}>[is learned]</span> card deck: {countNumberOfIsLearnedCards()}</li>
-                <li>when you feel confident that you've got the definition of a word memorized, click the checkmark to take the card off the review deck</li>
-                <li>to view the cards that you think you've mastered, click here 
+                <li>when you feel confident that you've got the definition of a word memorized, click the checkmark 
+                    <button className="button" style={{backgroundColor: "green", color: "cornsilk", padding: "4px", marginLeft: "1em"}}>
+                        ✔
+                    </button>
+                     to take the card off the review deck</li>
+                <li>to view the cards that you think you've mastered, that is, the ones that you've checked, click here 
                     <button className="button" style={{marginLeft: "1em", backgroundColor: "green", color: "cornsilk", padding: "4px", border: "1px solid green"}}>
                         is learned
                     </button>

@@ -33,11 +33,6 @@ function FlashCard({ index, card, isOnEditMode,
         masteredCard(id, reviewedCard);
     }
 
-    // function handleNeedsReviewClick() {
-    //     const cardStillNeedToBeReviewed = {needsReview: true};
-    //     masteredCard(id, cardStillNeedToBeReviewed);
-    // }
-
     return (
         <li className="flashcard" id={index}>
 
@@ -77,9 +72,6 @@ function FlashCard({ index, card, isOnEditMode,
             <button className="button" style={{backgroundColor: "green", color: "cornsilk"}} onClick={handleReviewedClick}>
                 ✔
             </button>
-            {/* <button className="button" onClick={handleNeedsReviewClick}>
-                ✖
-            </button> */}
             
         </li>
     );
