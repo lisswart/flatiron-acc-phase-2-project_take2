@@ -13,6 +13,7 @@ function RightPanel({ cards, isOnSearchMode,
                 <li>to sort the cards (a-z↑) alphabetically in increasing order, click on the sort↑ button</li>
                 <li>to sort the cards (a-z↓) alphabetically in decreasing order, click on the sort↓ button</li>
                 <li>to quiz yourself on a specific word, click on the underlined headword in each card; once a lone card finishes loading, hover away or toward the horizontal band that spans the height of the card in order to flip the card to see the answer</li>
+                <li>to take a card off the still need to be reviewed deck, click on the checkmark below the verbal illustration of each word</li>
                 <li>to search a specific word, enter search term below</li>
                 <li>when running multiple searches, after every search, click the clear button to reset before running another search</li>
             </ul>

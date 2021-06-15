@@ -6,7 +6,7 @@ function FlashCard({ index, card, isOnEditMode,
                     masteredCard 
                     }) {
 
-    const {id, headword, functionalLabel, definition, verbalIllustration, needsReview} = card;
+    const {id, headword, functionalLabel, definition, verbalIllustration} = card;
     
 
     function handleEditClick() {
