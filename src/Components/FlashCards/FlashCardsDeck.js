@@ -1,12 +1,20 @@
 import FlashCard from "./FlashCard";
+// import { useState } from "react";
+
 
 function FlashCardsDeck({ cards, isOnSearchMode, query,
                         isOnEditMode, setIsOnEditMode, 
                         cardToBeEdited, setCardToBeEdited, 
                         editCard, deleteCard, cardIndex }) {
+
+    // const [isLearned, setIsLearned ] = useState(null);
+    // function reviewCard(id) {
+    //     return card.id === true;
+    // }
     
     function displayCards() {
         return cards
+                // .filter(card => card.needsReview)
                 .slice(cardIndex, cardIndex + 6)
                 .map((card) => {
                     return (
@@ -29,17 +37,21 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
     function displayMatchedCards() {
         const filteredCards = cards.filter(isMatched);
         return filteredCards
+                // .filter(card => card.needsReview)
                 .map(card => {
-                    return (
+                    return (                        
                         <FlashCard card={card} key={card.id}
                                 isOnEditMode={isOnEditMode}
                                 setIsOnEditMode={setIsOnEditMode}
                                 cardToBeEdited={cardToBeEdited}
                                 setCardToBeEdited={setCardToBeEdited}
                                 editCard={editCard}
-                                deleteCard={deleteCard} />           
+                                deleteCard={deleteCard}
+                                // reviewCard={reviewCard}
+                                // setReviewCard={setReviewCard} 
+                        />           
                     );
-        });        
+                });        
     }
 
     return (

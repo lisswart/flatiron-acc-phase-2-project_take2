@@ -4,8 +4,8 @@ import { useState } from "react";
 
 function LeftPanel({ cards, isOnSearchMode, 
                     isOnSortMode, setIsOnSortMode,
-                    query, newCard, 
-                    setNewCard, isOnEditMode, 
+                    query, isNewCard, 
+                    setIsNewCard, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, editCard, 
                     deleteCard}) {
@@ -13,7 +13,7 @@ function LeftPanel({ cards, isOnSearchMode,
     const [cardIndex, setCardIndex] = useState(0);
 
     function handleNewCardClick() {
-        setNewCard(!newCard);
+        setIsNewCard(!isNewCard);
     }
 
     function handleSortClickIncreasing() {
@@ -80,7 +80,7 @@ function LeftPanel({ cards, isOnSearchMode,
                         Sort ↓
                 </button>
                 {
-                    newCard
+                    isNewCard
                     ?   <div className="new-button-div">
                             <button className="new-button"
                                     onClick={handleNewCardClick}>

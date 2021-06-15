@@ -320,3 +320,8 @@ li {
     align-items: center;
     font-size: 2em;
 }
+
+.review-button-container {
+    display: flex;
+    justify-content: space-evenly;
+}

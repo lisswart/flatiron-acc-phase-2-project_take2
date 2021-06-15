@@ -25,7 +25,7 @@ function EditForm({ editFormState, setEditFormState,
     }
 
     function handleCancelClick() {
-        setIsOnEditMode(!isOnEditMode);
+        setIsOnEditMode((isOnEditMode) => !isOnEditMode);
     }
 
     return (

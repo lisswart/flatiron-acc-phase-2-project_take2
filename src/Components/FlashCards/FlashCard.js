@@ -2,8 +2,12 @@ import { NavLink } from "react-router-dom";
 
 function FlashCard({ index, card, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
-                    setCardToBeEdited, deleteCard }) {
+                    setCardToBeEdited, deleteCard,
+                    reviewCard 
+                    }) {
+
     const {id, headword, functionalLabel, definition, verbalIllustration} = card;
+    
 
     function handleEditClick() {
         setIsOnEditMode(!isOnEditMode);
@@ -17,6 +21,10 @@ function FlashCard({ index, card, isOnEditMode,
 
     function handleDeleteClick() {
         deleteCard(id);
+    }
+
+    function handleReviewClick() {
+        // reviewCard(id);
     }
 
     return (
@@ -54,6 +62,12 @@ function FlashCard({ index, card, isOnEditMode,
             </button>
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
                 Delete
+            </button>
+            <button className="button" onClick={handleReviewClick}>
+                ✔
+            </button>
+            <button className="button" onClick={handleReviewClick}>
+                ✖
             </button>
             
         </li>

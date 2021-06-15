@@ -8,7 +8,7 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, setQuery}) {
     }
 
     function handleSearchClick() {
-        setIsOnSearchMode(!isOnSearchMode);
+        setIsOnSearchMode((isOnSearchMode) => !isOnSearchMode);
     }
 
     function handleSubmit(event) {

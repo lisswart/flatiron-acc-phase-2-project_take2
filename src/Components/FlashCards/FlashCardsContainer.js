@@ -14,9 +14,10 @@ function FlashCardsContainer() {
         headword: "",
         functionalLabel: "",
         definition: "",
-        verbalIllustration: ""
+        verbalIllustration: "",
+        isLearned: false
     });
-    const [newCard, setNewCard] = useState(false);
+    const [isNewCard, setIsNewCard] = useState(true);
     const [isOnEditMode, setIsOnEditMode] = useState(false);
     const [cardToBeEdited, setCardToBeEdited] = useState({
         id: undefined,
@@ -27,7 +28,8 @@ function FlashCardsContainer() {
         headword: "",
         functionalLabel: "",
         definition: "",
-        verbalIllustration: ""
+        verbalIllustration: "",
+        isLearned: false
     });
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
@@ -92,8 +94,8 @@ function FlashCardsContainer() {
                 query={query}
                 isOnSortMode={isOnSortMode}
                 setIsOnSortMode={setIsOnSortMode}
-                newCard={newCard}
-                setNewCard={setNewCard} 
+                isNewCard={isNewCard}
+                setIsNewCard={setIsNewCard} 
                 isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}
                 cardToBeEdited={cardToBeEdited}
@@ -101,12 +103,12 @@ function FlashCardsContainer() {
                 editCard={editCard} 
                 deleteCard={deleteCard} />
             {
-                newCard 
+                isNewCard 
                 ?   <NewFlashCardEntryForm                            
                         formState={formState} 
                         setFormState={setFormState} 
                         addCard={addCard} 
-                        setNewCard={setNewCard} />
+                        setIsNewCard={setIsNewCard} />
                 :   isOnEditMode 
                 ?   <EditForm editFormState={editFormState} 
                         setEditFormState={setEditFormState} 
