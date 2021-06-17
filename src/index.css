@@ -4,6 +4,7 @@
 }
 
 #root {
-  background-color: rgb(37, 37, 37);
+  /* background-color: rgb(37, 37, 37); */
+  background-color: black;
   color: cornsilk;
 }

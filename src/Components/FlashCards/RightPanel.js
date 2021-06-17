@@ -1,12 +1,20 @@
+import IsLearnedCardDeck from "./IsLearnedCardDeck";
 import SearchBar from "./SearchBar";
+import { useState } from "react";
 
-function RightPanel({ cards, isOnSearchMode, 
+function RightPanel({ cards, isOnSearchMode, masteredCards,
                     setIsOnSearchMode, setQuery,
-                    masteredCards }) {
+                    masteredCount }) {
+    
+    const [isLearnedDisplay, setIsLearnedDisplay] = useState(false);
 
-    function countNumberOfIsLearnedCards() {
-        const needsReviewDeck = cards.filter((card) => card.needsReview);
-        return cards.length - needsReviewDeck.length;
+    // function countNumberOfIsLearnedCards() {
+    //     const needsReviewDeck = cards.filter((card) => card.needsReview);
+    //     return cards.length - needsReviewDeck.length;
+    // }
+
+    function handleDisplayLearnedCardsClick() {
+        setIsLearnedDisplay(!isLearnedDisplay);
     }
 
     return (
@@ -14,24 +22,32 @@ function RightPanel({ cards, isOnSearchMode,
 
             <ul className="instructions">
                 <li>total number of cards: {cards.length}</li>
-                <li>current size of <span style={{color: "red"}}> need to review </span>card deck: {cards.length - countNumberOfIsLearnedCards()}</li>
-                <li>current size of <span style={{color: "limegreen"}}> is learned </span> card deck: {countNumberOfIsLearnedCards()}</li>
+                <li>current size of <span style={{color: "red"}}> need to review </span><span>card deck: </span> 
+                     {cards.length - masteredCount}
+                </li>
+                <li>current size of <span style={{color: "limegreen"}}> is learned </span><span>card deck: </span> 
+                     {masteredCount}
+                </li>
                 <li>when you feel confident that you've got the definition of a word memorized, click the checkmark 
                     <button className="button" style={{backgroundColor: "green", color: "cornsilk", padding: "4px", marginLeft: "1em", border: "1px solid green"}}>
                         ✔
                     </button>
                      to take the card off the review deck</li>
                 <li>to view the cards that you think you've mastered, that is, the ones that you've checked, click here 
-                    <button className="button" style={{marginLeft: "1em", backgroundColor: "green", color: "cornsilk", padding: "4px", border: "1px solid green"}}>
+                    <button className="button" 
+                            style={{marginLeft: "1em", backgroundColor: "green", color: "cornsilk", padding: "4px", border: "1px solid green"}}
+                            onClick={handleDisplayLearnedCardsClick}>
                         is learned
                     </button>
                 </li>
-                <li>to restore the cards referenced in the previous line, click 
-                    <button className="button" style={{marginLeft: "1em", backgroundColor: "green", color: "cornsilk", padding: "4px", border: "1px solid green"}}>
+                <li>to restore the cards referenced in the previous line to the <span style={{color: "red"}}> need to review </span> card deck, click 
+                    <button className="button" 
+                            style={{marginLeft: "1em", backgroundColor: "green", color: "cornsilk", padding: "4px", border: "1px solid green"}}
+                            onClick={handleDisplayLearnedCardsClick}>
                         is learned
                     </button>                    
                     then click the 
-                    <button className="button" style={{backgroundColor: "maroon", color: "cornsilk", marginLeft: "1em", padding: "4px", border: "1px solid maroon"}}>
+                    <button className="button" style={{backgroundColor: "maroon", color: "cornsilk", marginLeft: "1em", padding: "2px 4px 4px 4px", border: "1px solid maroon"}}>
                         ✖
                     </button>
                     on the card
@@ -49,7 +65,18 @@ function RightPanel({ cards, isOnSearchMode,
                 setIsOnSearchMode={setIsOnSearchMode}
                 setQuery={setQuery} />
 
-            <div className="escutcheon">
+            {
+                isLearnedDisplay
+                ?   <IsLearnedCardDeck 
+                        cards={cards}
+                        masteredCards={masteredCards}/>
+                :   <ul className="instructions"
+                        style={{display: "flex", flexWrap: "wrap", marginTop: "2em"}}>
+                        <li>***************</li>
+                    </ul>
+            }
+
+            {/* <div className="escutcheon">
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">
                         <div className="escutcheon-inner-2">
@@ -57,7 +84,7 @@ function RightPanel({ cards, isOnSearchMode,
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             
         </div>
     );

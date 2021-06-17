@@ -4,7 +4,8 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                         isOnEditMode, setIsOnEditMode, 
                         cardToBeEdited, setCardToBeEdited, 
                         editCard, deleteCard, cardIndex,
-                        masteredCard }) {
+                        masteredCard, setCards,
+                        setIsLearnedDisplay }) {
 
     function displayCards() {
         return cards
@@ -20,19 +21,20 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                             setCardToBeEdited={setCardToBeEdited}
                             editCard={editCard}
                             deleteCard={deleteCard}
-                            masteredCard={masteredCard} />
+                            masteredCard={masteredCard}
+                            setCards={setCards} />
                     );
         });
     }
 
     function isMatched(card) {
-        return card.headword.includes(query.toString());
+        if(query.toString() !== "")
+            return card.headword.includes(query.toString());
     }
 
     function displayMatchedCards() {
         const filteredCards = cards.filter(isMatched);
         return filteredCards
-                .filter(card => card.needsReview)
                 .map(card => {
                     return (                        
                         <FlashCard card={card} key={card.id}

@@ -1,7 +1,8 @@
 .flashcards-container {
     display: grid;
     grid-template-columns: 6fr 4fr;
-    background-color: rgb(37, 37, 37);
+    /* background-color: rgb(37, 37, 37); */
+    background-color: black;
 }
 
 .left-panel-div {
@@ -55,11 +56,15 @@ li {
     min-width: 265px;
     min-height: 395px;
     font-size: 16px;
-    font-weight: bolder;
-    background-color: lemonchiffon;
-    color: cornsilk;
+    /* font-weight: bolder; */
+    background-color: black;
+    color: lemonchiffon;
     border-radius: 10px;
-    border: 0.3em solid tomato;
+    border: 0.3em solid darkred;
+}
+
+.is-learned {
+    border: 0.3em solid forestgreen;
 }
 
 .card-list {
@@ -68,9 +73,9 @@ li {
     list-style-type: none;
 }
 
-.link-flashcard {
+.link-flashcard, a {
     color: cornsilk;
-    text-decoration: none;
+    text-decoration-color: tomato;
     margin-bottom: 2em;
 }
 
@@ -105,13 +110,15 @@ li {
     box-shadow: 0 18px 38px black;
     box-sizing: border-box;
     padding: 2em;
-    background-color: lemonchiffon;
-    color: black;
+    /* background-color: lemonchiffon; */
+    background-color: black;
+    /* color: black; */
+    color: lemonchiffon;
     font-size: 16px;
-    font-weight: bolder;
+    /* font-weight: bolder; */
     margin-top: 4em;
     perspective: 1000px;
-    border: 0.2em solid tomato;
+    border: 0.2em solid gold;
     position: relative;
     transition: transform 6s;
     transform-style: preserve-3d;
@@ -137,11 +144,13 @@ li {
 }
 
 .card-on-view-headword {
-    color: maroon;
+    /* color: maroon; */
+    color: tomato;
 }
 
 .card-on-view-functional-label {
-    color: navy;
+    /* color: navy; */
+    color: powderblue;
     margin-bottom: 2em;
 }
 
@@ -234,13 +243,14 @@ li {
     align-items: center;
     justify-content: space-evenly;
     padding: 2em;
-    background-color: maroon;
+    /* background-color: maroon; */
     color: cornsilk;
     font-size: 18px;
     font-weight: bolder;
     margin: 6.5em 2em 2em 0;
     border-radius: 10px;
     box-shadow: 0 8px 38px black;
+    border: 0.3em solid gold;
 }
 
 .inputbox {
@@ -256,7 +266,8 @@ li {
  }
 
  .label-definition {
-     color: darkgreen;
+     /* color: darkgreen; */
+     color:chartreuse;
  }
 
  .textarea {
@@ -290,11 +301,11 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0.1em solid cornsilk;
+    border: 0.1em solid gold;
 }
 
 .escutcheon-inner-0 {
-    border: 0.5em solid cornsilk;
+    border: 0.5em solid gold;
     min-width: 18em;
     max-width: 18em;
     min-height: 18em;
@@ -305,7 +316,7 @@ li {
 }
 
 .escutcheon-inner-1 {
-    border: 0.1em solid cornsilk;
+    border: 0.1em solid gold;
     min-width: 17.3em;
     max-width: 17.3em;
     min-height: 17.3em;
@@ -316,9 +327,10 @@ li {
 }
 
 .escutcheon-inner-2 {
-    padding: 0.01em;
+    /* padding: 0.01em; */
     border-radius: 50%;
-    background-color: maroon;
+    /* background-color: maroon; */
+    background-color: goldenrod;
     min-width: 5em;
     max-width: 5em;
     min-height: 5em;
@@ -326,20 +338,22 @@ li {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3em;
+    font-size: 1.7em;
 }
 
 #edit {
-    padding: 0.01em;
-    background-color: maroon;
-    min-width: 10em;
-    max-width: 10em;
-    min-height: 10em;
-    max-height: 10em;
+    /* padding: 0.01em; */
+    /* background-color: maroon; */
+    background-color: antiquewhite;
+    color: black;
+    min-width: 4em;
+    max-width: 4em;
+    min-height: 4em;
+    max-height: 4em;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 1.7em;
 }
 
 .review-button-container {

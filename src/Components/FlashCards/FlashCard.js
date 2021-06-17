@@ -3,11 +3,9 @@ import { NavLink } from "react-router-dom";
 function FlashCard({ index, card, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, deleteCard,
-                    masteredCard 
-                    }) {
+                    masteredCard, setCards }) {
 
-    const {id, headword, functionalLabel, definition, verbalIllustration} = card;
-    
+    const {id, headword, functionalLabel, definition, verbalIllustration} = card;    
 
     function handleEditClick() {
         setIsOnEditMode(!isOnEditMode);
@@ -31,6 +29,17 @@ function FlashCard({ index, card, isOnEditMode,
             verbalIllustration: verbalIllustration,
             needsReview: false };
         masteredCard(id, reviewedCard);
+        // setMasteredCards(reviewedCard);
+    }
+
+    function handleRestoreClick() {
+        const reviewedCard = { 
+            headword: headword,
+            functionalLabel: functionalLabel,
+            definition: definition,
+            verbalIllustration: verbalIllustration,
+            needsReview: true };
+        setCards(reviewedCard);
     }
 
     return (
@@ -38,10 +47,10 @@ function FlashCard({ index, card, isOnEditMode,
 
             <NavLink to={`/words/${id}`}>
                 <div className="link-flashcard">
-                    <pre style={{color: "rgb(105, 1, 1)", fontWeight: "bolder"}}>
+                    <pre style={{color: "tomato", fontWeight: "bolder"}}>
                         {headword}     
                     </pre>
-                    <span style={{color: "navy", fontWeight: "bolder"}}>
+                    <span style={{color: "powderblue", fontWeight: "bolder"}}>
                         {functionalLabel}
                     </span>
                 </div>
@@ -50,7 +59,7 @@ function FlashCard({ index, card, isOnEditMode,
             <p>
                 <i className="label-definition">definition: </i>
                 <br></br>
-                <span style={{color: "black"}}>
+                <span style={{color: "lemonchiffon"}}>
                     {definition}
                 </span>
             </p>
@@ -58,7 +67,7 @@ function FlashCard({ index, card, isOnEditMode,
             <p>
                 <i className="label-definition">verbal illustration: </i>
                 <br></br>
-                <span style={{color: "black"}}>
+                <span style={{color: "lemonchiffon"}}>
                     {verbalIllustration}
                 </span>
             </p>
@@ -69,8 +78,15 @@ function FlashCard({ index, card, isOnEditMode,
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
                 Delete
             </button>
-            <button className="button" style={{backgroundColor: "green", color: "cornsilk", border: "1px solid green"}} onClick={handleReviewedClick}>
+            <button className="button" 
+                    style={{backgroundColor: "green", color: "cornsilk", border: "1px solid green"}} 
+                    onClick={handleReviewedClick}>
                 ✔
+            </button>
+            <button className="button"
+                    style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
+                    onClick={{handleRestoreClick}}>
+                ✖
             </button>
             
         </li>

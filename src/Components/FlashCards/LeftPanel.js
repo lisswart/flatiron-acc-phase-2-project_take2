@@ -4,11 +4,11 @@ import { useState } from "react";
 
 function LeftPanel({ cards, isOnSearchMode, 
                     isOnSortMode, setIsOnSortMode,
-                    query, isNewCard, 
-                    setIsNewCard, isOnEditMode, 
-                    setIsOnEditMode, cardToBeEdited, 
-                    setCardToBeEdited, editCard, 
-                    deleteCard, masteredCard }) {
+                    query, isNewCard, setIsNewCard, 
+                    isOnEditMode, setIsOnEditMode, 
+                    cardToBeEdited, setCardToBeEdited, 
+                    editCard, deleteCard, setIsLearnedDisplay,
+                    masteredCard, setCards }) {
 
     const [cardIndex, setCardIndex] = useState(0);
 
@@ -122,7 +122,8 @@ function LeftPanel({ cards, isOnSearchMode,
                 setCardToBeEdited={setCardToBeEdited}
                 editCard={editCard}
                 deleteCard={deleteCard}
-                masteredCard={masteredCard} />
+                masteredCard={masteredCard}
+                setCards={setCards} />
                 
         </div>
     );

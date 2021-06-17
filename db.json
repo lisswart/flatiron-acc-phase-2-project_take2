@@ -5,252 +5,640 @@
       "headword": "unfazed",
       "functionalLabel": "adjective",
       "definition": "not perturbed or disconcerted",
-      "verbalIllustration": "the protestors were unfazed by the prospect of arrest"
+      "verbalIllustration": "the protestors were unfazed by the prospect of arrest",
+      "needsReview": false
     },
     {
       "id": 2,
       "headword": "brat",
       "functionalLabel": "noun",
       "definition": "a child who behaves very badly : an annoying child",
-      "verbalIllustration": "a bunch of ill-mannered little brats"
+      "verbalIllustration": "a bunch of ill-mannered little brats",
+      "needsReview": false
     },
     {
       "id": 3,
       "headword": "undaunted",
       "functionalLabel": "adjective",
       "definition": "feeling or displaying no fear by temperament",
-      "verbalIllustration": "undaunted despite their repeated failures at starting a business"
+      "verbalIllustration": "undaunted despite their repeated failures at starting a business",
+      "needsReview": false
     },
     {
       "id": 4,
       "headword": "cross",
       "functionalLabel": "adjective",
       "definition": "annoyed or angry",
-      "verbalIllustration": "I was cross with her for being so careless"
+      "verbalIllustration": "I was cross with her for being so careless",
+      "needsReview": false
     },
     {
       "id": 5,
       "headword": "perturb",
       "functionalLabel": "verb",
       "definition": "to cause someone to be worried or upset",
-      "verbalIllustration": "It perturbed him that his son was thinking about leaving school"
+      "verbalIllustration": "It perturbed him that his son was thinking about leaving school",
+      "needsReview": false
     },
     {
       "id": 6,
       "headword": "troll",
       "functionalLabel": "verb",
       "definition": "to look through (as a place) carefully or thoroughly in an effort to find or discover something",
-      "verbalIllustration": "the owner of the bed-and-breakfast often trolls antique stores for furniture and knickknacks"
+      "verbalIllustration": "the owner of the bed-and-breakfast often trolls antique stores for furniture and knickknacks",
+      "needsReview": false
     },
     {
       "id": 7,
       "headword": "scurry",
       "functionalLabel": "verb",
       "definition": ":to proceed or move quickly",
-      "verbalIllustration": "everyone scurried back to work as soon as they had finished their lunch in the cafeteria"
+      "verbalIllustration": "everyone scurried back to work as soon as they had finished their lunch in the cafeteria",
+      "needsReview": false
     },
     {
       "id": 8,
       "headword": "dawdle",
       "functionalLabel": "verb",
       "definition": "to move or act slowly",
-      "verbalIllustration": "if you continue to dawdle, we'll be late for sure"
+      "verbalIllustration": "if you continue to dawdle, we'll be late for sure",
+      "needsReview": false
     },
     {
       "id": 9,
       "headword": "dart",
       "functionalLabel": "verb",
       "definition": "to make an irregular series of quick, sudden movements",
-      "verbalIllustration": "the housefly darted about the room until it found an open window and flew out"
+      "verbalIllustration": "the housefly darted about the room until it found an open window and flew out",
+      "needsReview": false
     },
     {
       "headword": "post",
       "functionalLabel": "verb",
       "definition": ":to put up (a sign, notice, etc.) so that it can be seen by many people",
       "verbalIllustration": "The professor posted (up) the students's exam grades outside her office",
-      "id": 10
+      "id": 10,
+      "needsReview": false
     },
     {
       "headword": "post",
       "functionalLabel": "verb",
       "definition": ":to make (something) officially known to many people",
       "verbalIllustration": "The company posted increased profits for the third quarter.",
-      "id": 11
+      "id": 11,
+      "needsReview": true
     },
     {
       "headword": "post",
       "functionalLabel": "verb",
       "definition": ":to add (a message) to an online message board ",
       "verbalIllustration": "She posts regularly to several newsgroups.",
-      "id": 12
+      "id": 12,
+      "needsReview": true
     },
     {
       "headword": "post",
       "functionalLabel": "verb",
       "definition": ":to assign (someone, such as a guard) to stand or stay at a particular place",
       "verbalIllustration": "Paramedics were posted nearby.",
-      "id": 13
+      "id": 13,
+      "needsReview": true
     },
     {
       "id": 14,
       "headword": "post",
       "functionalLabel": "noun",
       "definition": ":a piece of wood or metal that is set in an upright position into or on the ground especially as a support or marker",
-      "verbalIllustration": "fence posts"
+      "verbalIllustration": "fence posts",
+      "needsReview": false
     },
     {
       "id": 15,
       "headword": "clench",
       "functionalLabel": "verb",
       "definition": ":to set (something) in a tightly closed position",
-      "verbalIllustration": "His jaw clenched and unclenched as he listened to the speech."
+      "verbalIllustration": "His jaw clenched and unclenched as he listened to the speech.",
+      "needsReview": true
     },
     {
       "id": 16,
       "headword": "clench",
       "functionalLabel": "verb",
       "definition": ":to hold (something) tightly",
-      "verbalIllustration": "She danced alone, with a rose clenched in her teeth."
+      "verbalIllustration": "She danced alone, with a rose clenched in her teeth.",
+      "needsReview": true
     },
     {
       "id": 17,
       "headword": "clench",
       "functionalLabel": "noun",
       "definition": ":the act or manner of holding",
-      "verbalIllustration": "fearful that his suitcase might be stolen, he never once relaxed his clench on the handle"
+      "verbalIllustration": "fearful that his suitcase might be stolen, he never once relaxed his clench on the handle",
+      "needsReview": true
     },
     {
       "id": 18,
       "headword": "clench",
       "functionalLabel": "verb",
       "definition": ":to have or keep in one's hands",
-      "verbalIllustration": "clenched a tissue in his hands as he told his story of misfortune"
+      "verbalIllustration": "clenched a tissue in his hands as he told his story of misfortune",
+      "needsReview": true
     },
     {
       "id": 19,
       "headword": "clutch",
       "functionalLabel": "verb",
       "definition": ":to have or keep in one's hands",
-      "verbalIllustration": "he clutched the eggs carefully so he wouldn't drop them"
+      "verbalIllustration": "he clutched the eggs carefully so he wouldn't drop them",
+      "needsReview": true
     },
     {
       "id": 20,
       "headword": "clasp",
       "functionalLabel": "verb",
       "definition": ":to fasten (something) with a clasp",
-      "verbalIllustration": "He clasped the keys to his belt"
+      "verbalIllustration": "He clasped the keys to his belt",
+      "needsReview": true
     },
     {
       "id": 21,
       "headword": "clasp",
       "functionalLabel": "verb",
       "definition": ":to hold (someone or something) tightly with your hands or arms",
-      "verbalIllustration": "He clasped her hand gently/firmly."
+      "verbalIllustration": "He clasped her hand gently/firmly.",
+      "needsReview": true
     },
     {
       "id": 22,
       "headword": "invested",
       "functionalLabel": "verb",
       "definition": ":to cause (as a person) to become filled or saturated with a certain quality or principle",
-      "verbalIllustration": "invested the film with his own enthusiasm for the wonders of flight"
+      "verbalIllustration": "invested the film with his own enthusiasm for the wonders of flight",
+      "needsReview": true
     },
     {
       "id": 23,
       "headword": "invested",
       "functionalLabel": "verb",
       "definition": ":to furnish freely or naturally with some power, quality, or attribute",
-      "verbalIllustration": "a woman invested with the strong desire to make the world a better place"
+      "verbalIllustration": "a woman invested with the strong desire to make the world a better place",
+      "needsReview": true
+    },
+    {
+      "id": 24,
+      "headword": "clutch",
+      "functionalLabel": "noun",
+      "definition": ":a number of things considered as a unit",
+      "verbalIllustration": "a clutch of medals adorned the general's chest",
+      "needsReview": true
     },
     {
       "id": 25,
       "headword": "clutch",
       "functionalLabel": "noun",
-      "definition": ":a number of things considered as a unit",
-      "verbalIllustration": "a clutch of medals adorned the general's chest"
+      "definition": ":a usually small number of persons considered as a unit",
+      "verbalIllustration": "a clutch of people traveling together",
+      "needsReview": true
     },
     {
       "id": 26,
       "headword": "clutch",
       "functionalLabel": "noun",
-      "definition": ":a usually small number of persons considered as a unit",
-      "verbalIllustration": "a clutch of people traveling together"
+      "definition": ":a time or state of affairs requiring prompt or decisive action",
+      "verbalIllustration": "a football quarterback who always comes through in the clutch",
+      "needsReview": true
     },
     {
       "id": 27,
       "headword": "clutch",
       "functionalLabel": "noun",
-      "definition": ":a time or state of affairs requiring prompt or decisive action",
-      "verbalIllustration": "a football quarterback who always comes throught in the clutch"
-    },
-    {
-      "id": 28,
-      "headword": "clutch",
-      "functionalLabel": "noun",
       "definition": ":the right or means to command or control others",
-      "verbalIllustration": "a nation no longer living in the clutch of a cruel tyrant"
+      "verbalIllustration": "a nation no longer living in the clutch of a cruel tyrant",
+      "needsReview": true
     },
     {
       "headword": "gall",
       "functionalLabel": "verb",
       "definition": ":to make (someone) feel annoyed or angry",
       "verbalIllustration": "It galls me that such a small group of people can have so much power.",
-      "id": 29
+      "id": 28,
+      "needsReview": true
     },
     {
       "headword": "bide one's time",
       "functionalLabel": "phrasal verb",
       "definition": "to remain in place in readiness or expectation of something",
       "verbalIllustration": "decided to bide her time until she had an opportunity to switch jobs",
-      "id": 30
+      "id": 29,
+      "needsReview": true
     },
     {
       "headword": "grist for the mill",
       "functionalLabel": "phrasal noun",
       "definition": ":something that can be used for a particular purpose",
       "verbalIllustration": "Now that he's a writer, he regards his difficult childhood experience as grist for the mill.",
-      "id": 31
+      "id": 30,
+      "needsReview": true
     },
     {
       "headword": "run your eye over",
       "functionalLabel": "phrasal verb",
       "definition": ":to read or look at something quickly",
       "verbalIllustration": "Please run your eye over this and let me know what you think.",
-      "id": 32
-      },
-      {
+      "id": 31,
+      "needsReview": true
+    },
+    {
       "headword": "run your eye down",
       "functionalLabel": "phrasal verb",
       "definition": ":to quickly read or look at (something, such as a list)",
       "verbalIllustration": "She ran her eye down the list looking for her name.",
-      "id": 33
-      },
-      {
+      "id": 32,
+      "needsReview": true
+    },
+    {
       "headword": "up to your eyes",
       "functionalLabel": "phrasal adjective",
       "definition": ":deeply involved in or affected by something",
       "verbalIllustration": "We're up to our eyes in work. [=we are very busy]",
-      "id": 34
-      },
-      {
+      "id": 33,
+      "needsReview": true
+    },
+    {
       "headword": "vigil",
       "functionalLabel": "noun",
       "definition": "an act or period of watching for signs of activity, danger, or opportunity",
       "verbalIllustration": "kept vigil at their ailing son's bedside the entire time he was in the hospital",
-      "id": 35
-      },
-      {
+      "id": 34,
+      "needsReview": true
+    },
+    {
       "headword": "on the fence",
       "functionalLabel": "phrasal adjective",
       "definition": ":unable to decide about something",
       "verbalIllustration": "He tried to persuade those still (sitting) on the fence to vote in his favor.",
-      "id": 36
-      },
-      {
+      "id": 35,
+      "needsReview": true
+    },
+    {
       "headword": "find your feet",
       "functionalLabel": "phrasal verb",
       "definition": "1:to start to be comfortable in a new situation 2:to begin to be confident or successful",
       "verbalIllustration": "1. They quickly found their feet in their adopted country. 2. I was away for a long time, so it will take me a while to find my feet again.",
-      "id": 37
-      }
+      "id": 36,
+      "needsReview": true
+    },
+    {
+      "headword": "linked list",
+      "functionalLabel": "data structure",
+      "definition": ":a way to represent a list of items, each item in the list is a node, and a node contains two things, the value itself and a reference to the next node on the list",
+      "verbalIllustration": "linked lists are a building block for more complex data structures",
+      "id": 37,
+      "needsReview": true
+    },
+    {
+      "headword": "marvel",
+      "functionalLabel": "verb",
+      "definition": ":to feel great surprise, wonder, or admiration",
+      "verbalIllustration": "The doctors marveled that anyone could recover so quickly.",
+      "id": 38,
+      "needsReview": true
+    },
+    {
+      "headword": "dangle",
+      "functionalLabel": "verb",
+      "definition": ":to hang down loosely especially in a way that makes it possible to swing freely",
+      "verbalIllustration": "He dangled a piece of string in front of the cat.",
+      "id": 39,
+      "needsReview": true
+    },
+    {
+      "headword": "dangle",
+      "functionalLabel": "verb",
+      "definition": ":to offer (something) in order to persuade someone to do something",
+      "verbalIllustration": "The money she dangled in front of him wasn't enough to convince him to sell.",
+      "id": 40,
+      "needsReview": true
+    },
+    {
+      "headword": "lacuna",
+      "functionalLabel": "noun",
+      "definition": "1:a gap or blank space in something; 2:a missing part",
+      "verbalIllustration": "She found a lacuna in the historical record.",
+      "id": 41,
+      "needsReview": true
+    },
+    {
+      "headword": "dearth",
+      "functionalLabel": "noun",
+      "definition": ":a falling short of an essential or desirable amount or number",
+      "verbalIllustration": "there was a dearth of usable firewood at the campsite",
+      "id": 42,
+      "needsReview": true
+    },
+    {
+      "headword": "dearth",
+      "functionalLabel": "noun",
+      "definition": ":the fact or state of being absent",
+      "verbalIllustration": "the dearth of salesclerks at the shoe store annoyed us",
+      "id": 43,
+      "needsReview": true
+    },
+    {
+      "headword": "absent",
+      "functionalLabel": "adjective",
+      "definition": ":lost in thought and unaware of one's surroundings or actions",
+      "verbalIllustration": "seemed absent when I told him you were coming because he nodded but didn't say anything",
+      "id": 44,
+      "needsReview": true
+    },
+    {
+      "headword": "absent",
+      "functionalLabel": "preposition",
+      "definition": ":not having",
+      "verbalIllustration": "absent a significant source of investment funds, the fledgling company continues to struggle",
+      "id": 45,
+      "needsReview": true
+    },
+    {
+      "headword": "absent oneself",
+      "functionalLabel": "phrase",
+      "definition": ":to fail to attend",
+      "verbalIllustration": "She found a plausible excuse to absent herself from the gathering.",
+      "id": 46,
+      "needsReview": true
+    },
+    {
+      "headword": "wary",
+      "functionalLabel": "adjective",
+      "definition": ":not having or showing complete trust in someone or something that could be dangerous or cause trouble",
+      "verbalIllustration": "The store owner kept a wary eye on him.",
+      "id": 47,
+      "needsReview": true
+    },
+    {
+      "headword": "scrupulous",
+      "functionalLabel": "adjective",
+      "definition": ":taking, showing, or involving great care and effort",
+      "verbalIllustration": "a scrupulous attention to detail is evident in all of his reporting",
+      "id": 48,
+      "needsReview": true
+    },
+    {
+      "headword": "lore",
+      "functionalLabel": "noun",
+      "definition": ":traditional knowledge, beliefs, and stories that relate to a particular place, subject, or group",
+      "verbalIllustration": "[1]an event that has become part of local lore, [2]forest lore, [3]the lore of sailing",
+      "id": 49,
+      "needsReview": true
+    },
+    {
+      "headword": "lore",
+      "functionalLabel": "noun",
+      "definition": ":a body of facts learned by study or experience",
+      "verbalIllustration": "the home gardener had acquired her herbal lore from many years of trial and error",
+      "id": 50,
+      "needsReview": true
+    },
+    {
+      "headword": "bail",
+      "functionalLabel": "verb",
+      "definition": ":to leave a place often for another",
+      "verbalIllustration": "after two hours of that boring party, we were ready to bail",
+      "id": 51,
+      "needsReview": true
+    },
+    {
+      "headword": "jump",
+      "functionalLabel": "verb",
+      "definition": ":to move suddenly and sharply (as in surprise)",
+      "verbalIllustration": "the sudden appearance of a mouse scurrying across the floor made me jump",
+      "id": 52,
+      "needsReview": true
+    },
+    {
+      "headword": "muddle through",
+      "functionalLabel": "phrase",
+      "definition": "to do something without doing it very well or easily",
+      "verbalIllustration": "I had a hard time with the class, but somehow I muddled through.",
+      "id": 53,
+      "needsReview": true
+    },
+    {
+      "headword": "muddle along",
+      "functionalLabel": "phrase",
+      "definition": "to think, act, or proceed in a confused way or without a plan",
+      "verbalIllustration": "She muddled along for a few years before going to college.",
+      "id": 54,
+      "needsReview": true
+    },
+    {
+      "headword": "muddle",
+      "functionalLabel": "noun",
+      "definition": ":a disordered mixture",
+      "verbalIllustration": "a muddle of documents",
+      "id": 55,
+      "needsReview": true
+    },
+    {
+      "headword": "muddle",
+      "functionalLabel": "noun",
+      "definition": ":a state of mental uncertainty",
+      "verbalIllustration": "the new, supposedly improved forms simply put taxpayers in a bigger muddle",
+      "id": 56,
+      "needsReview": true
+    },
+    {
+      "headword": "angle",
+      "functionalLabel": "noun",
+      "definition": ":something that curves or is curved",
+      "verbalIllustration": "the road around the peninsula is all angles and hairpin turns",
+      "id": 57,
+      "needsReview": false
+    },
+    {
+      "headword": "angle",
+      "functionalLabel": "noun",
+      "definition": ":a way of looking at or thinking about something",
+      "verbalIllustration": "what's your angle on the problem?",
+      "id": 58,
+      "needsReview": false
+    },
+    {
+      "headword": "angle",
+      "functionalLabel": "verb",
+      "definition": ":to try to get what you want in a clever or indirect way",
+      "verbalIllustration": "She's been angling to get a promotion.",
+      "id": 59,
+      "needsReview": false
+    },
+    {
+      "headword": "arch",
+      "functionalLabel": "adjective",
+      "definition": ":coming before all others in importance",
+      "verbalIllustration": "since the start of her acting career her parents have steadfastly remained her arch supporters",
+      "id": 60,
+      "needsReview": true
+    },
+    {
+      "headword": "bolt",
+      "functionalLabel": "verb",
+      "definition": ":to move or go very suddenly and quickly from or to a particular place, position, or condition",
+      "verbalIllustration": "She bolted awake when the alarm sounded.",
+      "id": 61,
+      "needsReview": false
+    },
+    {
+      "headword": "bolt",
+      "functionalLabel": "verb",
+      "definition": "[1]:to attach (something) firmly, [2]:to attach (something) with a bolt",
+      "verbalIllustration": "[1]He bolted the panels together, [2]The bench was bolted to the floor.",
+      "id": 62,
+      "needsReview": true
+    },
+    {
+      "headword": "snap up",
+      "functionalLabel": "phrasal verb",
+      "definition": ":to buy or take (something or someone) quickly or eagerly",
+      "verbalIllustration": "Shoppers came to the store to snap up bargains after the holidays.",
+      "id": 63,
+      "needsReview": true
+    },
+    {
+      "headword": "quizzical",
+      "functionalLabel": "adjective",
+      "definition": ":showing that you do not understand something or that you find something strange or amusing",
+      "verbalIllustration": "She raised a quizzical eyebrow when she saw what he was wearing.",
+      "id": 64,
+      "needsReview": true
+    },
+    {
+      "headword": "rigmarole",
+      "functionalLabel": "noun",
+      "definition": ":a long, complicated, and annoying process, description, etc",
+      "verbalIllustration": "We had to go through the rigmarole of installing, registering, and activating the software before we found out it wouldn't work.",
+      "id": 65,
+      "needsReview": true
+    },
+    {
+      "headword": "laundry list",
+      "functionalLabel": "noun",
+      "definition": ":a long list of related things",
+      "verbalIllustration": "He recited a laundry list of problems.",
+      "id": 66,
+      "needsReview": true
+    },
+    {
+      "headword": "list",
+      "functionalLabel": "verb",
+      "definition": ":to make a list of (names, things, etc)",
+      "verbalIllustration": "I listed my likes and dislikes.",
+      "id": 67,
+      "needsReview": true
+    },
+    {
+      "headword": "list",
+      "functionalLabel": "verb",
+      "definition": ":to enter information about someone (something)",
+      "verbalIllustration": "The hospital has listed him (as being) in fair condition.",
+      "id": 68,
+      "needsReview": true
+    },
+    {
+      "headword": "fiddle",
+      "functionalLabel": "verb",
+      "definition": ":to make jerky or restless movements",
+      "verbalIllustration": "the executive fiddled with a pen as she impatiently waited for the meeting to begin",
+      "id": 69,
+      "needsReview": true
+    },
+    {
+      "headword": "fiddle (around)",
+      "functionalLabel": "phrasal verb",
+      "definition": ":to spend time in aimless activity",
+      "verbalIllustration": "we spent the snow day just fiddling aroung",
+      "id": 70,
+      "needsReview": true
+    },
+    {
+      "headword": "fiddle (with)",
+      "functionalLabel": "phrasal verb",
+      "definition": ":to handle thoughtlessly, ignorantly, or mischievously",
+      "verbalIllustration": "I could tell that someone had been fiddling with the carefully set controls on my entertainment system",
+      "id": 71,
+      "needsReview": true
+    },
+    {
+      "headword": "fiddle away",
+      "functionalLabel": "phrasal verb",
+      "definition": ":to use up carelessly",
+      "verbalIllustration": "fiddled away the entire evening",
+      "id": 72,
+      "needsReview": true
+    },
+    {
+      "headword": "tremulous",
+      "functionalLabel": "adjective",
+      "definition": ":marked by or given to small uncontrollable bodily movements",
+      "verbalIllustration": "the frail woman extended a tremulous hand in welcome",
+      "id": 73,
+      "needsReview": true
+    },
+    {
+      "headword": "tremulous",
+      "functionalLabel": "adjective",
+      "definition": ":easily frightened",
+      "verbalIllustration": "a tremulous girl somehow mustered up the courage to ask a question of the governor",
+      "id": 74,
+      "needsReview": true
+    },
+    {
+      "headword": "muster",
+      "functionalLabel": "verb",
+      "definition": ":to work hard to find or get (courage, support, etc)",
+      "verbalIllustration": "He finally mustered (up) the courage to ask her on a date.",
+      "id": 75,
+      "needsReview": true
+    },
+    {
+      "headword": "droll",
+      "functionalLabel": "adjective",
+      "definition": ":having an odd and amusing quality",
+      "verbalIllustration": "a droll little man with a peculiar sense of humor",
+      "id": 76,
+      "needsReview": true
+    },
+    {
+      "headword": "waddle",
+      "functionalLabel": "verb",
+      "definition": ":to walk with short steps while moving from side to side like a duck",
+      "verbalIllustration": "[1]He waddled down the hallway. [2]A fat goose waddled across the yard.",
+      "id": 77,
+      "needsReview": true
+    },
+    {
+      "headword": "zilch",
+      "functionalLabel": "noun",
+      "definition": ":nothing at all",
+      "verbalIllustration": "She's done zilch to help me out.",
+      "id": 78,
+      "needsReview": true
+    },
+    {
+      "headword": "jest",
+      "functionalLabel": "verb",
+      "definition": ":to say things that are meant to cause laughter",
+      "verbalIllustration": "You voted for him? Surely you jest.",
+      "id": 79,
+      "needsReview": true
+    },
+    {
+      "headword": "jam",
+      "functionalLabel": "verb",
+      "definition": ":to press or push (an object) into a tight place",
+      "verbalIllustration": "He jammed the book back into the bookcase",
+      "needsReview": true,
+      "id": 80
+    }
   ]
 }

@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import NewFlashCardEntryForm from "./NewFlashCardEntryForm";
 import EditForm from "./EditForm";
 
-const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
-//const LOCAL = `http://localhost:4000/words`;
+//const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
+const LOCAL = `http://localhost:4000/words`;
 
 function FlashCardsContainer() {
     const [cards, setCards] = useState([]);    
@@ -35,17 +35,28 @@ function FlashCardsContainer() {
     const [query, setQuery] = useState("");
     const [isOnSortMode, setIsOnSortMode] = useState(false);
     const [masteredCards, setMasteredCards] = useState([]);
+    const [masteredCount, setMasteredCount] = useState(0);
     
     useEffect(() => {        
-        fetch(URL)
+        fetch(LOCAL)
             .then(r => r.json())
             .then(cardObjs => {
                 setCards(cardObjs);
             });
     }, []);
 
+    useEffect(() => {
+        fetch(LOCAL)
+            .then(r => r.json())
+            .then(cards => {
+                const _masteredCards = cards.filter(card => card.needsReview === false);
+                // const _needsReviewCards = cards.filter(card => card.needsReview === true);
+                setMasteredCount(_masteredCards.length);
+            });
+    }, [masteredCards]);
+
     function addCard(card) {
-        fetch(URL, {
+        fetch(LOCAL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -60,7 +71,7 @@ function FlashCardsContainer() {
     }
 
     function deleteCard(cardId) {
-        fetch(`${URL}/${cardId}`, {
+        fetch(`${LOCAL}/${cardId}`, {
             method: "DELETE"            
         })
             .then(r => r.json())
@@ -71,7 +82,7 @@ function FlashCardsContainer() {
     }
 
     function editCard(id, updatedCard) {
-        fetch(`${URL}/${id}`, {
+        fetch(`${LOCAL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -89,9 +100,7 @@ function FlashCardsContainer() {
     }
 
     function masteredCard(id, masteredCard) {
-        setMasteredCards(masteredCard);
-        console.log(masteredCards);
-        fetch(`${URL}/${id}`, {
+        fetch(`${LOCAL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -121,7 +130,8 @@ function FlashCardsContainer() {
                 setCardToBeEdited={setCardToBeEdited} 
                 editCard={editCard} 
                 deleteCard={deleteCard}
-                masteredCard={masteredCard} />
+                masteredCard={masteredCard}
+                setCards={setCards} />
             {
                 isNewCard 
                 ?   <NewFlashCardEntryForm                            
@@ -136,13 +146,15 @@ function FlashCardsContainer() {
                         isOnEditMode={isOnEditMode}
                         setIsOnEditMode={setIsOnEditMode} 
                         editCard={editCard} />
+                // :   isLearnedDisplay
+                // ?   <IsLearnedCardDeck masteredCards={masteredCards}/>
                 :   <RightPanel 
                         cards={cards}
                         isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
                         setQuery={setQuery}
                         masteredCards={masteredCards}
-                    />
+                        masteredCount={masteredCount} />
             } 
         </div>
     );

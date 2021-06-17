@@ -70,7 +70,7 @@ function NewFlashCardEntryForm({ addCard, formState,
                 <div className="escutcheon-inner-0">
                     <div className="escutcheon-inner-1">
                         <div className="escutcheon-inner-2">
-                            ⫶
+                            ✿
                         </div>
                     </div>
                 </div>
