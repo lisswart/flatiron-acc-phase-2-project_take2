@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import NewFlashCardEntryForm from "./NewFlashCardEntryForm";
 import EditForm from "./EditForm";
 
-//const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
-const LOCAL = `http://localhost:4000/words`;
+const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
+//const LOCAL = `http://localhost:4000/words`;
 
 function FlashCardsContainer() {
     const [cards, setCards] = useState([]);    
@@ -38,7 +38,7 @@ function FlashCardsContainer() {
     const [masteredCount, setMasteredCount] = useState(0);
     
     useEffect(() => {        
-        fetch(LOCAL)
+        fetch(URL)
             .then(r => r.json())
             .then(cardObjs => {
                 setCards(cardObjs);
@@ -46,7 +46,7 @@ function FlashCardsContainer() {
     }, []);
 
     useEffect(() => {
-        fetch(LOCAL)
+        fetch(URL)
             .then(r => r.json())
             .then(cards => {
                 const _masteredCards = cards.filter(card => card.needsReview === false);
@@ -56,7 +56,7 @@ function FlashCardsContainer() {
     }, [masteredCards]);
 
     function addCard(card) {
-        fetch(LOCAL, {
+        fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -74,7 +74,7 @@ function FlashCardsContainer() {
     }
 
     function deleteCard(cardId) {
-        fetch(`${LOCAL}/${cardId}`, {
+        fetch(`${URL}/${cardId}`, {
             method: "DELETE"            
         })
             .then(r => {
@@ -88,7 +88,7 @@ function FlashCardsContainer() {
     }
 
     function editCard(id, updatedCard) {
-        fetch(`${LOCAL}}/${id}`, {
+        fetch(`${URL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -106,7 +106,7 @@ function FlashCardsContainer() {
     }
 
     function masteredCard(id, masteredCard) {
-        fetch(`${LOCAL}}/${id}`, {
+        fetch(`${URL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
