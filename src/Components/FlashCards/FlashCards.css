@@ -20,7 +20,7 @@
     align-items: flex-start;
     background-color: transparent;
     padding: 0 2em 2em 1.2em;
-    margin: 4em 2em 2em 0;
+    margin: 1em 2em 2em 0;
     border-radius: 10px;
 }
 
@@ -220,7 +220,7 @@ li {
 .click-more-button-container {
     display: flex;
     justify-content: space-between;
-    margin: 0 1em 0 1em;
+    margin: 0 3em 0 1em;
 }
 
 .click-more-button {
@@ -255,7 +255,7 @@ li {
 
 .inputbox {
     width: 100%;
-    min-width: 15em;
+    min-width: 1em;
     margin-top: 1em;
     display: flex;
     flex-direction: column; }
@@ -272,7 +272,7 @@ li {
 
  .textarea {
     min-height: 7em;
-    min-width: 25em;
+    min-width: 225px;
     max-width: 25em;
     background-color: bisque;
     border-radius: 5px;
@@ -341,12 +341,10 @@ li {
     font-size: 1.7em;
 }
 
-#edit {
-    /* padding: 0.01em; */
-    /* background-color: maroon; */
+/* #edit {
     background-color: antiquewhite;
     color: black;
-    min-width: 4em;
+    min-width: 225px;
     max-width: 4em;
     min-height: 4em;
     max-height: 4em;
@@ -354,7 +352,7 @@ li {
     justify-content: center;
     align-items: center;
     font-size: 1.7em;
-}
+} */
 
 .review-button-container {
     display: flex;

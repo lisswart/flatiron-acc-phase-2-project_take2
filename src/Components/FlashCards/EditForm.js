@@ -38,7 +38,7 @@ function EditForm({ editFormState, setEditFormState,
     return (
         <div>
             
-            <form onSubmit={handleSubmit} className="form-view">
+            <form onSubmit={handleSubmit} className="form-view" style={{paddingLeft: "0"}}>
                 <div className="inputbox label" >
                     <strong>headword: </strong>
                     <span style={{color: "moccasin"}}>
@@ -83,7 +83,7 @@ function EditForm({ editFormState, setEditFormState,
                         <div className="escutcheon-inner-2" id="edit">
                             ✿
                         </div>
-                        <div className="escutcheon-inner-2" id="edit">
+                        {/* <div className="escutcheon-inner-2" id="edit">
                             ✿
                         </div>
                         <div className="escutcheon-inner-2" id="edit">
@@ -175,7 +175,7 @@ function EditForm({ editFormState, setEditFormState,
                         </div>
                         <div className="escutcheon-inner-2" id="edit">
                             ✿
-                        </div>
+                        </div> */}
                         {/* <div className="escutcheon-inner-2" id="edit">
                             ✿
                         </div>

@@ -10,7 +10,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
     function displayCards() {
         return cards
                 // .filter(card => card.needsReview)
-                .slice(cardIndex, cardIndex + 18)
+                .slice(cardIndex, cardIndex + 6)
                 .map((card) => {
                     return (
                         <FlashCard 

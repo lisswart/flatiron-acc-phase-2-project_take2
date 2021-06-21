@@ -7,7 +7,7 @@ function LeftPanel({ cards, isOnSearchMode,
                     query, isNewCard, setIsNewCard, 
                     isOnEditMode, setIsOnEditMode, 
                     cardToBeEdited, setCardToBeEdited, 
-                    editCard, deleteCard, setIsLearnedDisplay,
+                    editCard, deleteCard, learnedCards, needToReviewCards,
                     masteredCard, setCards }) {
 
     const [cardIndex, setCardIndex] = useState(0);
@@ -58,17 +58,17 @@ function LeftPanel({ cards, isOnSearchMode,
 
     function handleClickMore() {
         console.log(cardIndex);
-        if(cardIndex + 18 < cards.length) {
-            setCardIndex((cardIndex) => (cardIndex + 18) % cards.length);
+        if(cardIndex + 6 < cards.length) {
+            setCardIndex((cardIndex) => (cardIndex + 6) % cards.length);
             console.log(cardIndex);
         }
     }
 
     function handleClickBackward() {
         console.log(cardIndex);
-        if(cardIndex - 18 >= 0) {
+        if(cardIndex - 6 >= 0) {
             setCardIndex((cardIndex) => 
-                (cardIndex - 18) % cards.length);
+                (cardIndex - 6) % cards.length);
                 console.log(cardIndex);
         }
     }
@@ -100,9 +100,11 @@ function LeftPanel({ cards, isOnSearchMode,
                             </button>
                         </div>
                 }
-                <button className="sort-button">show all cards</button>
-                <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}>show learned cards</button>
-                <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}>show need-to-review cards</button>
+                <button className="sort-button">All: {cards.length} cards</button>
+                <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}>Learned: 0 cards</button>
+                {/* {learnedCards.length} */}
+                <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}>Need-to-review: {cards.length} cards</button>
+                {/* {needToReviewCards.length} */}
                 
             </div>
             <div style={{marginLeft: "2em"}}>
@@ -114,7 +116,12 @@ function LeftPanel({ cards, isOnSearchMode,
                             ◀
                         </button>
                     </div>
-                    <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cardIndex + 18}</span>
+                    {
+                        (cardIndex + 6) >= cards.length
+                        ?   <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cards.length}</span>
+                        :   <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cardIndex + 6}</span>
+                    }
+                    
                     <div className="click-more-button-container">
                         <button onClick={handleClickMore}
                                 className="click-more-button">
