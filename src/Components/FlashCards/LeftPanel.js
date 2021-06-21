@@ -57,19 +57,14 @@ function LeftPanel({ cards, isOnSearchMode,
     }
 
     function handleClickMore() {
-        console.log(cardIndex);
         if(cardIndex + 6 < cards.length) {
             setCardIndex((cardIndex) => (cardIndex + 6) % cards.length);
-            console.log(cardIndex);
         }
     }
 
     function handleClickBackward() {
-        console.log(cardIndex);
         if(cardIndex - 6 >= 0) {
-            setCardIndex((cardIndex) => 
-                (cardIndex - 6) % cards.length);
-                console.log(cardIndex);
+            setCardIndex((cardIndex) => (cardIndex - 6) % cards.length);
         }
     }
 
@@ -117,7 +112,9 @@ function LeftPanel({ cards, isOnSearchMode,
                         </button>
                     </div>
                     {
-                        (cardIndex + 6) >= cards.length
+                        (cards.length === 0)
+                        ?   <></>
+                        :   (cardIndex + 6) >= cards.length
                         ?   <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cards.length}</span>
                         :   <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cardIndex + 6}</span>
                     }
