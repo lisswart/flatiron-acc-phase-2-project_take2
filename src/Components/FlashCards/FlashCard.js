@@ -79,13 +79,13 @@ function FlashCard({ index, card, isOnEditMode,
                 Delete 🗑
             </button>
             <button className="button" 
-                    style={{backgroundColor: "green", color: "cornsilk", border: "1px solid green"}} 
+                    style={{backgroundColor: "darkgreen", color: "cornsilk", border: "1px solid darkgreen"}} 
                     // onClick={handleReviewedClick}
             >
                 Learned ✔
             </button>
             <button className="button"
-                    style={{backgroundColor: "brown", color: "cornsilk", border: "1px solid brown"}}
+                    style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
                     // onClick={{handleRestoreClick}}
             >
                 Need to review !!

@@ -56,9 +56,13 @@ function RightPanel({ cards, isOnSearchMode, masteredCards,
                 <li>to cancel, click on the same button</li>
                 <li>to sort the cards (a-z↑) alphabetically in increasing order, click on the sort↑ button</li>
                 <li>to sort the cards (a-z↓) alphabetically in decreasing order, click on the sort↓ button</li> */}
-                <li>to quiz yourself on a specific word, click on the underlined headword in each card; once a lone card finishes loading, hover away or toward the horizontal band that spans the height of the card in order to flip the card to see the answer</li>
+                <li>to quiz yourself on a specific word, click on the underlined headword in each card; 
+                    once a lone card finishes loading, hover away or toward the horizontal band that spans 
+                    the height of the card in order to flip the card to see the answer; click the browser 
+                    back button once you're done</li>
                 <li>to search a specific word, enter search term below</li>
-                <li>when running multiple searches, after every search, click the clear button to reset before running another search</li>
+                <li>when running multiple searches, after every search, click the clear button 
+                    to reset before running another search</li>
             </ul>
 
             <SearchBar isOnSearchMode={isOnSearchMode} 

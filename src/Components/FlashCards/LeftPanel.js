@@ -57,13 +57,19 @@ function LeftPanel({ cards, isOnSearchMode,
     }
 
     function handleClickMore() {
-        setCardIndex((cardIndex) => (cardIndex + 6) % cards.length)
+        console.log(cardIndex);
+        if(cardIndex + 18 < cards.length) {
+            setCardIndex((cardIndex) => (cardIndex + 18) % cards.length);
+            console.log(cardIndex);
+        }
     }
 
     function handleClickBackward() {
-        if(cardIndex >= 0) {
+        console.log(cardIndex);
+        if(cardIndex - 18 >= 0) {
             setCardIndex((cardIndex) => 
-                (cardIndex - 6) % cards.length);
+                (cardIndex - 18) % cards.length);
+                console.log(cardIndex);
         }
     }
 
@@ -95,8 +101,12 @@ function LeftPanel({ cards, isOnSearchMode,
                         </div>
                 }
                 <button className="sort-button">show all cards</button>
-                <button className="sort-button">show learned cards</button>
-                <button className="sort-button">show need-to-review cards</button>
+                <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}>show learned cards</button>
+                <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}>show need-to-review cards</button>
+                
+            </div>
+            <div style={{marginLeft: "2em"}}>
+                
                 <div className="forward-backward-buttons-container">
                     <div className="click-more-button-container">
                         <button onClick={handleClickBackward}
@@ -104,6 +114,7 @@ function LeftPanel({ cards, isOnSearchMode,
                             ◀
                         </button>
                     </div>
+                    <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cardIndex + 18}</span>
                     <div className="click-more-button-container">
                         <button onClick={handleClickMore}
                                 className="click-more-button">
