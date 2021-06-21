@@ -10,27 +10,11 @@ const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
 
 function FlashCardsContainer() {
     const [cards, setCards] = useState([]);    
-    const [formState, setFormState] = useState({
-        headword: "",
-        functionalLabel: "",
-        definition: "",
-        verbalIllustration: "",
-        needsReview: true
-    });
+    const [formState, setFormState] = useState({});
     const [isNewCard, setIsNewCard] = useState(false);
     const [isOnEditMode, setIsOnEditMode] = useState(false);
-    const [cardToBeEdited, setCardToBeEdited] = useState({
-        // id: undefined,
-        // headword: "",
-        // functionalLabel: ""
-    });
-    const [editFormState, setEditFormState] = useState({
-        // headword: "",
-        // functionalLabel: "",
-        // definition: "",
-        // verbalIllustration: "",
-        // needsReview: true
-    });
+    const [cardToBeEdited, setCardToBeEdited] = useState({});
+    const [editFormState, setEditFormState] = useState({});
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
     const [isOnSortMode, setIsOnSortMode] = useState(false);

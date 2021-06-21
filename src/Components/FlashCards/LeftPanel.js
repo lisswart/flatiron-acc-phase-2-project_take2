@@ -73,11 +73,11 @@ function LeftPanel({ cards, isOnSearchMode,
             <div className="sort-button-div">
                 <button className="sort-button"
                         onClick={handleSortClickIncreasing}>
-                        <pre>Sort ↑</pre>
+                        <pre>Sort a-z↑</pre>
                 </button>
                 <button className="sort-button"
                         onClick={handleSortClickDecreasing}>
-                        <pre>Sort ↓</pre>
+                        <pre>Sort a-z↓</pre>
                 </button>
                 {
                     isNewCard
@@ -90,10 +90,13 @@ function LeftPanel({ cards, isOnSearchMode,
                     :   <div className="new-button-div">
                             <button className="new-button"
                                     onClick={handleNewCardClick}>
-                                New
+                                create new card
                             </button>
                         </div>
                 }
+                <button className="sort-button">show all cards</button>
+                <button className="sort-button">show learned cards</button>
+                <button className="sort-button">show need-to-review cards</button>
                 <div className="forward-backward-buttons-container">
                     <div className="click-more-button-container">
                         <button onClick={handleClickBackward}

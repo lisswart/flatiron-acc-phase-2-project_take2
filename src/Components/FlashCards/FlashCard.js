@@ -73,22 +73,22 @@ function FlashCard({ index, card, isOnEditMode,
             </p>
             <br></br>
             <button className="button" onClick={handleEditClick}>
-                Edit
+                Edit 📝
             </button>
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
-                Delete
+                Delete 🗑
             </button>
             <button className="button" 
                     style={{backgroundColor: "green", color: "cornsilk", border: "1px solid green"}} 
                     // onClick={handleReviewedClick}
             >
-                ✔
+                Learned ✔
             </button>
             <button className="button"
-                    style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
+                    style={{backgroundColor: "brown", color: "cornsilk", border: "1px solid brown"}}
                     // onClick={{handleRestoreClick}}
             >
-                ✖
+                Need to review !!
             </button>
             
         </li>

@@ -38,7 +38,7 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, setQuery}) {
                                     className="inputbar inputbox" /><br></br>
                             <button className="button" 
                                     onClick={handleSearchClick}>
-                                        Search by headword
+                                        Search card deck by headword
                             </button>
                         </>
                 }
