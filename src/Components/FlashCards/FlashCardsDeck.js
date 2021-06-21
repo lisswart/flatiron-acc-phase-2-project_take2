@@ -9,7 +9,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function displayCards() {
         return cards
-                .filter(card => card.needsReview)
+                // .filter(card => card.needsReview)
                 .slice(cardIndex, cardIndex + 6)
                 .map((card) => {
                     return (
@@ -29,7 +29,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function isMatched(card) {
         if(query.toString() !== "")
-            return card.headword.includes(query.toString());
+            return (card.headword).includes(query.toString());
     }
 
     function displayMatchedCards() {

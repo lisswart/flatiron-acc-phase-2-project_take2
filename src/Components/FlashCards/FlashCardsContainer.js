@@ -5,8 +5,8 @@ import { useState, useEffect } from "react";
 import NewFlashCardEntryForm from "./NewFlashCardEntryForm";
 import EditForm from "./EditForm";
 
-const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
-//const LOCAL = `http://localhost:4000/words`;
+//const URL = `https://hidden-harbor-11546.herokuapp.com/words`;
+const LOCAL = `http://localhost:4000/words`;
 
 function FlashCardsContainer() {
     const [cards, setCards] = useState([]);    
@@ -20,16 +20,16 @@ function FlashCardsContainer() {
     const [isNewCard, setIsNewCard] = useState(false);
     const [isOnEditMode, setIsOnEditMode] = useState(false);
     const [cardToBeEdited, setCardToBeEdited] = useState({
-        id: undefined,
-        headword: "",
-        functionalLabel: ""
+        // id: undefined,
+        // headword: "",
+        // functionalLabel: ""
     });
     const [editFormState, setEditFormState] = useState({
-        headword: "",
-        functionalLabel: "",
-        definition: "",
-        verbalIllustration: "",
-        needsReview: true
+        // headword: "",
+        // functionalLabel: "",
+        // definition: "",
+        // verbalIllustration: "",
+        // needsReview: true
     });
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
@@ -38,7 +38,7 @@ function FlashCardsContainer() {
     const [masteredCount, setMasteredCount] = useState(0);
     
     useEffect(() => {        
-        fetch(URL)
+        fetch(LOCAL)
             .then(r => r.json())
             .then(cardObjs => {
                 setCards(cardObjs);
@@ -46,7 +46,7 @@ function FlashCardsContainer() {
     }, []);
 
     useEffect(() => {
-        fetch(URL)
+        fetch(LOCAL)
             .then(r => r.json())
             .then(cards => {
                 const _masteredCards = cards.filter(card => card.needsReview === false);
@@ -56,14 +56,17 @@ function FlashCardsContainer() {
     }, [masteredCards]);
 
     function addCard(card) {
-        fetch(URL, {
+        fetch(LOCAL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(card)
         })
-            .then(r => r.json())
+            .then(r => {
+                console.log(r);
+                r.json();
+            })
             .then(newCard => {
                 const augmentedDeckOfCards = [...cards, newCard];
                 setCards(augmentedDeckOfCards);
@@ -71,10 +74,13 @@ function FlashCardsContainer() {
     }
 
     function deleteCard(cardId) {
-        fetch(`${URL}}/${cardId}`, {
+        fetch(`${LOCAL}/${cardId}`, {
             method: "DELETE"            
         })
-            .then(r => r.json())
+            .then(r => {
+                console.log(r);
+                r.json();
+            })
             .then(() => {
                 const updatedDeckOfCards = cards.filter(card => card.id !== cardId);
                 setCards(updatedDeckOfCards);
@@ -82,7 +88,7 @@ function FlashCardsContainer() {
     }
 
     function editCard(id, updatedCard) {
-        fetch(`${URL}}/${id}`, {
+        fetch(`${LOCAL}}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
@@ -100,7 +106,7 @@ function FlashCardsContainer() {
     }
 
     function masteredCard(id, masteredCard) {
-        fetch(`${URL}}/${id}`, {
+        fetch(`${LOCAL}}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

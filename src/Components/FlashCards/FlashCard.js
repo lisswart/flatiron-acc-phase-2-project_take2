@@ -21,26 +21,26 @@ function FlashCard({ index, card, isOnEditMode,
         deleteCard(id);
     }
 
-    function handleReviewedClick() {
-        const reviewedCard = { 
-            headword: headword,
-            functionalLabel: functionalLabel,
-            definition: definition,
-            verbalIllustration: verbalIllustration,
-            needsReview: false };
-        masteredCard(id, reviewedCard);
-        // setMasteredCards(reviewedCard);
-    }
+    // function handleReviewedClick() {
+    //     const reviewedCard = { 
+    //         headword: headword,
+    //         functionalLabel: functionalLabel,
+    //         definition: definition,
+    //         verbalIllustration: verbalIllustration,
+    //         needsReview: false };
+    //     masteredCard(id, reviewedCard);
+    //     // setMasteredCards(reviewedCard);
+    // }
 
-    function handleRestoreClick() {
-        const reviewedCard = { 
-            headword: headword,
-            functionalLabel: functionalLabel,
-            definition: definition,
-            verbalIllustration: verbalIllustration,
-            needsReview: true };
-        setCards(reviewedCard);
-    }
+    // function handleRestoreClick() {
+    //     const reviewedCard = { 
+    //         headword: headword,
+    //         functionalLabel: functionalLabel,
+    //         definition: definition,
+    //         verbalIllustration: verbalIllustration,
+    //         needsReview: true };
+    //     setCards(reviewedCard);
+    // }
 
     return (
         <li className="flashcard" id={index}>
@@ -80,12 +80,14 @@ function FlashCard({ index, card, isOnEditMode,
             </button>
             <button className="button" 
                     style={{backgroundColor: "green", color: "cornsilk", border: "1px solid green"}} 
-                    onClick={handleReviewedClick}>
+                    // onClick={handleReviewedClick}
+            >
                 ✔
             </button>
             <button className="button"
                     style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
-                    onClick={{handleRestoreClick}}>
+                    // onClick={{handleRestoreClick}}
+            >
                 ✖
             </button>
             

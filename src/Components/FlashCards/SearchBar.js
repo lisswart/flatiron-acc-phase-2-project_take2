@@ -22,15 +22,17 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, setQuery}) {
                 {
                     isOnSearchMode
                     ?   <>  
-                            <input type="text" 
-                                    className="inputbar inputbox" /><br></br>
+                            <input  type="text" 
+                                    className="inputbar inputbox"
+                                    onChange={handleChange}
+                                    value="" /><br></br>
                             <button className="button" 
                                     onClick={handleSearchClick}>
                                         Clear
                             </button>
                         </>
                     :   <>  
-                            <input type="text" required
+                            <input  type="text" required
                                     onChange={handleChange} 
                                     value={input} 
                                     className="inputbar inputbox" /><br></br>
