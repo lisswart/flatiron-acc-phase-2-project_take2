@@ -82,19 +82,26 @@ function FlashCard({ index, card, isOnEditMode,
             <button className="button" style={{marginBottom: "1em"}} onClick={handleDeleteClick}>
                 Delete 🗑
             </button>
-            <button className="button" 
-                    style={{backgroundColor: "darkgreen", color: "cornsilk", border: "1px solid darkgreen"}} 
-                    onClick={handleLearnedClick}
-            >
-                Learned ✔
-            </button>
-            <button className="button"
-                    style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
-                    // onClick={{handleNeedToReviewClick}}
-            >
-                Need to review !!
-            </button>
-            
+            {
+                card.needsReview === true
+                ?   <button className="button" 
+                            style={{backgroundColor: "darkgreen", color: "cornsilk", border: "1px solid darkgreen"}} 
+                            onClick={handleLearnedClick}
+                    >
+                        Learned ✔
+                    </button>
+                :   <></>
+            }
+            {
+                card.needsReview === false
+                ?    <button className="button"
+                            style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
+                            // onClick={{handleNeedToReviewClick}}
+                    >
+                        Need to review !!
+                    </button>
+                :   <></>
+            }
         </li>
     );
 }
