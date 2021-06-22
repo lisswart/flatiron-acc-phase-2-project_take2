@@ -29,15 +29,15 @@ function FlashCardsContainer() {
             });
     }, []);
 
-    useEffect(() => {
-        fetch(URL)
-            .then(r => r.json())
-            .then(cards => {
-                const _masteredCards = cards.filter(card => card.needsReview === false);
-                // const _needsReviewCards = cards.filter(card => card.needsReview === true);
-                setMasteredCount(_masteredCards.length);
-            });
-    }, [masteredCards]);
+    // useEffect(() => {
+    //     fetch(URL)
+    //         .then(r => r.json())
+    //         .then(cards => {
+    //             const _masteredCards = cards.filter(card => card.needsReview === false);
+    //             // const _needsReviewCards = cards.filter(card => card.needsReview === true);
+    //             setMasteredCount(_masteredCards.length);
+    //         });
+    // }, [masteredCards]);
 
     function addCard(card) {
         fetch(URL, {

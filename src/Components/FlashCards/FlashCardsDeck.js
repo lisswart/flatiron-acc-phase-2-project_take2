@@ -5,11 +5,13 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                         cardToBeEdited, setCardToBeEdited, 
                         editCard, deleteCard, cardIndex,
                         masteredCard, setCards,
-                        setIsLearnedDisplay }) {
+                        learnedCards, setLearnedCards, 
+                        wantToViewLearnedCards, needToReviewCards, 
+                        setNeedToReviewCards, 
+                        wantToViewNeedToReviewCards }) {
 
     function displayCards() {
         return cards
-                // .filter(card => card.needsReview)
                 .slice(cardIndex, cardIndex + 6)
                 .map((card) => {
                     return (
@@ -29,7 +31,8 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function isMatched(card) {
         if(query.toString() !== "")
-            return (card.headword).toLowerCase().includes(query.toString().toLowerCase());
+            return (card.headword).toLowerCase()
+                        .includes(query.toString().toLowerCase());
     }
 
     function displayMatchedCards() {
@@ -44,10 +47,21 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                                 setCardToBeEdited={setCardToBeEdited}
                                 editCard={editCard}
                                 deleteCard={deleteCard}
-                                masteredCard={masteredCard} 
+                                learnedCards={learnedCards}
+                                setLearnedCards={setLearnedCards}
+                                needToReviewCards={needToReviewCards}
+                                setNeedToReviewCards={setNeedToReviewCards} 
                         />           
                     );
                 });        
+    }
+
+    function displayLearnedCards() {
+
+    }
+
+    function displayNeedToReviewCards() {
+
     }
 
     return (
@@ -58,7 +72,11 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                         <div>Loading...</div>
                     </div>
                 :   isOnSearchMode
-                ?   displayMatchedCards() 
+                ?   displayMatchedCards()
+                :   wantToViewLearnedCards
+                ?   displayLearnedCards()
+                :   wantToViewNeedToReviewCards
+                ?   displayNeedToReviewCards()
                 :   displayCards()
             }
         </ul>
