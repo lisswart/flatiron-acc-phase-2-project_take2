@@ -18,26 +18,18 @@ function FlashCardsContainer() {
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
     const [isOnSortMode, setIsOnSortMode] = useState(false);
-    const [masteredCards, setMasteredCards] = useState([]);
-    const [masteredCount, setMasteredCount] = useState(0);
+    const [learnedCards, setLearnedCards] = useState([]);  // only stores the ones from the current session, forgets previous sessions
+    // const [needToReviewCards, setNeedToReviewCards] = useState([]);
+    const [countOfLearnedCards, setCountOfLearnedCards] = useState(0);
     
     useEffect(() => {        
         fetch(URL)
             .then(r => r.json())
-            .then(cardObjs => {
-                setCards(cardObjs);
-            });
+            .then(cardObjs => setCards(cardObjs)
+            );
     }, []);
 
-    useEffect(() => {
-        fetch(URL)
-            .then(r => r.json())
-            .then(cards => {
-                const _masteredCards = cards.filter(card => card.needsReview === false);
-                // const _needsReviewCards = cards.filter(card => card.needsReview === true);
-                setMasteredCount(_masteredCards.length);
-            });
-    }, [masteredCards]);
+    useEffect(() => setLearnedCards(learnedCards), [learnedCards]);
 
     function addCard(card) {
         fetch(URL, {
@@ -81,6 +73,7 @@ function FlashCardsContainer() {
         })
             .then(r => r.json())
             .then((updatedCard) => {
+                console.log(updatedCard);
                 const updatedCards = cards.map((card) => {
                     if(card.id === updatedCard.id) return updatedCard;
                     return card;
@@ -89,20 +82,26 @@ function FlashCardsContainer() {
             });
     }
 
-    function masteredCard(id, masteredCard) {
+    function updateLearnedCard(id, learnedCard) {
         fetch(`${URL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(masteredCard)
+            body: JSON.stringify(learnedCard)
         })
             .then(r => r.json())
-            .then((updatedCard) => {
-                const updatedCards = cards.filter((card) => card.id !== updatedCard.id);
+            .then(learnedCard => {
+                console.log(learnedCard);
+                const updatedCards = cards.filter(card => card.id !== learnedCard.id);
                 setCards(updatedCards);
-                setMasteredCards([...masteredCards, updatedCard]);
-            });
+                setLearnedCards([...learnedCards, learnedCard]);  // this line is moot since on the next line, logging learnedCards still show []
+                console.log(learnedCards); // => []
+            })
+    }
+
+    function updateNeedToReviewCards(id, needToReviewCard) {
+        fetch(``)
     }
 
     return (
@@ -120,7 +119,10 @@ function FlashCardsContainer() {
                 setCardToBeEdited={setCardToBeEdited} 
                 editCard={editCard} 
                 deleteCard={deleteCard}
-                masteredCard={masteredCard}
+                updateLearnedCard={updateLearnedCard}
+                countOfLearnedCards={countOfLearnedCards}
+                setCountOfLearnedCards={setCountOfLearnedCards}
+                updateNeedToReviewCards={updateNeedToReviewCards}
                 setCards={setCards} />
             {
                 isNewCard 
@@ -136,15 +138,10 @@ function FlashCardsContainer() {
                         isOnEditMode={isOnEditMode}
                         setIsOnEditMode={setIsOnEditMode} 
                         editCard={editCard} />
-                // :   isLearnedDisplay
-                // ?   <IsLearnedCardDeck masteredCards={masteredCards}/>
                 :   <RightPanel 
-                        cards={cards}
-                        isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
                         setQuery={setQuery}
-                        masteredCards={masteredCards}
-                        masteredCount={masteredCount} />
+                        cards={cards} />
             } 
         </div>
     );

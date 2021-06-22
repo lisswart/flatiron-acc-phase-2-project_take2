@@ -3,7 +3,10 @@ import { NavLink } from "react-router-dom";
 function FlashCard({ index, card, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, deleteCard,
-                    masteredCard, setCards }) {
+                    learnedCards, setLearnedCards,
+                    updateLearnedCard, updateNeedToReviewCards,
+                    needToReviewCards, setNeedToReviewCards,
+                    setCards }) {
 
     const {id, headword, functionalLabel, definition, verbalIllustration} = card;    
 
@@ -21,25 +24,26 @@ function FlashCard({ index, card, isOnEditMode,
         deleteCard(id);
     }
 
-    // function handleReviewedClick() {
-    //     const reviewedCard = { 
-    //         headword: headword,
-    //         functionalLabel: functionalLabel,
-    //         definition: definition,
-    //         verbalIllustration: verbalIllustration,
-    //         needsReview: false };
-    //     masteredCard(id, reviewedCard);
-    //     // setMasteredCards(reviewedCard);
-    // }
+    function handleLearnedClick() {
+        const learnedCard = { 
+            id: id,
+            headword: headword,
+            functionalLabel: functionalLabel,
+            definition: definition,
+            verbalIllustration: verbalIllustration,
+            needsReview: false 
+        };
+        // setLearnedCards([...learnedCards, learnedCard]);
+        updateLearnedCard(id, learnedCard);
+    }
 
-    // function handleRestoreClick() {
-    //     const reviewedCard = { 
-    //         headword: headword,
-    //         functionalLabel: functionalLabel,
-    //         definition: definition,
-    //         verbalIllustration: verbalIllustration,
-    //         needsReview: true };
-    //     setCards(reviewedCard);
+    // function handleNeedToReviewClick() {
+    //     const needToReviewCard = {
+    //         id: id,
+    //         needsReview: true 
+    //     };
+    //     // setNeedToReviewCards([...needToReviewCards, needToReviewCard]);
+    //     updateNeedToReviewCards(id, needToReviewCard);
     // }
 
     return (
@@ -80,13 +84,13 @@ function FlashCard({ index, card, isOnEditMode,
             </button>
             <button className="button" 
                     style={{backgroundColor: "darkgreen", color: "cornsilk", border: "1px solid darkgreen"}} 
-                    // onClick={handleReviewedClick}
+                    onClick={handleLearnedClick}
             >
                 Learned ✔
             </button>
             <button className="button"
                     style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
-                    // onClick={{handleRestoreClick}}
+                    // onClick={{handleNeedToReviewClick}}
             >
                 Need to review !!
             </button>
