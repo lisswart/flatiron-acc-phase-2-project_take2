@@ -93,6 +93,11 @@ function LeftPanel({ cards, isOnSearchMode,
         console.log(countOfLearnedCards); // => 0
     }, [needsReview, countOfLearnedCards]);
 
+    function handleViewAllCardsClick() {
+        setWantToViewLearnedCards(false);
+        setWantToViewNeedToReviewCards(false);
+    }
+
     function handleViewLearnedCardsClick() {
         setWantToViewLearnedCards(true);
     }
@@ -128,7 +133,8 @@ function LeftPanel({ cards, isOnSearchMode,
                             </button>
                         </div>
                 }
-                <button className="sort-button">All: {cards.length} cards</button>               
+                <button className="sort-button"
+                        onClick={handleViewAllCardsClick}>All: {cards.length} cards</button>               
                 {
                     cards.length === 0
                     ?   <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}>
@@ -138,7 +144,6 @@ function LeftPanel({ cards, isOnSearchMode,
                                 onClick={handleViewLearnedCardsClick}>
                             Learned: {(needsReview.false).length} cards
                         </button>
-                        {/* {learnedCards.length} */}
                         <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
                                 onClick={handleViewNeedToReviewCardsClick}>
                             Need-to-review: {(needsReview.true).length} cards

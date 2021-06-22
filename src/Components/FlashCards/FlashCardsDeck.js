@@ -13,8 +13,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                         wantToViewNeedToReviewCards }) {
 
     function displayCards() {
-        const filteredCards = cards.filter(needsReview);
-        return filteredCards
+        return cards
                 .slice(cardIndex, cardIndex + 6)
                 .map((card) => {
                     return (
@@ -77,7 +76,6 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
     function displayLearnedCards() {
         const filteredCards = cards.filter(isLearned);
         setLearnedCards = filteredCards;
-        // setCountOfLearnedCards(filteredCards.length);
         return filteredCards
                 .slice(cardIndex, cardIndex + 6)
                 .map(card =>
@@ -99,7 +97,27 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
     }
 
     function displayNeedToReviewCards() {
-
+        const filteredCards = cards.filter(needsReview);
+        return filteredCards
+                .slice(cardIndex, cardIndex + 6)
+                .map((card) => {
+                    return (
+                        <FlashCard card={card} key={card.id}
+                                isOnEditMode={isOnEditMode}
+                                setIsOnEditMode={setIsOnEditMode}
+                                cardToBeEdited={cardToBeEdited}
+                                setCardToBeEdited={setCardToBeEdited}
+                                editCard={editCard}
+                                deleteCard={deleteCard}
+                                learnedCards={learnedCards}
+                                setLearnedCards={setLearnedCards}
+                                updateLearnedCard={updateLearnedCard}
+                                needToReviewCards={needToReviewCards}
+                                setNeedToReviewCards={setNeedToReviewCards} 
+                                updateNeedToReviewCards={updateNeedToReviewCards}
+                        />  
+                    );
+        });
     }
 
     return (
