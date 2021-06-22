@@ -51,7 +51,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
     }
 
     return (
-        <ul className="card-list">
+        <ul className="card-list scroller">
             {
                 cards.length === 0
                 ?   <div className="loading-flashcards">

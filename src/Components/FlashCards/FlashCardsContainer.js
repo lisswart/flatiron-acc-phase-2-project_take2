@@ -106,7 +106,7 @@ function FlashCardsContainer() {
     }
 
     return (
-        <div className="flashcards-container">
+        <div className="flashcards-container scroll-section">
             <LeftPanel cards={cards}
                 isOnSearchMode={isOnSearchMode}
                 query={query}

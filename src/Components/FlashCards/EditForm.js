@@ -77,12 +77,12 @@ function EditForm({ editFormState, setEditFormState,
                 </div>
             </form>
 
-            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", marginRight: "2em"}}>
+            {/* <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center", marginRight: "2em"}}> */}
                 {/* <div className="escutcheon-inner-0"> */}
                     {/* <div className="escutcheon-inner-1"> */}
-                        <div className="escutcheon-inner-2" id="edit">
+                        {/* <div className="escutcheon-inner-2" id="edit">
                             ✿
-                        </div>
+                        </div> */}
                         {/* <div className="escutcheon-inner-2" id="edit">
                             ✿
                         </div>
@@ -190,7 +190,7 @@ function EditForm({ editFormState, setEditFormState,
                         </div> */}
                     {/* </div> */}
                 {/* </div> */}
-            </div>
+            {/* </div> */}
         </div>
     );
 }

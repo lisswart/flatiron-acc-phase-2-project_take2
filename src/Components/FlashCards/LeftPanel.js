@@ -91,7 +91,7 @@ function LeftPanel({ cards, isOnSearchMode,
                     :   <div className="new-button-div">
                             <button className="new-button"
                                     onClick={handleNewCardClick}>
-                                create new card
+                                Create new card
                             </button>
                         </div>
                 }
