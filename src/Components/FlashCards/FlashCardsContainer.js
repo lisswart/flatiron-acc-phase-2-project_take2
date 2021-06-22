@@ -18,17 +18,40 @@ function FlashCardsContainer() {
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
     const [isOnSortMode, setIsOnSortMode] = useState(false);
-    const [learnedCards, setLearnedCards] = useState([]);
+    const [learnedCards, setLearnedCards] = useState([]);  // only stores the ones from the current session, forgets previous sessions
     const [needToReviewCards, setNeedToReviewCards] = useState([]);
-
+    const [countOfLearnedCards, setCountOfLearnedCards] = useState(0);
     
     useEffect(() => {        
         fetch(URL)
             .then(r => r.json())
-            .then(cardObjs => {
-                setCards(cardObjs);
-            });
+            .then(cardObjs => setCards(cardObjs)
+            );
     }, []);
+
+    function groupBy(objectArray, property) {
+        return objectArray.reduce((acc, currObj) => {
+            let key = currObj[property];
+            if(!acc[key]) {
+                acc[key] = [];
+            }
+            acc[key].push(currObj);
+            return acc;
+        }, {});
+    }
+
+    const learnedCards_1 = groupBy(cards, "needsReview");
+    useEffect(() => {
+        console.log(learnedCards_1); // => {}
+        // console.log(learnedCards_1.false.length);  //on first render, 
+        // this line throws an error, since learnedCards_1 is still an empty object
+        // as it depends on cards, whose completion is asynchronous
+        // likewise, for the following line
+        // setCountOfLearnedCards((learnedCards_1.false).length);
+        console.log(countOfLearnedCards); // => 0
+    }, [learnedCards_1]);
+
+    useEffect(() => setLearnedCards(learnedCards), [learnedCards]);
 
     function addCard(card) {
         fetch(URL, {
@@ -70,11 +93,7 @@ function FlashCardsContainer() {
             },
             body: JSON.stringify(updatedCard)
         })
-            .then(r => {
-                console.log(r);
-                r.json();
-                // console.log(r.json());
-            })
+            .then(r => r.json())
             .then((updatedCard) => {
                 console.log(updatedCard);
                 const updatedCards = cards.map((card) => {
@@ -94,15 +113,13 @@ function FlashCardsContainer() {
             },
             body: JSON.stringify(learnedCard)
         })
-            .then(r => {
-                console.log(r);
-                r.json();
-            })
+            .then(r => r.json())
             .then(learnedCard => {
                 console.log(learnedCard);
-                // const updatedCards = cards.filter(card => card.id !== learnedCard.id);
-                // setCards(updatedCards);
+                const updatedCards = cards.filter(card => card.id !== learnedCard.id);
+                setCards(updatedCards);
                 setLearnedCards([...learnedCards, learnedCard]);
+                console.log(learnedCards);
             })
     }
 
@@ -126,6 +143,8 @@ function FlashCardsContainer() {
                 editCard={editCard} 
                 deleteCard={deleteCard}
                 updateLearnedCard={updateLearnedCard}
+                countOfLearnedCards={countOfLearnedCards}
+                setCountOfLearnedCards={setCountOfLearnedCards}
                 updateNeedToReviewCards={updateNeedToReviewCards}
                 setCards={setCards} />
             {

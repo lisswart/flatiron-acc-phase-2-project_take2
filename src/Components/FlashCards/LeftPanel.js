@@ -8,7 +8,7 @@ function LeftPanel({ cards, isOnSearchMode,
                     isOnEditMode, setIsOnEditMode, 
                     cardToBeEdited, setCardToBeEdited, learnedCards, setLearnedCards,
                     updateLearnedCard, updateNeedToReviewCards, needToReviewCards, setNeedToReviewCards,
-                    editCard, deleteCard, setCards }) {
+                    countOfLearnedCards, setCountOfLearnedCards, editCard, deleteCard, setCards }) {
 
     const [cardIndex, setCardIndex] = useState(0);    
     const [wantToViewLearnedCards, setWantToViewLearnedCards] = useState(false);
@@ -106,17 +106,19 @@ function LeftPanel({ cards, isOnSearchMode,
                         </div>
                 }
                 <button className="sort-button">All: {cards.length} cards</button>
-                {
-                    learnedCards &&
+                {/* {
+                    learnedCards && */}
                         <><button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
                                 onClick={handleViewLearnedCardsClick}>
-                            Learned: {learnedCards.length} cards
+                            Learned: {countOfLearnedCards} cards
                         </button>
+                        {/* {learnedCards.length} */}
                         <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
                                 onClick={handleViewNeedToReviewCardsClick}>
-                            Need-to-review: {cards.length - learnedCards.length} cards
+                            Need-to-review: {cards.length - countOfLearnedCards} cards
                         </button></>
-                }
+                        {/* - learnedCards.length */}
+                {/* } */}
                 
             </div>
             <div style={{marginLeft: "2em"}}>
@@ -160,6 +162,8 @@ function LeftPanel({ cards, isOnSearchMode,
                 learnedCards={learnedCards}
                 setLearnedCards={setLearnedCards}
                 updateLearnedCard={updateLearnedCard}
+                countOfLearnedCards={countOfLearnedCards}
+                setCountOfLearnedCards={setCountOfLearnedCards}
                 wantToViewLearnedCards={wantToViewLearnedCards}
                 needToReviewCards={needToReviewCards}
                 setNeedToReviewCards={setNeedToReviewCards}
