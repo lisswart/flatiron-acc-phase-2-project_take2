@@ -38,7 +38,7 @@ function EditForm({ editFormState, setEditFormState,
     return (
         <div>
             
-            <form onSubmit={handleSubmit} className="form-view" style={{paddingLeft: "0"}}>
+            <form onSubmit={handleSubmit} className="form-view">
                 <div className="inputbox label" >
                     <strong>headword: </strong>
                     <span style={{color: "moccasin"}}>

@@ -38,28 +38,28 @@ function NewFlashCardEntryForm({ addCard, formState,
                     <label><strong>headword: </strong></label>
                     <input type="text" onChange={handleNewEntryChange} 
                         name="headword" 
-                        value={formState.headword}
+                        value={formState.headword} required
                         className="inputbar" />
                 </div>
                 <div className="inputbox" >
                     <label><strong>functional label: </strong></label>
                     <input type="text" onChange={handleNewEntryChange} 
                         name="functionalLabel" 
-                        value={formState.functionalLabel}
+                        value={formState.functionalLabel} required
                         className="inputbar" />
                 </div>
                 <div className="inputbox" >
                     <label><strong>definition: </strong></label>
                     <textarea onChange={handleNewEntryChange} 
                         name="definition" 
-                        value={formState.definition}
+                        value={formState.definition} required
                         className="textarea" />
                 </div>
                 <div  className="inputbox">
                     <label><strong>verbal illustration: </strong></label>
                     <textarea onChange={handleNewEntryChange} 
                         name="verbalIllustration" 
-                        value={formState.verbalIllustration}
+                        value={formState.verbalIllustration} required
                         className="textarea" />
                 </div>
                 <button type="submit" className="button"
