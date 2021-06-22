@@ -29,7 +29,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function isMatched(card) {
         if(query.toString() !== "")
-            return (card.headword).includes(query.toString());
+            return (card.headword).toLowerCase().includes(query.toString().toLowerCase());
     }
 
     function displayMatchedCards() {
