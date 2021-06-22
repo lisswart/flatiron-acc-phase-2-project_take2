@@ -25,7 +25,6 @@ function FlashCard({ index, card, isOnEditMode,
     }
 
     function handleLearnedClick() {
-        console.log(card);
         const learnedCard = { 
             id: id,
             headword: headword,

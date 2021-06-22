@@ -1,5 +1,5 @@
 import FlashCardsDeck from "./FlashCardsDeck";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 function LeftPanel({ cards, isOnSearchMode, 
@@ -70,6 +70,29 @@ function LeftPanel({ cards, isOnSearchMode,
         }
     }
 
+    function groupBy(objectArray, property) {
+        return objectArray.reduce((acc, currObj) => {
+            let key = currObj[property];
+            if(!acc[key]) {
+                acc[key] = [];
+            }
+            acc[key].push(currObj);
+            return acc;
+        }, {});
+    }
+
+    const needsReview = groupBy(cards, "needsReview");  // an object with two keys: false, true
+    // => {false:[{...}, ..., {...}], true: [{...}, ..., {...}]}
+    useEffect(() => {
+        console.log("needs review: ","\n", needsReview, "\n", needsReview.false, needsReview.true); // => {} undefined undefined, then after a few seconds promise is fulfilled
+        // console.log(needsReview.length);  //on first render, 
+        // this line throws an error, since learnedCards_1 is still an empty object
+        // as it depends on cards, whose completion is asynchronous
+        // likewise, for the following line
+        // setCountOfLearnedCards((learnedCards_1.false).length);
+        console.log(countOfLearnedCards); // => 0
+    }, [needsReview, countOfLearnedCards]);
+
     function handleViewLearnedCardsClick() {
         setWantToViewLearnedCards(true);
     }
@@ -105,20 +128,22 @@ function LeftPanel({ cards, isOnSearchMode,
                             </button>
                         </div>
                 }
-                <button className="sort-button">All: {cards.length} cards</button>
-                {/* {
-                    learnedCards && */}
-                        <><button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
+                <button className="sort-button">All: {cards.length} cards</button>               
+                {
+                    cards.length === 0
+                    ?   <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}>
+                            Loading...
+                        </button>
+                    :   <><button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
                                 onClick={handleViewLearnedCardsClick}>
-                            Learned: {countOfLearnedCards} cards
+                            Learned: {(needsReview.false).length} cards
                         </button>
                         {/* {learnedCards.length} */}
                         <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
                                 onClick={handleViewNeedToReviewCardsClick}>
-                            Need-to-review: {cards.length - countOfLearnedCards} cards
-                        </button></>
-                        {/* - learnedCards.length */}
-                {/* } */}
+                            Need-to-review: {(needsReview.true).length} cards
+                        </button></>                        
+                }
                 
             </div>
             <div style={{marginLeft: "2em"}}>
