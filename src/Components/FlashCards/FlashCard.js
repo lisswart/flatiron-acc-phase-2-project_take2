@@ -24,7 +24,7 @@ function FlashCard({ index, card, isOnEditMode,
         deleteCard(id);
     }
 
-    function handleLearnedClick() {
+    function handleLearnedClick() {  //when I click the learned ✔ button on a card, I switch its needsReview property from true to false and then post the updated card to my database
         const learnedCard = { 
             id: id,
             headword: headword,

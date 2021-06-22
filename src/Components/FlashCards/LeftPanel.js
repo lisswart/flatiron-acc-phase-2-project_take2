@@ -84,7 +84,7 @@ function LeftPanel({ cards, isOnSearchMode,
     const needsReview = groupBy(cards, "needsReview");  // an object with two keys: false, true
     // => {false:[{...}, ..., {...}], true: [{...}, ..., {...}]}
     useEffect(() => {
-        console.log("needs review: ","\n", needsReview, "\n", needsReview.false, needsReview.true); // => {} undefined undefined, then after a few seconds promise is fulfilled
+        console.log("needs review: ","\n", needsReview, "\n", needsReview.false, needsReview.true); // => {} undefined undefined, then after a few seconds, promise is fulfilled
         // console.log(needsReview.length);  //on first render, 
         // this line throws an error, since learnedCards_1 is still an empty object
         // as it depends on cards, whose completion is asynchronous
@@ -100,9 +100,11 @@ function LeftPanel({ cards, isOnSearchMode,
 
     function handleViewLearnedCardsClick() {
         setWantToViewLearnedCards(true);
+        setWantToViewNeedToReviewCards(false);
     }
 
     function handleViewNeedToReviewCardsClick() {
+        setWantToViewLearnedCards(false);
         setWantToViewNeedToReviewCards(true);
     }
 
@@ -142,7 +144,7 @@ function LeftPanel({ cards, isOnSearchMode,
                         </button>
                     :   <><button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
                                 onClick={handleViewLearnedCardsClick}>
-                            Learned: {(needsReview.false).length} cards
+                            Learned: {cards.length - (needsReview.true).length} cards
                         </button>
                         <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
                                 onClick={handleViewNeedToReviewCardsClick}>

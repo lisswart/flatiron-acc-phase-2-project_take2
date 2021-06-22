@@ -26,17 +26,13 @@ function RightPanel({ cards, isOnSearchMode, masteredCards,
             <SearchBar isOnSearchMode={isOnSearchMode} 
                 setIsOnSearchMode={setIsOnSearchMode}
                 setQuery={setQuery} />
-
-            {/* <ul className="instructions"> */}
-                {/* <li> */}
-            <p className="instructions" style={{lineHeight: "1.6", paddingBottom: "2em"}}>
+            
+            <p className="instructions" style={{lineHeight: "1.6", paddingBottom: "2em", fontFamily: "sans-serif"}}>
                 To quiz yourself on a specific word, click on the underlined headword in each card; 
                 once a lone card finishes loading, hover away or toward the horizontal band that spans 
                 the height of the card in order to flip the card to see the answer; click the browser 
-                back button once you're done
+                back button once you're done.
             </p>
-                {/* </li> */}
-            {/* </ul> */}
             <div style={{marginLeft: "2em"}}>
                 <textarea className="textarea" style={{minWidth: "18em", marginBottom: "1em"}}/><br></br>
                 <button className="button"

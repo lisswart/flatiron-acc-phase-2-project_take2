@@ -91,13 +91,14 @@ function FlashCardsContainer() {
             body: JSON.stringify(learnedCard)
         })
             .then(r => r.json())
-            .then(learnedCard => {
-                console.log(learnedCard);
-                const updatedCards = cards.filter(card => card.id !== learnedCard.id);
+            .then(updatedCard => {
+                console.log(updatedCard);
+                const updatedCards = cards.filter(card => card.id !== updatedCard.id);
                 setCards(updatedCards);
-                setLearnedCards([...learnedCards, learnedCard]);  // this line is moot since on the next line, logging learnedCards still show []
+                const updatedLearnedCards = [...learnedCards, updatedCard];
+                setLearnedCards(updatedLearnedCards);  // this line is moot since on the next line, logging learnedCards still show []
                 console.log(learnedCards); // => []
-            })
+            });
     }
 
     function updateNeedToReviewCards(id, needToReviewCard) {
