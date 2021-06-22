@@ -18,8 +18,9 @@ function FlashCardsContainer() {
     const [isOnSearchMode, setIsOnSearchMode] = useState(false);
     const [query, setQuery] = useState("");
     const [isOnSortMode, setIsOnSortMode] = useState(false);
-    const [masteredCards, setMasteredCards] = useState([]);
-    const [masteredCount, setMasteredCount] = useState(0);
+    const [learnedCards, setLearnedCards] = useState([]);
+    const [needToReviewCards, setNeedToReviewCards] = useState([]);
+
     
     useEffect(() => {        
         fetch(URL)
@@ -28,16 +29,6 @@ function FlashCardsContainer() {
                 setCards(cardObjs);
             });
     }, []);
-
-    // useEffect(() => {
-    //     fetch(URL)
-    //         .then(r => r.json())
-    //         .then(cards => {
-    //             const _masteredCards = cards.filter(card => card.needsReview === false);
-    //             // const _needsReviewCards = cards.filter(card => card.needsReview === true);
-    //             setMasteredCount(_masteredCards.length);
-    //         });
-    // }, [masteredCards]);
 
     function addCard(card) {
         fetch(URL, {
@@ -79,8 +70,13 @@ function FlashCardsContainer() {
             },
             body: JSON.stringify(updatedCard)
         })
-            .then(r => r.json())
+            .then(r => {
+                console.log(r);
+                r.json();
+                // console.log(r.json());
+            })
             .then((updatedCard) => {
+                console.log(updatedCard);
                 const updatedCards = cards.map((card) => {
                     if(card.id === updatedCard.id) return updatedCard;
                     return card;
@@ -89,20 +85,29 @@ function FlashCardsContainer() {
             });
     }
 
-    function masteredCard(id, masteredCard) {
+    function updateLearnedCard(id, learnedCard) {
+        console.log(learnedCard);
         fetch(`${URL}/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(masteredCard)
+            body: JSON.stringify(learnedCard)
         })
-            .then(r => r.json())
-            .then((updatedCard) => {
-                const updatedCards = cards.filter((card) => card.id !== updatedCard.id);
-                setCards(updatedCards);
-                setMasteredCards([...masteredCards, updatedCard]);
-            });
+            .then(r => {
+                console.log(r);
+                r.json();
+            })
+            .then(learnedCard => {
+                console.log(learnedCard);
+                // const updatedCards = cards.filter(card => card.id !== learnedCard.id);
+                // setCards(updatedCards);
+                setLearnedCards([...learnedCards, learnedCard]);
+            })
+    }
+
+    function updateNeedToReviewCards(id, needToReviewCard) {
+        fetch(``)
     }
 
     return (
@@ -120,7 +125,8 @@ function FlashCardsContainer() {
                 setCardToBeEdited={setCardToBeEdited} 
                 editCard={editCard} 
                 deleteCard={deleteCard}
-                masteredCard={masteredCard}
+                updateLearnedCard={updateLearnedCard}
+                updateNeedToReviewCards={updateNeedToReviewCards}
                 setCards={setCards} />
             {
                 isNewCard 
@@ -136,15 +142,10 @@ function FlashCardsContainer() {
                         isOnEditMode={isOnEditMode}
                         setIsOnEditMode={setIsOnEditMode} 
                         editCard={editCard} />
-                // :   isLearnedDisplay
-                // ?   <IsLearnedCardDeck masteredCards={masteredCards}/>
                 :   <RightPanel 
-                        cards={cards}
-                        isOnSearchMode={isOnSearchMode}
                         setIsOnSearchMode={setIsOnSearchMode}
                         setQuery={setQuery}
-                        masteredCards={masteredCards}
-                        masteredCount={masteredCount} />
+                        cards={cards} />
             } 
         </div>
     );

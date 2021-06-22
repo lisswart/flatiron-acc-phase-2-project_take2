@@ -6,8 +6,9 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                         editCard, deleteCard, cardIndex,
                         masteredCard, setCards,
                         learnedCards, setLearnedCards, 
-                        wantToViewLearnedCards, needToReviewCards, 
-                        setNeedToReviewCards, 
+                        updateLearnedCard, wantToViewLearnedCards, 
+                        needToReviewCards, setNeedToReviewCards, 
+                        updateNeedToReviewCards,
                         wantToViewNeedToReviewCards }) {
 
     function displayCards() {
@@ -15,16 +16,20 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                 .slice(cardIndex, cardIndex + 6)
                 .map((card) => {
                     return (
-                        <FlashCard 
-                            card={card} key={card.id}
-                            isOnEditMode={isOnEditMode}
-                            setIsOnEditMode={setIsOnEditMode}
-                            cardToBeEdited={cardToBeEdited}
-                            setCardToBeEdited={setCardToBeEdited}
-                            editCard={editCard}
-                            deleteCard={deleteCard}
-                            masteredCard={masteredCard}
-                            setCards={setCards} />
+                        <FlashCard card={card} key={card.id}
+                                isOnEditMode={isOnEditMode}
+                                setIsOnEditMode={setIsOnEditMode}
+                                cardToBeEdited={cardToBeEdited}
+                                setCardToBeEdited={setCardToBeEdited}
+                                editCard={editCard}
+                                deleteCard={deleteCard}
+                                learnedCards={learnedCards}
+                                setLearnedCards={setLearnedCards}
+                                updateLearnedCard={updateLearnedCard}
+                                needToReviewCards={needToReviewCards}
+                                setNeedToReviewCards={setNeedToReviewCards} 
+                                updateNeedToReviewCards={updateNeedToReviewCards}
+                        />  
                     );
         });
     }
@@ -49,8 +54,10 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                                 deleteCard={deleteCard}
                                 learnedCards={learnedCards}
                                 setLearnedCards={setLearnedCards}
+                                updateLearnedCard={updateLearnedCard}
                                 needToReviewCards={needToReviewCards}
                                 setNeedToReviewCards={setNeedToReviewCards} 
+                                updateNeedToReviewCards={updateNeedToReviewCards}
                         />           
                     );
                 });        

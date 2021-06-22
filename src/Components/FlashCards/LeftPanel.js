@@ -6,13 +6,12 @@ function LeftPanel({ cards, isOnSearchMode,
                     isOnSortMode, setIsOnSortMode,
                     query, isNewCard, setIsNewCard, 
                     isOnEditMode, setIsOnEditMode, 
-                    cardToBeEdited, setCardToBeEdited, 
+                    cardToBeEdited, setCardToBeEdited, learnedCards, setLearnedCards,
+                    updateLearnedCard, updateNeedToReviewCards, needToReviewCards, setNeedToReviewCards,
                     editCard, deleteCard, setCards }) {
 
-    const [cardIndex, setCardIndex] = useState(0);
-    const [learnedCards, setLearnedCards] = useState([]);
+    const [cardIndex, setCardIndex] = useState(0);    
     const [wantToViewLearnedCards, setWantToViewLearnedCards] = useState(false);
-    const [needToReviewCards, setNeedToReviewCards] = useState([]);
     const [wantToViewNeedToReviewCards, setWantToViewNeedToReviewCards] = useState(false);
 
     function handleNewCardClick() {
@@ -107,15 +106,17 @@ function LeftPanel({ cards, isOnSearchMode,
                         </div>
                 }
                 <button className="sort-button">All: {cards.length} cards</button>
-                <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
-                        onClick={handleViewLearnedCardsClick}>
-                    Learned: {learnedCards.length} cards
-                </button>
-                <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
-                        onClick={handleViewNeedToReviewCardsClick}>
-                    Need-to-review: {cards.length} cards
-                </button>
-                {/* {needToReviewCards.length} */}
+                {
+                    learnedCards &&
+                        <><button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
+                                onClick={handleViewLearnedCardsClick}>
+                            Learned: {learnedCards.length} cards
+                        </button>
+                        <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
+                                onClick={handleViewNeedToReviewCardsClick}>
+                            Need-to-review: {cards.length - learnedCards.length} cards
+                        </button></>
+                }
                 
             </div>
             <div style={{marginLeft: "2em"}}>
@@ -158,9 +159,11 @@ function LeftPanel({ cards, isOnSearchMode,
                 deleteCard={deleteCard}
                 learnedCards={learnedCards}
                 setLearnedCards={setLearnedCards}
+                updateLearnedCard={updateLearnedCard}
                 wantToViewLearnedCards={wantToViewLearnedCards}
                 needToReviewCards={needToReviewCards}
                 setNeedToReviewCards={setNeedToReviewCards}
+                updateNeedToReviewCards={updateNeedToReviewCards}
                 wantToViewNeedToReviewCards={wantToViewNeedToReviewCards}
                 setCards={setCards} />
                 

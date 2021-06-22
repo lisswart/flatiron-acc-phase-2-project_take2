@@ -4,6 +4,7 @@ function FlashCard({ index, card, isOnEditMode,
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, deleteCard,
                     learnedCards, setLearnedCards,
+                    updateLearnedCard, updateNeedToReviewCards,
                     needToReviewCards, setNeedToReviewCards,
                     setCards }) {
 
@@ -26,20 +27,24 @@ function FlashCard({ index, card, isOnEditMode,
     function handleLearnedClick() {
         const learnedCard = { 
             id: id,
+            headword: headword,
+            functionalLabel: functionalLabel,
+            definition: definition,
+            verbalIllustration: verbalIllustration,
             needsReview: false 
         };
-        setLearnedCards([...learnedCards, learnedCard]);
-        updateLearnedCards();
+        // setLearnedCards([...learnedCards, learnedCard]);
+        updateLearnedCard(id, learnedCard);
     }
 
-    function handleNeedToReviewClick() {
-        const needToReviewCard = {
-            id: id,
-            needsReview: true 
-        };
-        setNeedToReviewCards([...needToReviewCards, needToReviewCard]);
-        updateNeedToReviewCards();
-    }
+    // function handleNeedToReviewClick() {
+    //     const needToReviewCard = {
+    //         id: id,
+    //         needsReview: true 
+    //     };
+    //     // setNeedToReviewCards([...needToReviewCards, needToReviewCard]);
+    //     updateNeedToReviewCards(id, needToReviewCard);
+    // }
 
     return (
         <li className="flashcard" id={index}>
@@ -85,7 +90,7 @@ function FlashCard({ index, card, isOnEditMode,
             </button>
             <button className="button"
                     style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
-                    onClick={{handleNeedToReviewClick}}
+                    // onClick={{handleNeedToReviewClick}}
             >
                 Need to review !!
             </button>
