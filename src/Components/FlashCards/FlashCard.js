@@ -24,7 +24,7 @@ function FlashCard({ index, card, isOnEditMode,
         deleteCard(id);
     }
 
-    function handleLearnedClick() {  //when I click the learned ✔ button on a card, I switch its needsReview property from true to false and then post the updated card to my database
+    function handleLearnedClick() {  
         const learnedCard = { 
             id: id,
             headword: headword,
@@ -33,18 +33,20 @@ function FlashCard({ index, card, isOnEditMode,
             verbalIllustration: verbalIllustration,
             needsReview: false 
         };
-        // setLearnedCards([...learnedCards, learnedCard]);
         updateLearnedCard(id, learnedCard);
     }
 
-    // function handleNeedToReviewClick() {
-    //     const needToReviewCard = {
-    //         id: id,
-    //         needsReview: true 
-    //     };
-    //     // setNeedToReviewCards([...needToReviewCards, needToReviewCard]);
-    //     updateNeedToReviewCards(id, needToReviewCard);
-    // }
+    function handleNeedToReviewClick() {
+        const needToReviewCard = {
+            id: id,
+            headword: headword,
+            functionalLabel: functionalLabel,
+            definition: definition,
+            verbalIllustration: verbalIllustration,
+            needsReview: true
+        };
+        updateLearnedCard(id, needToReviewCard);
+    }
 
     return (
         <li className="flashcard" id={index}>
@@ -90,17 +92,12 @@ function FlashCard({ index, card, isOnEditMode,
                     >
                         Learned ✔
                     </button>
-                :   <></>
-            }
-            {
-                card.needsReview === false
-                ?    <button className="button"
+                :   <button className="button"
                             style={{backgroundColor: "maroon", color: "cornsilk", border: "1px solid maroon"}}
-                            // onClick={{handleNeedToReviewClick}}
+                            onClick={handleNeedToReviewClick}
                     >
                         Need to review !!
                     </button>
-                :   <></>
             }
         </li>
     );

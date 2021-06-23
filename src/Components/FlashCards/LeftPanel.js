@@ -142,14 +142,23 @@ function LeftPanel({ cards, isOnSearchMode,
                     ?   <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}>
                             Loading...
                         </button>
-                    :   <><button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
-                                onClick={handleViewLearnedCardsClick}>
-                            Learned: {cards.length - (needsReview.true).length} cards
-                        </button>
-                        <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
-                                onClick={handleViewNeedToReviewCardsClick}>
-                            Need-to-review: {(needsReview.true).length} cards
-                        </button></>                        
+                    :   <>
+                            <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}
+                                    onClick={handleViewLearnedCardsClick}
+                            >
+                                Learned:    {   needsReview.false
+                                                ?   (needsReview.false).length
+                                                :   0
+                                            }   cards
+                            </button>
+                            <button className="sort-button" style={{backgroundColor: "maroon", border: "1px solid maroon"}}
+                                    onClick={handleViewNeedToReviewCardsClick}>
+                                Need-to-review:     {   needsReview.true
+                                                        ?   (needsReview.true).length
+                                                        :   0
+                                                    } cards
+                            </button>
+                        </>                        
                 }
                 
             </div>

@@ -94,10 +94,10 @@ function FlashCardsContainer() {
             .then(updatedCard => {
                 console.log(updatedCard);
                 const updatedCards = cards.filter(card => card.id !== updatedCard.id);
-                setCards(updatedCards);
-                const updatedLearnedCards = [...learnedCards, updatedCard];
-                setLearnedCards(updatedLearnedCards);  // this line is moot since on the next line, logging learnedCards still show []
-                console.log(learnedCards); // => []
+                setCards(updatedCards);  // calling setState should automatically re-renders the page!!!
+                // const updatedLearnedCards = [...learnedCards, updatedCard];
+                // setLearnedCards(updatedLearnedCards);  // this line is moot since on the next line, logging learnedCards still show []
+                // console.log(learnedCards); // => []
             });
     }
 
