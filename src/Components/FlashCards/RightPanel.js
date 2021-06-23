@@ -34,7 +34,7 @@ function RightPanel({ cards, isOnSearchMode, masteredCards,
                 back button once you're done.
             </p> */}
             <div style={{marginLeft: "2em", marginTop: "2em"}}>
-                <textarea className="textarea" style={{minWidth: "18em", marginBottom: "1em", minWidth: "362px", minHeight: "496px", backgroundColor: "black", color: "lemonchiffon"}}/><br></br>
+                <textarea className="textarea" style={{marginBottom: "1em", minWidth: "362px", minHeight: "496px", backgroundColor: "black", color: "lemonchiffon"}}/><br></br>
                 <button className="button"
                         onClick={handleNoteToSelfClick}
                 >
