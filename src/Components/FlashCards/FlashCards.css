@@ -198,15 +198,12 @@ li {
 
 .forward-backward-buttons-container {
     display: flex;
-    justify-content: center;
-    padding-left: 0 2em 0 2em;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .click-more-button-container {
     display: flex;
-    justify-content: space-between;
-    margin: 0 3em 0 1em;
+    justify-content: flex-start;
 }
 
 .click-more-button {
@@ -215,11 +212,10 @@ li {
     min-width: 3em;
     max-height: 3em;
     min-height: 3em;
-    padding-left: 0 2em 0 2em;
     border-radius: 50%;
-    background-color: maroon;
+    background-color: transparent;
     color:oldlace;
-    border:1px solid maroon;
+    border:1px solid transparent;
 }
 
 .form-view {
@@ -247,7 +243,6 @@ li {
 
  .label {
      color: cornsilk;
-     margin-left: 2em;
  }
 
  .label-definition {
@@ -258,7 +253,7 @@ li {
     min-height: 7em;
     min-width: 225px;
     max-width: 25em;
-    background-color: bisque;
+    background-color: transparent;
     border-radius: 5px;
     padding: 1em 1em 0 1em;
     outline: none;
@@ -266,7 +261,8 @@ li {
 }
 
 .inputbar {
-    background-color: bisque;
+    background-color: transparent;
+    color: lemonchiffon;
     max-width: 26em;
     min-height: 35px;
     border-radius: 5px;
@@ -330,7 +326,7 @@ li {
 
 .scroll-section {
     background-color: black;
-    /* display: flex; */
+    display: flex;
     margin-top: 10px;
 }
 

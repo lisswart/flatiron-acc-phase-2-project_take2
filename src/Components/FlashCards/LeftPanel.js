@@ -1,14 +1,13 @@
 import FlashCardsDeck from "./FlashCardsDeck";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 
 function LeftPanel({ cards, isOnSearchMode, 
                     isOnSortMode, setIsOnSortMode,
                     query, isNewCard, setIsNewCard, 
-                    isOnEditMode, setIsOnEditMode, 
-                    cardToBeEdited, setCardToBeEdited,
-                    editCard, deleteCard, setCards,
-                    updateLearnedCard }) {
+                    setIsOnEditMode, cardToBeEdited, 
+                    setCardToBeEdited, editCard, 
+                    deleteCard, setCards }) {
 
     const [cardIndex, setCardIndex] = useState(0);    
     const [wantToViewLearnedCards, setWantToViewLearnedCards] = useState(false);
@@ -83,15 +82,7 @@ function LeftPanel({ cards, isOnSearchMode,
 
     const needsReview = groupBy(cards, "needsReview");  // an object with two keys: false, true
     // => {false:[{...}, ..., {...}], true: [{...}, ..., {...}]}
-    useEffect(() => {
-        console.log("needs review: ","\n", needsReview, "\n", needsReview.false, needsReview.true); // => {} undefined undefined, then after a few seconds, promise is fulfilled
-        // console.log(needsReview.length);  //on first render, 
-        // this line throws an error, since learnedCards_1 is still an empty object
-        // as it depends on cards, whose completion is asynchronous
-        // likewise, for the following line
-        // setCountOfLearnedCards((learnedCards_1.false).length);
-    }, [needsReview]);
-
+    
     function handleViewAllCardsClick() {
         setWantToViewLearnedCards(false);
         setWantToViewNeedToReviewCards(false);
@@ -164,6 +155,23 @@ function LeftPanel({ cards, isOnSearchMode,
             <div style={{marginLeft: "2em"}}>
                 
                 <div className="forward-backward-buttons-container">
+                {
+                    wantToViewLearnedCards
+                    ?   <>
+                            <div style={{display: "flex", alignItems: "center"}}>Learned Deck</div>
+                        </>
+                    :   wantToViewNeedToReviewCards
+                    ?   <>
+                            <div style={{display: "flex", alignItems: "center"}}>Need-to-Review Deck</div>
+                        </>
+                    :   isOnSearchMode
+                    ?    <>
+                            <div style={{display: "flex", alignItems: "center"}}>Search Results</div>
+                        </>
+                    :   <>
+                            <div style={{display: "flex", alignItems: "center"}}>Full Deck</div>
+                        </>
+                }
                     <div className="click-more-button-container">
                         <button onClick={handleClickBackward}
                                 className="click-more-button">
@@ -193,12 +201,10 @@ function LeftPanel({ cards, isOnSearchMode,
                 query={query}
                 handleSortClickIncreasing={handleSortClickIncreasing}
                 handleSortClickDecreasing={handleSortClickDecreasing}
-                isOnEditMode={isOnEditMode}
                 setIsOnEditMode={setIsOnEditMode}
                 cardToBeEdited={cardToBeEdited}
                 setCardToBeEdited={setCardToBeEdited}
                 editCard={editCard}
-                updateLearnedCard={updateLearnedCard}
                 deleteCard={deleteCard}                
                 wantToViewLearnedCards={wantToViewLearnedCards}                
                 wantToViewNeedToReviewCards={wantToViewNeedToReviewCards}

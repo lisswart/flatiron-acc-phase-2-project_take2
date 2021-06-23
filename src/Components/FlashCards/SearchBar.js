@@ -8,7 +8,7 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, setQuery}) {
     }
 
     function handleSearchClick() {
-        setIsOnSearchMode((isOnSearchMode) => !isOnSearchMode);
+        setIsOnSearchMode(true);
     }
 
     function handleSubmit(event) {
@@ -24,7 +24,6 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, setQuery}) {
                     ?   <>  
                             <input  type="text" 
                                     className="inputbar inputbox"
-                                    onChange={handleChange}
                                     value=""
                                     disabled /><br></br>
                             <button className="button" 

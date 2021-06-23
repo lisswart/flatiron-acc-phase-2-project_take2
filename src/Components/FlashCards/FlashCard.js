@@ -1,14 +1,13 @@
 import { NavLink } from "react-router-dom";
 
-function FlashCard({ index, card, isOnEditMode, 
-                    setIsOnEditMode, cardToBeEdited, 
-                    setCardToBeEdited, deleteCard,
-                    updateLearnedCard }) {
+function FlashCard({ index, card, setIsOnEditMode, 
+                    cardToBeEdited, setCardToBeEdited, 
+                    deleteCard, editCard }) {
 
     const {id, headword, functionalLabel, definition, verbalIllustration} = card;    
 
     function handleEditClick() {
-        setIsOnEditMode(!isOnEditMode);
+        setIsOnEditMode(true);
         setCardToBeEdited({
             ...cardToBeEdited,
             id: id,
@@ -24,25 +23,17 @@ function FlashCard({ index, card, isOnEditMode,
     function handleLearnedClick() {  
         const learnedCard = { 
             id: id,
-            headword: headword,
-            functionalLabel: functionalLabel,
-            definition: definition,
-            verbalIllustration: verbalIllustration,
             needsReview: false 
         };
-        updateLearnedCard(id, learnedCard);
+        editCard(id, learnedCard);
     }
 
     function handleNeedToReviewClick() {
         const needToReviewCard = {
             id: id,
-            headword: headword,
-            functionalLabel: functionalLabel,
-            definition: definition,
-            verbalIllustration: verbalIllustration,
             needsReview: true
         };
-        updateLearnedCard(id, needToReviewCard);
+        editCard(id, needToReviewCard);
     }
 
     return (
