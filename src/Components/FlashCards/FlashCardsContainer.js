@@ -77,25 +77,24 @@ function FlashCardsContainer() {
             });
     }
 
-    function updateLearnedCard(id, learnedCard) {
-        fetch(`${URL}/${id}`, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(learnedCard)
-        })
-            .then(r => r.json())
-            .then(updatedCard => {
-                console.log(updatedCard);
-                const updatedCards = cards.map(card => {
-                    if(card.id === updatedCard.id) return updatedCard;
-                    return card;
-                });
-                setCards(updatedCards);
-                
-            });
-    }
+    // function updateLearnedCard(id, learnedCard) {
+    //     fetch(`${URL}/${id}`, {
+    //         method: "PATCH",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         },
+    //         body: JSON.stringify(learnedCard)
+    //     })
+    //         .then(r => r.json())
+    //         .then(updatedCard => {
+    //             console.log(updatedCard);
+    //             const updatedCards = cards.map(card => {
+    //                 if(card.id === updatedCard.id) return updatedCard;
+    //                 return card;
+    //             });
+    //             setCards(updatedCards);                
+    //         });
+    // }
 
     return (
         <div className="flashcards-container scroll-section">
@@ -112,7 +111,7 @@ function FlashCardsContainer() {
                 setCardToBeEdited={setCardToBeEdited} 
                 editCard={editCard} 
                 deleteCard={deleteCard}
-                updateLearnedCard={updateLearnedCard}                              
+                // updateLearnedCard={updateLearnedCard}                              
                 setCards={setCards} />
             {
                 isNewCard 

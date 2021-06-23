@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 function FlashCard({ index, card, isOnEditMode, 
                     setIsOnEditMode, cardToBeEdited, 
                     setCardToBeEdited, deleteCard,
-                    updateLearnedCard}) {
+                    updateLearnedCard }) {
 
     const {id, headword, functionalLabel, definition, verbalIllustration} = card;    
 
