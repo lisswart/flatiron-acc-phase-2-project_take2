@@ -65,17 +65,6 @@ function NewFlashCardEntryForm({ addCard, formState,
                 <button type="submit" className="button"
                         style={{marginTop: "1em"}}>Submit</button>           
             </form>
-
-            {/* <div className="escutcheon">
-                <div className="escutcheon-inner-0">
-                    <div className="escutcheon-inner-1">
-                        <div className="escutcheon-inner-2">
-                            ✿
-                        </div>
-                    </div>
-                </div>
-            </div>  */}
-
         </div>
     );
 }

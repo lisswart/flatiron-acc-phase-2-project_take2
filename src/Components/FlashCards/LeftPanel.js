@@ -6,9 +6,7 @@ function LeftPanel({ cards, isOnSearchMode,
                     isOnSortMode, setIsOnSortMode,
                     query, isNewCard, setIsNewCard, 
                     isOnEditMode, setIsOnEditMode, 
-                    cardToBeEdited, setCardToBeEdited, learnedCards, setLearnedCards,
-                    updateLearnedCard, updateNeedToReviewCards, needToReviewCards, setNeedToReviewCards,
-                    countOfLearnedCards, setCountOfLearnedCards, editCard, deleteCard, setCards }) {
+                    cardToBeEdited, setCardToBeEdited,editCard, deleteCard, setCards }) {
 
     const [cardIndex, setCardIndex] = useState(0);    
     const [wantToViewLearnedCards, setWantToViewLearnedCards] = useState(false);
@@ -199,16 +197,8 @@ function LeftPanel({ cards, isOnSearchMode,
                 cardToBeEdited={cardToBeEdited}
                 setCardToBeEdited={setCardToBeEdited}
                 editCard={editCard}
-                deleteCard={deleteCard}
-                learnedCards={learnedCards}
-                setLearnedCards={setLearnedCards}
-                updateLearnedCard={updateLearnedCard}
-                countOfLearnedCards={countOfLearnedCards}
-                setCountOfLearnedCards={setCountOfLearnedCards}
-                wantToViewLearnedCards={wantToViewLearnedCards}
-                needToReviewCards={needToReviewCards}
-                setNeedToReviewCards={setNeedToReviewCards}
-                updateNeedToReviewCards={updateNeedToReviewCards}
+                deleteCard={deleteCard}                
+                wantToViewLearnedCards={wantToViewLearnedCards}                
                 wantToViewNeedToReviewCards={wantToViewNeedToReviewCards}
                 setCards={setCards} />
                 
