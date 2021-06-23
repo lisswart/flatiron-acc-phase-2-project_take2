@@ -60,7 +60,6 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function displayLearnedCards() {
         const filteredCards = cards.filter(isLearned);
-        setLearnedCards = filteredCards;
         return filteredCards
                 .slice(cardIndex, cardIndex + 6)
                 .map(card =>

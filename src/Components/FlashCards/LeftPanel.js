@@ -88,8 +88,7 @@ function LeftPanel({ cards, isOnSearchMode,
         // as it depends on cards, whose completion is asynchronous
         // likewise, for the following line
         // setCountOfLearnedCards((learnedCards_1.false).length);
-        console.log(countOfLearnedCards); // => 0
-    }, [needsReview, countOfLearnedCards]);
+    }, [needsReview]);
 
     function handleViewAllCardsClick() {
         setWantToViewLearnedCards(false);

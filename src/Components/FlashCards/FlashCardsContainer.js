@@ -25,9 +25,7 @@ function FlashCardsContainer() {
             .then(cardObjs => setCards(cardObjs)
             );
     }, []);
-
-    useEffect(() => setLearnedCards(learnedCards), [learnedCards]);
-
+    
     function addCard(card) {
         fetch(URL, {
             method: "POST",
