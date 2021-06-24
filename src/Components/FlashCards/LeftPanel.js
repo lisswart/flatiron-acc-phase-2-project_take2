@@ -124,9 +124,16 @@ function LeftPanel({ cards, isOnSearchMode,
                                 Create new card
                             </button>
                         </div>
+                }                             
+                {
+                    cards.length === 0
+                    ?   <button className="sort-button" onClick={handleViewAllCardsClick}>
+                            Loading...
+                        </button>
+                    :   <button className="sort-button" onClick={handleViewAllCardsClick}>
+                            All: {cards.length} cards
+                        </button>  
                 }
-                <button className="sort-button"
-                        onClick={handleViewAllCardsClick}>All: {cards.length} cards</button>               
                 {
                     cards.length === 0
                     ?   <button className="sort-button" style={{backgroundColor: "darkgreen", border: "1px solid darkgreen"}}>
@@ -180,10 +187,16 @@ function LeftPanel({ cards, isOnSearchMode,
                     </div>
                     {
                         (cards.length === 0)
-                        ?   <></>
+                        ?   <div style={{display: "flex", alignItems: "center"}}>
+                                Loading...
+                            </div>
                         :   (cardIndex + 6) >= cards.length
-                        ?   <div style={{display: "flex", alignItems: "center"}}><span>{cardIndex + 1} - {cards.length}</span></div>
-                        :   <div style={{display: "flex", alignItems: "center"}}><span>{cardIndex + 1} - {cardIndex + 6}</span></div>
+                        ?   <div style={{display: "flex", alignItems: "center"}}>
+                                <span>{cardIndex + 1} - {cards.length}</span>
+                            </div>
+                        :   <div style={{display: "flex", alignItems: "center"}}>
+                                <span>{cardIndex + 1} - {cardIndex + 6}</span>
+                            </div>
                     }
                     
                     <div className="click-more-button-container">
