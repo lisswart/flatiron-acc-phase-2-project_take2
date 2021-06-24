@@ -182,8 +182,8 @@ function LeftPanel({ cards, isOnSearchMode,
                         (cards.length === 0)
                         ?   <></>
                         :   (cardIndex + 6) >= cards.length
-                        ?   <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cards.length}</span>
-                        :   <span style={{marginTop: "3em"}}>{cardIndex + 1} - {cardIndex + 6}</span>
+                        ?   <div style={{display: "flex", alignItems: "center"}}><span>{cardIndex + 1} - {cards.length}</span></div>
+                        :   <div style={{display: "flex", alignItems: "center"}}><span>{cardIndex + 1} - {cardIndex + 6}</span></div>
                     }
                     
                     <div className="click-more-button-container">

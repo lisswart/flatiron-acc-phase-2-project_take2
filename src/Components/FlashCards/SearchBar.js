@@ -22,20 +22,20 @@ function SearchBar({ isOnSearchMode, setIsOnSearchMode, setQuery}) {
                 {
                     isOnSearchMode
                     ?   <>  
-                            <input  type="text" 
+                            <input  type="text" style={{marginBottom: "10px"}}
                                     className="inputbar inputbox"
                                     value=""
-                                    disabled /><br></br>
+                                    disabled />
                             <button className="button" 
                                     onClick={handleSearchClick}>
                                         Clear
                             </button>
                         </>
                     :   <>  
-                            <input  type="text"
+                            <input  type="text" style={{marginBottom: "10px"}}
                                     onChange={handleChange} 
                                     value={input} 
-                                    className="inputbar inputbox" /><br></br>
+                                    className="inputbar inputbox" />
                             <button className="button" 
                                     onClick={handleSearchClick}>
                                         Search card deck by headword
