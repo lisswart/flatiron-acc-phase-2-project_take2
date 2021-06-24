@@ -14,7 +14,7 @@ function RightPanel({ isOnSearchMode,
                 setQuery={setQuery} />
 
             <div style={{marginTop: "2em"}}>
-                <textarea className="textarea" style={{marginBottom: "2px", minWidth: "300px", minHeight: "496px", backgroundColor: "black", color: "lemonchiffon"}}/><br></br>
+                <textarea className="textarea" style={{marginBottom: "5px", minWidth: "300px", minHeight: "450px", backgroundColor: "black", color: "lemonchiffon"}}/><br></br>
                 <button className="button"
                         onClick={handleNoteToSelfClick}
                 >
