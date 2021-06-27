@@ -12,7 +12,7 @@ function LeftPanel({ cards, isOnSearchMode,
     const [cardIndex, setCardIndex] = useState(0);    
     const [wantToViewLearnedCards, setWantToViewLearnedCards] = useState(false);
     const [wantToViewNeedToReviewCards, setWantToViewNeedToReviewCards] = useState(false);
-    // const [searchResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = useState([]);
 
     function handleNewCardClick() {
         setIsNewCard(!isNewCard);
@@ -285,7 +285,8 @@ function LeftPanel({ cards, isOnSearchMode,
                 deleteCard={deleteCard}                
                 wantToViewLearnedCards={wantToViewLearnedCards}                
                 wantToViewNeedToReviewCards={wantToViewNeedToReviewCards}
-                // setSearchResults={setSearchResults}
+                setSearchResults={setSearchResults}
+                searchResults={searchResults}
                 setCards={setCards} />
                 
         </div>
