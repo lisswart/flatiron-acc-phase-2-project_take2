@@ -28,7 +28,7 @@
 } */
 
 #footer {
-  background-color: maroon;
+  background-color: rgb(41, 38, 38);
   color: cornsilk;
   position: absolute;
   width: 100%;
@@ -47,7 +47,7 @@
   font-size: 1.5rem;
   font-weight: bolder;
   padding: 0.4em 0 0.4em 0;
-  background-color: maroon;
+  background-color: rgba(65, 105, 225, 0.288);
 }
 
 .link {

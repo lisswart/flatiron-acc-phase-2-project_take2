@@ -12,6 +12,7 @@ function LeftPanel({ cards, isOnSearchMode,
     const [cardIndex, setCardIndex] = useState(0);    
     const [wantToViewLearnedCards, setWantToViewLearnedCards] = useState(false);
     const [wantToViewNeedToReviewCards, setWantToViewNeedToReviewCards] = useState(false);
+    // const [searchResults, setSearchResults] = useState([]);
 
     function handleNewCardClick() {
         setIsNewCard(!isNewCard);
@@ -57,11 +58,45 @@ function LeftPanel({ cards, isOnSearchMode,
         });
     }
 
+    // function handleClickMore() {
+        // if(wantToViewLearnedCards) {
+        //     // if(needsReview.false) {
+        //         // if((cardIndex) >= (needsReview.false).length) {
+        //         //     return;
+        //         // }
+        //         // else
+        //          if(cardIndex + 6 < (needsReview.false).length) {
+        //             setCardIndex(cardIndex => (cardIndex + 6) % (needsReview.false).length);
+        //         }
+        //     // }
+        // }
+        // if(wantToViewNeedToReviewCards) {
+        //     // if((cardIndex) >= (needsReview.true).length) {
+        //     //     return;
+        //     // }
+        //     // else
+        //      if(cardIndex + 6 < (needsReview.true).length) {
+        //         setCardIndex(cardIndex => (cardIndex + 6) % (needsReview.true).length);
+        //     }
+        // }
+        // if(isOnSearchMode) {
+        //     if(searchResults) {
+        //         if(cardIndex - 6 < searchResults.length) {
+        //             setCardIndex(cardIndex => (cardIndex + 6) % searchResults.length);
+        //         }
+        //     }
+        // }
+        // if(cardIndex + 6 < cards.length) {
+        //     setCardIndex((cardIndex) => (cardIndex + 6) % cards.length);
+        // }
+    // }
+
     function handleClickMore() {
         if(cardIndex + 6 < cards.length) {
             setCardIndex((cardIndex) => (cardIndex + 6) % cards.length);
         }
     }
+
 
     function handleClickBackward() {
         if(cardIndex - 6 >= 0) {
@@ -172,7 +207,7 @@ function LeftPanel({ cards, isOnSearchMode,
                             <div style={{display: "flex", alignItems: "center"}}>Need-to-Review Deck</div>
                         </>
                     :   isOnSearchMode
-                    ?    <>
+                    ?   <>
                             <div style={{display: "flex", alignItems: "center"}}>Search Results</div>
                         </>
                     :   <>
@@ -190,15 +225,44 @@ function LeftPanel({ cards, isOnSearchMode,
                         ?   <div style={{display: "flex", alignItems: "center"}}>
                                 Loading...
                             </div>
-                        :   (cardIndex + 6) >= cards.length
+                        :   wantToViewLearnedCards
+                        ?   <div style={{display: "flex", alignItems: "center"}}>
+                                {   needsReview.false
+                                    ?   <div style={{display: "flex", alignItems: "center"}}>
+                                            {
+                                                (cardIndex + 6) >= (needsReview.false).length
+                                                ?   <span>{cardIndex + 1} - {(needsReview.false).length}</span>
+                                                :   <span>{cardIndex + 1} - {cardIndex + 6}</span>
+                                            }
+                                        </div>
+                                    :   <div>0</div>
+                                }
+                            </div>
+                        :   wantToViewNeedToReviewCards
+                        ?   <div style={{display: "flex", alignItems: "center"}}>
+                                {   needsReview.true
+                                    ?   <div style={{display: "flex", alignItems: "center"}}>
+                                            {
+                                                (cardIndex + 6) >= (needsReview.true).length
+                                                ?   <span>{cardIndex + 1} - {(needsReview.true).length}</span>
+                                                :   <span>{cardIndex + 1} - {cardIndex + 6}</span>
+                                            }
+                                        </div>
+                                    :   <div>0</div>
+                                }
+                            </div>
+                        :   isOnSearchMode
                         ?   <div style={{display: "flex", alignItems: "center"}}>
                                 <span>{cardIndex + 1} - {cards.length}</span>
                             </div>
                         :   <div style={{display: "flex", alignItems: "center"}}>
-                                <span>{cardIndex + 1} - {cardIndex + 6}</span>
+                                {
+                                    (cardIndex + 6) >= cards.length
+                                    ?   <span>{cardIndex + 1} - {cards.length}</span>
+                                    :   <span>{cardIndex + 1} - {cardIndex + 6}</span>
+                                }
                             </div>
-                    }
-                    
+                    }                    
                     <div className="click-more-button-container">
                         <button onClick={handleClickMore}
                                 className="click-more-button">
@@ -221,6 +285,7 @@ function LeftPanel({ cards, isOnSearchMode,
                 deleteCard={deleteCard}                
                 wantToViewLearnedCards={wantToViewLearnedCards}                
                 wantToViewNeedToReviewCards={wantToViewNeedToReviewCards}
+                // setSearchResults={setSearchResults}
                 setCards={setCards} />
                 
         </div>

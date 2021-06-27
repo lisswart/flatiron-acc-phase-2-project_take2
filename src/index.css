@@ -4,8 +4,9 @@
 }
 
 #root {
-  background-color: black;
+  background-color: rgb(63, 55, 55);
   color: cornsilk;
   font-size: 24px;
   overflow-y: hidden;
+  box-sizing: border-box;
 }

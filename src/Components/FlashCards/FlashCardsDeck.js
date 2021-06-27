@@ -3,7 +3,7 @@ import FlashCard from "./FlashCard";
 function FlashCardsDeck({ cards, isOnSearchMode, query,
                         setIsOnEditMode, cardToBeEdited, 
                         setCardToBeEdited, editCard, 
-                        deleteCard, cardIndex,
+                        deleteCard, cardIndex, setSearchResults,
                         wantToViewLearnedCards,
                         wantToViewNeedToReviewCards }) {
 
@@ -39,6 +39,7 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
 
     function displayMatchedCards() {
         const filteredCards = cards.filter(isMatched);
+        setSearchResults(...filteredCards);
         return filteredCards
                 .slice(cardIndex, cardIndex + 6)
                 .map(card => {
@@ -60,11 +61,11 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
                 .slice(cardIndex, cardIndex + 6)
                 .map(card =>
                     <FlashCard card={card} key={card.id}
-                                setIsOnEditMode={setIsOnEditMode}
-                                cardToBeEdited={cardToBeEdited}
-                                setCardToBeEdited={setCardToBeEdited}
-                                editCard={editCard}
-                                deleteCard={deleteCard}                             
+                            setIsOnEditMode={setIsOnEditMode}
+                            cardToBeEdited={cardToBeEdited}
+                            setCardToBeEdited={setCardToBeEdited}
+                            editCard={editCard}
+                            deleteCard={deleteCard}                             
                     />   
             );
     }

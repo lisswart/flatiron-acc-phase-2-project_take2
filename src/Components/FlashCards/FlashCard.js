@@ -38,17 +38,21 @@ function FlashCard({ index, card, setIsOnEditMode,
 
     return (
         <li className="flashcard" id={index}>
-
-            <NavLink to={`/words/${id}`}>
+            
+            <NavLink to={`/words/${id}`}> 
+                <div className=" tooltip">               
+                    <span className="tooltip-text">Click here to quiz yourself</span>
+                </div>  
                 <div className="link-flashcard">
                     <pre style={{color: "tomato", fontWeight: "bolder"}}>
                         {headword}     
-                    </pre>
+                    </pre>                
                     <span style={{color: "powderblue", fontWeight: "bolder"}}>
                         {functionalLabel}
-                    </span>
-                </div>
+                    </span>  
+                </div>                            
             </NavLink>
+            
             
             <p>
                 <i className="label-definition">definition: </i>
