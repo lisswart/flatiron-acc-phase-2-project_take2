@@ -34,11 +34,9 @@ function FlashCardsContainer() {
             },
             body: JSON.stringify(card)
         })
-            .then(r => {
-                console.log(r);
-                r.json();
-            })
+            .then(r => r.json())
             .then(newCard => {
+                console.log(newCard);
                 const augmentedDeckOfCards = [...cards, newCard];
                 setCards(augmentedDeckOfCards);
             });
@@ -48,10 +46,7 @@ function FlashCardsContainer() {
         fetch(`${URL}/${cardId}`, {
             method: "DELETE"            
         })
-            .then(r => {
-                console.log(r);
-                r.json();
-            })
+            .then(r => r.json())
             .then(() => {
                 const updatedDeckOfCards = cards.filter(card => card.id !== cardId);
                 setCards(updatedDeckOfCards);
@@ -66,7 +61,10 @@ function FlashCardsContainer() {
             },
             body: JSON.stringify(updatedCard)
         })
-            .then(r => r.json())
+            .then(r => {
+                console.log(r);
+                r.json();
+            })
             .then((updatedCard) => {
                 console.log(updatedCard);
                 const updatedCards = cards.map((card) => {

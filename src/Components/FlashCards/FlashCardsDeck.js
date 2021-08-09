@@ -87,31 +87,39 @@ function FlashCardsDeck({ cards, isOnSearchMode, query,
         });
     }
 
-    return (
-        <ul className="card-list scroller">
-            {
-                cards.length === 0
-                ?   <div className="loading-flashcards">
-                        <div style={{fontSize: "24px"}}>Loading...</div>
-                    </div>
-                :   isOnSearchMode
-                ?   <>
-                        <div style={{display: "flex", flexWrap: "wrap"}}>{displayMatchedCards()}</div>
-                    </>
-                :   wantToViewLearnedCards
-                ?   <>
-                        <div style={{display: "flex", flexWrap: "wrap"}}>{displayLearnedCards()}</div>
-                    </>
-                :   wantToViewNeedToReviewCards
-                ?   <>
-                        <div style={{display: "flex", flexWrap: "wrap"}}>{displayNeedToReviewCards()}</div>
-                    </>
-                :   <>
-                        <div style={{display: "flex", flexWrap: "wrap"}}>{displayCards()}</div>
-                    </>
-            }
-        </ul>
-    );
+  return (
+    <ul className="card-list scroller">
+      {
+        cards.length === 0
+          ?   <div className="loading-flashcards">
+                <div style={{fontSize: "24px"}}>Loading...</div>
+              </div>
+          :   isOnSearchMode
+          ?   <>
+                <div style={{display: "flex", flexWrap: "wrap"}}>
+                  {displayMatchedCards()}
+                </div>
+              </>
+          :   wantToViewLearnedCards
+          ?   <>
+                <div style={{display: "flex", flexWrap: "wrap"}}>
+                  {displayLearnedCards()}
+                </div>
+              </>
+          :   wantToViewNeedToReviewCards
+          ?   <>
+                <div style={{display: "flex", flexWrap: "wrap"}}>
+                  {displayNeedToReviewCards()}
+                </div>
+              </>
+          :   <>
+                <div style={{display: "flex", flexWrap: "wrap"}}>
+                  {displayCards()}
+                </div>
+              </>
+        }
+    </ul>
+  );
 }
 
 export default FlashCardsDeck;

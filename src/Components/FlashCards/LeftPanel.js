@@ -228,7 +228,7 @@ function LeftPanel({ cards, isOnSearchMode,
                         :   wantToViewLearnedCards
                         ?   <div style={{display: "flex", alignItems: "center"}}>
                                 {   needsReview.false
-                                    ?   <div style={{display: "flex", alignItems: "center"}}>
+                                    ?   <div style={ {display: "flex", alignItems: "center"} }>
                                             {
                                                 (cardIndex + 6) >= (needsReview.false).length
                                                 ?   <span>{cardIndex + 1} - {(needsReview.false).length}</span>
@@ -239,9 +239,9 @@ function LeftPanel({ cards, isOnSearchMode,
                                 }
                             </div>
                         :   wantToViewNeedToReviewCards
-                        ?   <div style={{display: "flex", alignItems: "center"}}>
+                        ?   <div style={ {display: "flex", alignItems: "center"} }>
                                 {   needsReview.true
-                                    ?   <div style={{display: "flex", alignItems: "center"}}>
+                                    ?   <div style={ {display: "flex", alignItems: "center"} }>
                                             {
                                                 (cardIndex + 6) >= (needsReview.true).length
                                                 ?   <span>{cardIndex + 1} - {(needsReview.true).length}</span>
@@ -252,10 +252,10 @@ function LeftPanel({ cards, isOnSearchMode,
                                 }
                             </div>
                         :   isOnSearchMode
-                        ?   <div style={{display: "flex", alignItems: "center"}}>
+                        ?   <div style={ {display: "flex", alignItems: "center"} }>
                                 <span>{cardIndex + 1} - {cards.length}</span>
                             </div>
-                        :   <div style={{display: "flex", alignItems: "center"}}>
+                        :   <div style={ {display: "flex", alignItems: "center"} }>
                                 {
                                     (cardIndex + 6) >= cards.length
                                     ?   <span>{cardIndex + 1} - {cards.length}</span>

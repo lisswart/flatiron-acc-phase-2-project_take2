@@ -5,6 +5,7 @@ function NewFlashCardEntryForm({ addCard, formState,
     function handleNewEntryChange(event) {
         const fieldName = event.target.name;
         const userInput = event.target.value;
+        console.log(userInput);
         setFormState({
             ...formState,
             [fieldName]: userInput,

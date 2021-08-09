@@ -44,7 +44,7 @@ function FlashCard({ index, card, setIsOnEditMode,
                     <span className="tooltip-text">Click here to quiz yourself</span>
                 </div>  
                 <div className="link-flashcard">
-                    <pre style={{color: "tomato", fontWeight: "bolder"}}>
+                    <pre style={{color: "black", fontWeight: "bolder"}}>
                         {headword}     
                     </pre>                
                     <span style={{color: "powderblue", fontWeight: "bolder"}}>
